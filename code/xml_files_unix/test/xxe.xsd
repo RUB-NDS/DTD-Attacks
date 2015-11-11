@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+  <xsd:element name="data">
+
+    <xsd:choice>
+      <xsd:element name="description" type="descriptionType"
+        minOccurs="1" maxOccurs="1" />
+    </xsd:choice>
+
+</xsd:element>
+</xsd:schema>

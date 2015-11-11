@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY external SYSTEM "internalSubset_ExternalEntityReferenceAsAttValue.txt">
+<!ELEMENT data (#PCDATA)>
+<!ATTLIST data sort ENTITY #REQUIRED>
+]>
+<data sort="external"></data>

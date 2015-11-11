@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE data [
+<!ENTITY % start "<![CDATA[">
+<!ENTITY % goodies SYSTEM "internalSubset_PEReferenceIn_ExternalSubsetInternalGeneralEntity.txt">
+<!ENTITY % end "]]>">
+<!ENTITY % dtd SYSTEM "internalSubset_PEReferenceIn_ExternalSubsetInternalGeneralEntity.dtd">
+%dtd;
+]>
+<data>&all;</data>

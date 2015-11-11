@@ -1,0 +1,7 @@
+<?xml version='1.0'?>
+<!DOCTYPE data [
+<!ELEMENT data (#PCDATA)>
+<!ENTITY % remote SYSTEM "http://127.0.0.1:5000/url_invocation_parameterEntity.dtd">
+%remote;  
+]> 
+<data>4</data>

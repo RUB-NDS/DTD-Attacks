@@ -1,0 +1,5 @@
+<!ENTITY % start "<![CDATA[">
+<!ENTITY % goodies SYSTEM "externalSubset_ExternalPEReferenceIn_ExternalSubset_InternalGeneralEntity.txt">
+<!ENTITY % end "]]>">
+<!ENTITY % dtd "<!ENTITY all '%start;%goodies;%end;'>">
+%dtd;

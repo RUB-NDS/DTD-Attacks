@@ -1,0 +1,6 @@
+G:\Christopher_Spaeth\code\dotNet\XMLDocument\TestXMLDocument\bin\Debug\TestXMLDocument.dll
+G:\Christopher_Spaeth\code\dotNet\XMLDocument\TestXMLDocument\bin\Debug\TestXMLDocument.pdb
+G:\Christopher_Spaeth\code\dotNet\XMLDocument\TestXMLDocument\bin\Debug\XInclude.dll
+G:\Christopher_Spaeth\code\dotNet\XMLDocument\TestXMLDocument\obj\Debug\TestXMLDocument.dll
+G:\Christopher_Spaeth\code\dotNet\XMLDocument\TestXMLDocument\obj\Debug\TestXMLDocument.pdb
+G:\Christopher_Spaeth\code\dotNet\XMLDocument\TestXMLDocument\obj\Debug\TestXMLDocument.csprojResolveAssemblyReference.cache

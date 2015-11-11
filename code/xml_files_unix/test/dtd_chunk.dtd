@@ -1,0 +1,2 @@
+<!ELEMENT list >
+<!ATTLIST list list_type (ul | ol)>

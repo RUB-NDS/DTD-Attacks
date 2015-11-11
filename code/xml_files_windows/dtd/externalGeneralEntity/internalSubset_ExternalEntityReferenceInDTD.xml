@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY internal SYSTEM "internalSubset_ExternalEntityReferenceInDTD.dtd">
+&internal;
+]>
+<data></data>
+

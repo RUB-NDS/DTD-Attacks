@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE data [
+<!ENTITY % start "<![CDATA[">
+<!ENTITY % goodies SYSTEM "file:///tmp/xxe.txt">
+<!ENTITY % end "]]>">
+<!ENTITY % dtd SYSTEM "combine.dtd">
+%dtd;
+]>
+<data>&all;</data>
+

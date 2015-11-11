@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE img [
+  <!ELEMENT img EMPTY>
+  <!ATTLIST img src ENTITY #REQUIRED> 
+  <!ENTITY logo SYSTEM "http://www.xmlwriter.net/logo.gif" NDATA gif>
+  <!NOTATION gif PUBLIC "gif viewer">
+]>
+<img src="logo"/>

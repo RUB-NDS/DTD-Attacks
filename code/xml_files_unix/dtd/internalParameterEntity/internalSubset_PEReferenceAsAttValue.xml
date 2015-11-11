@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY % internal "intern">
+<!ELEMENT data (#PCDATA)>
+<!ATTLIST data sort ENTITY #REQUIRED>
+]>
+<data sort="internal"></data>

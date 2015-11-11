@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY % external SYSTEM "ExternalPEReferenceInParamEntity.txt">
+<!ENTITY % use "%external;">
+]>
+<data></data>

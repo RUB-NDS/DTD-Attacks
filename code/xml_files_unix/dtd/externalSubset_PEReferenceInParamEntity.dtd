@@ -1,0 +1,3 @@
+<!ENTITY % internal "<!ENTITY intern 'it_works'>">
+<!ENTITY % use "%internal;">
+%use;

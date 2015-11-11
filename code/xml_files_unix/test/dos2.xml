@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE garden [
+<!ENTITY a "dos&b;">
+<!ENTITY % inc SYSTEM "dos2.dtd">
+%inc;
+]>
+<garden> 
+<tree>&a;</tree>
+</garden>

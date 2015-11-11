@@ -1,0 +1,2 @@
+<!ENTITY % internal "it_works">
+<!ENTITY use "%internal;">

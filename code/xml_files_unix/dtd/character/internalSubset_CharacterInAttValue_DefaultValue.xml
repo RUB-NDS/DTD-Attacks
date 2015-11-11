@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ELEMENT data (#PCDATA)>
+<!ATTLIST data sort CDATA "&#65;&#84;&#38;&#84;">
+]>
+<data></data>
+

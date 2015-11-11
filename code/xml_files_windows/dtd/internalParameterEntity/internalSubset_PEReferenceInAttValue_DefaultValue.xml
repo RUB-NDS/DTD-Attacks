@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY % internal "it_works">
+<!ELEMENT data (#PCDATA)>
+<!ATTLIST data sort CDATA #FIXED "%internal;">
+]>
+<data></data>
+

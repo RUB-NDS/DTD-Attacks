@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ELEMENT data (#PCDATA)>
+<!ENTITY file SYSTEM "netdoc:http://127.0.0.1:5000/xxe.txt">
+]>
+<data>&file;</data>

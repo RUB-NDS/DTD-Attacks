@@ -1,0 +1,5 @@
+<!ENTITY % start "<![CDATA[">
+<!ENTITY % goodies SYSTEM "file:///tmp/xxe.txt">
+<!ENTITY % end "]]>">
+<!ENTITY % dtd "<!ENTITY all "%start;%goodies;%end;">">
+%dtd;

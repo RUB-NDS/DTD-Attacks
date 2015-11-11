@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE data[
+<!ENTITY example "<p>An ampersand (&#38;#38;) may be escaped numerically (&#38;#38;#38;) or with a general entity(&amp;amp;).</p>" >
+]>
+<root>
+    <data>&example;</data>
+    <data>&lt;test&gt;</data>
+</root>
+

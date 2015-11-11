@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY internal "it_works">
+<!ELEMENT garden (#PCDATA)>
+<!ATTLIST garden sort ENTITY #REQUIRED>
+]>
+<data sort="internal"></data>

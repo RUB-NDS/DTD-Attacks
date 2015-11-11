@@ -1,0 +1,9 @@
+<!DOCTYPE doc [
+<!ELEMENT doc (para|graphic)+>
+<!ENTITY norm "Norman Walsh">
+]>
+<doc>
+<para>The following element incorporates the image declared as
+	"mypicture":</para>
+<graphic image="mypicture" alt="A picture of &norm;"/>
+</doc>

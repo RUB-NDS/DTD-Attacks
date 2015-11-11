@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY % file SYSTEM "file:///tmp/xxe">
+<!ENTITY % all "<!ENTITY send SYSTEM '%file;'>">
+%all;
+<!ENTITY neu "&send;">
+
+

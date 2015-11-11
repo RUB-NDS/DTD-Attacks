@@ -1,0 +1,2 @@
+<!ENTITY % external SYSTEM "externalSubset_ExternalPEReferenceInInternalGeneralEntity.txt">
+<!ENTITY use "%external;">

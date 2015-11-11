@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY external SYSTEM "internalSubset_ExternalEntity_Definition_NoReference.txt">
+]>
+<data>external</data>

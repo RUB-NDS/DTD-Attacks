@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+
+use XML::Simple qw(:strict);
+
+  my $config = XMLin(undef,undef,  '../../xml_files/standard.xml', ForceArray => 1);
+  print $config->{data}

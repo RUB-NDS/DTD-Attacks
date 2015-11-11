@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY external SYSTEM "internalSubset_ExternalEntityReferenceInParamEntity.txt">
+<!ENTITY % use "&external;">
+%use;
+]>
+<data>&intern;</data>

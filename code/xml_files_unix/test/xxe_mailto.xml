@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY file SYSTEM "/etc/passwd">
+]>
+<data>
+<LINK href="/etc/passwd" type="base64"/>
+
+
+</data>
+
+4fd7503402f29f9aabbdabdcc1c135c9
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE data [
+<!ENTITY internal "zeile 1
+					zeile 2">
+]>
+<data></data>

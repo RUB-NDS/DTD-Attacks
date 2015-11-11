@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY % external SYSTEM "internalSubset_ExternalPEReferenceInAttValue_DefaultValue.txt">
+<!ELEMENT data (#PCDATA)>
+<!ATTLIST data sort CDATA #FIXED "%external;">
+]>
+<data></data>
+

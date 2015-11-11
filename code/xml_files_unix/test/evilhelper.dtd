@@ -1,0 +1,1 @@
+<!ENTITY % payload SYSTEM "file:///tmp/xxe">

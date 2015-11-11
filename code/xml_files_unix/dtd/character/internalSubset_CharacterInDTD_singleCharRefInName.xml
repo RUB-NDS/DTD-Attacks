@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY &#105;nternal "intern">
+]>
+<data>&internal;</data>
+
+<!--Inhalt DTD: <!ENTITY internal "intern"> -->
+
+
+

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ENTITY internal "<!ENTITY intern 'it_works'>">
+&internal;
+]>
+<data></data>
+
