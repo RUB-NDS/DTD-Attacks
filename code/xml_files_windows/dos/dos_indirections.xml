@@ -1,0 +1,12 @@
+<!DOCTYPE data [
+<!ENTITY a0 "dos" >
+<!ENTITY a1 "&a0;&a0;&a0;&a0;&a0;&a0;&a0;&a0;&a0;&a0;">
+<!ENTITY a2 "&a1;&a1;&a1;&a1;&a1;&a1;&a1;&a1;&a1;&a1;">
+<!ENTITY a3 "&a2;&a2;&a2;&a2;&a2;&a2;&a2;&a2;&a2;&a2;">
+<!ENTITY a4 "&a3;&a3;&a3;&a3;&a3;&a3;&a3;&a3;&a3;&a3;">
+]>
+<data>&a4;</data>
+
+<!--1 + 10 + 10**2 + 10**3 + 10**4 = 11 + 100 + 1000 + 10000 = 11111 entity indirections -->
+
+

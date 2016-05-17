@@ -1,5 +1,0 @@
-G:\Christopher_Spaeth\code\dotNet\XMLDocument\XMLDocument\bin\Debug\XMLDocument.exe.config
-G:\Christopher_Spaeth\code\dotNet\XMLDocument\XMLDocument\bin\Debug\XMLDocument.exe
-G:\Christopher_Spaeth\code\dotNet\XMLDocument\XMLDocument\bin\Debug\XMLDocument.pdb
-G:\Christopher_Spaeth\code\dotNet\XMLDocument\XMLDocument\obj\Debug\XMLDocument.exe
-G:\Christopher_Spaeth\code\dotNet\XMLDocument\XMLDocument\obj\Debug\XMLDocument.pdb

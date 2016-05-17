@@ -2187,7 +2187,7 @@ public class TestXercesDocumentBuilderFactory {
 	public void testXXE() throws SAXException, IOException, ParserConfigurationException {		
 
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxe.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxe/xxe.xml");
 		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		content = content.replaceAll("\\n","");
 		assertEquals("it_works", content);		
@@ -2237,7 +2237,7 @@ public class TestXercesDocumentBuilderFactory {
 
         try {
         	
-        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxe.xml");
+        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxe/xxe.xml");
 			// nothing to do for jdom/dom4j
 //			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 //			String jdomContent = jdomDocument.getRootElement().getText();			
@@ -2264,7 +2264,7 @@ public class TestXercesDocumentBuilderFactory {
     	
 		builder = factory.newDocumentBuilder();
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxe.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxe/xxe.xml");
 			// nothing to do for jdom/dom4j
 //			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 //			String jdomContent = jdomDocument.getRootElement().getText();			
@@ -2292,7 +2292,7 @@ public class TestXercesDocumentBuilderFactory {
 	    
 	    builder = factory.newDocumentBuilder();
 		
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxe.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxe/xxe.xml");
 //		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();
 		assertEquals("", content);	
@@ -2325,7 +2325,7 @@ public class TestXercesDocumentBuilderFactory {
 		
 	    builder = factory.newDocumentBuilder();
 		
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxe.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxe/xxe.xml");
 //		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();
 		assertEquals("", content);	
@@ -2340,6 +2340,28 @@ public class TestXercesDocumentBuilderFactory {
 		org.dom4j.Document dom4jDocument = dom4jDOMReader.read(w3cDocument);
 		String dom4jContent = dom4jDocument.getRootElement().getText();
 		assertEquals("", dom4jContent);
+		
+	}
+	
+	
+	@Test
+	public void testXXE_netdoc() throws SAXException, IOException, ParserConfigurationException {		
+
+		builder = factory.newDocumentBuilder();
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxe/xxe_netdoc.xml");
+		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
+		content = content.replaceAll("\\n","");
+		assertEquals("it_works", content);		
+		
+		
+		org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument); 
+		String jdomContent = jdomDocument.getRootElement().getText();
+		assertEquals("it_works", jdomContent);
+		
+		dom4jDOMReader=  new org.dom4j.io.DOMReader();
+		org.dom4j.Document dom4jDocument = dom4jDOMReader.read(w3cDocument);
+		String dom4jContent = dom4jDocument.getRootElement().getText();
+		assertEquals("it_works", dom4jContent);
 		
 	}
 	

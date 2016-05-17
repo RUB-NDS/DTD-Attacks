@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!DOCTYPE data [
+<!ELEMENT data (#PCDATA)>
+<!ENTITY file SYSTEM "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.txt">
+]>
+<data>&file;</data>

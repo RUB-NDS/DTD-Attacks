@@ -1,6 +1,0 @@
-G:\Christopher_Spaeth\code\dotNet\XMLReader\TestXMLReader\bin\Debug\TestXMLReader.dll
-G:\Christopher_Spaeth\code\dotNet\XMLReader\TestXMLReader\bin\Debug\TestXMLReader.pdb
-G:\Christopher_Spaeth\code\dotNet\XMLReader\TestXMLReader\bin\Debug\XInclude.dll
-G:\Christopher_Spaeth\code\dotNet\XMLReader\TestXMLReader\obj\Debug\TestXMLReader.dll
-G:\Christopher_Spaeth\code\dotNet\XMLReader\TestXMLReader\obj\Debug\TestXMLReader.pdb
-G:\Christopher_Spaeth\code\dotNet\XMLReader\TestXMLReader\obj\Debug\TestXMLReader.csprojResolveAssemblyReference.cache

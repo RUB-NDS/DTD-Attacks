@@ -1187,7 +1187,7 @@ public class TestAttackVectors {
     @Test
     public void testXXE() throws IOException,SAXException, ParserConfigurationException {
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         SAXParser saxParser = factory.newSAXParser();              
@@ -1201,7 +1201,7 @@ public class TestAttackVectors {
     @Test
     public void testXXE_setEntityResolver() throws IOException,SAXException, ParserConfigurationException {
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
         
 		MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();	
         SAXParser saxParser = factory.newSAXParser();              
@@ -1234,7 +1234,7 @@ public class TestAttackVectors {
 //			assertEquals(message, e.getMessage());
 //		}	
 //    	  finally {
-//          	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe.xml");
+//          	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
 //              
 //              MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
 //              SAXParser saxParser = factory.newSAXParser();              
@@ -1250,7 +1250,7 @@ public class TestAttackVectors {
     @Test
     public void testXXE_setProperty_setProperty_DeclHandler() throws IOException,SAXException, ParserConfigurationException {
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe.xml");        
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();        
         SAXParser saxParser = factory.newSAXParser();
@@ -1270,6 +1270,22 @@ public class TestAttackVectors {
         	assertEquals("", content);
         }       
 
+    }
+    
+    
+    
+    @Test
+    public void testXXE_netdoc() throws IOException,SAXException, ParserConfigurationException {
+		
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
+        
+        MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
+        SAXParser saxParser = factory.newSAXParser();              
+        
+        saxParser.parse(xmlInput, myDefaultHandler);	    
+	
+		String content =myDefaultHandler.getElementContent("data");
+		assertEquals("it_works", content);
     }
     
    

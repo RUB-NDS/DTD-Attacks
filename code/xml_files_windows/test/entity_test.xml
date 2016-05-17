@@ -1,0 +1,62 @@
+<!DOCTYPE data [ 
+
+<!ENTITY a1 '&a3;'>
+
+<!ENTITY a3 '&a30;&a31;&a32;&a33;&a34;&a35;&a36;&a37;'>
+<!ENTITY a30 "&a300;&a301;&a302;&a303;&a304;&a305;&a306;&a307;">
+<!ENTITY a300 "dos">
+<!ENTITY a301 "dos">
+<!ENTITY a302 "dos">
+<!ENTITY a303 "dos">
+<!ENTITY a304 "dos">
+<!ENTITY a305 "dos">
+<!ENTITY a306 "dos">
+<!ENTITY a307 "dos">
+
+<!ENTITY a31 "dos">
+<!ENTITY a32 "dos">
+<!ENTITY a33 "dos">
+<!ENTITY a34 "dos">
+<!ENTITY a35 "dos">
+<!ENTITY a36 "dos">
+<!ENTITY a37 "dos">
+
+
+
+
+
+<!ENTITY a4 '&a40;&a41;&a42;&a43;&a44;&a45;&a46;&a47;'>
+<!ENTITY a40 "dos">
+<!ENTITY a41 "dos">
+<!ENTITY a42 "dos">
+<!ENTITY a43 "dos">
+<!ENTITY a44 "dos">
+<!ENTITY a45 "dos">
+<!ENTITY a46 "dos">
+<!ENTITY a47 "dos">
+
+
+
+
+]> 
+<data>&a1;</data>
+
+<!--
+<!ENTITY a3 '&az;&ay;&ax;&aw;&av;&au;&at;&as;&ar;&aq;&ao;
+			&a4;'>
+			
+			
+			<!ENTITY ao 'a'> 
+<!ENTITY aq 'a'> 
+<!ENTITY ar 'a'> 
+
+<!ENTITY as 'a'> 
+<!ENTITY at 'a'>
+<!ENTITY au 'a'>
+<!ENTITY av 'a'>
+<!ENTITY aw 'a'>
+<!ENTITY ax 'a'>
+<!ENTITY ay 'a'>
+<!ENTITY az 'a'>
+			
+//-->

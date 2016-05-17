@@ -1,0 +1,6 @@
+<!DOCTYPE data [
+<!ELEMENT data (#PCDATA)>
+<!ENTITY % external SYSTEM "file:///data/data/nds.rub.de.helloworld/internalSubset_ExternalPEReferenceInDTD.dtd">
+%external;
+]>
+<data>&intern;</data>

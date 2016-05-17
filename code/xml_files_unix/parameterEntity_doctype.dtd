@@ -1,4 +1,0 @@
-<!ENTITY % start "<![CDATA[">
-<!ENTITY % goodies SYSTEM "file:///tmp/xxe.txt">
-<!ENTITY % end "]]>">
-<!ENTITY all '%start;%goodies;%end;'>

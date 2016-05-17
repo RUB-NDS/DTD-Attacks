@@ -59,7 +59,7 @@ public class TestAttackVectors {
 	
 	@Test
 	public void testDOS_core() throws ParserConfigurationException, SAXException, IOException {
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml";
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml";
 		
 	    builder = factory.newDocumentBuilder();	    
 		org.w3c.dom.Document w3cDocument = builder.parse(xmlFile);		
@@ -74,7 +74,7 @@ public class TestAttackVectors {
 //	obsolet
 //	@Test
 //	public void testDOS_core_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
-//		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml"; 
+//		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml"; 
 //	    DocumentBuilder builder = factory.newDocumentBuilder();
 //	    MyEntityResolver myEntityResolver = new MyEntityResolver();
 //	    builder.setEntityResolver(myEntityResolver);
@@ -96,7 +96,7 @@ public class TestAttackVectors {
 		factory.setExpandEntityReferences(false);		
 		assertFalse(factory.isExpandEntityReferences());
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml";
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml";
 	    
 	      
 	    builder = factory.newDocumentBuilder();
@@ -115,7 +115,7 @@ public class TestAttackVectors {
 
 	@Test
 	public void testDOS_entitySize() throws ParserConfigurationException, SAXException, IOException {
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_entitySize.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_entitySize.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -135,7 +135,7 @@ public class TestAttackVectors {
 		factory.setExpandEntityReferences(false);
 		assertFalse(factory.isExpandEntityReferences());
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_entitySize.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_entitySize.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -149,7 +149,7 @@ public class TestAttackVectors {
 	
 	@Test
 	public void testDOS_indirections() throws ParserConfigurationException, SAXException, IOException {
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_indirections.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -169,7 +169,7 @@ public class TestAttackVectors {
 		factory.setExpandEntityReferences(false);
 		assertFalse(factory.isExpandEntityReferences());
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_indirections.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -885,6 +885,19 @@ public class TestAttackVectors {
 		org.w3c.dom.Document w3cDocument = builder.parse(xmlFile);		
 		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getTextContent();
 		assertEquals("", content);		
+			
+	}  
+	
+	
+	@Test
+	public void testXXE_netdoc() throws ParserConfigurationException, SAXException, IOException {
+		
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe_netdoc.xml"; 
+		builder = factory.newDocumentBuilder();	      
+	    	
+		org.w3c.dom.Document w3cDocument = builder.parse(xmlFile);		
+		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getTextContent();
+		assertEquals("it_works", content);		
 			
 	}  
 	

@@ -18,7 +18,7 @@ public class XercesDocumentBuilderFactory {
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 	
 //		String provider ="org.apache.xerces.impl.Version";
-		String xmlFile = "../../xml_files_windows/standard.xml";
+		String xmlFile = "../../xml_files_windows/dos_core.xml";
 //		String xmlFile= "../../xml_files_windows/test/schemaEntity_noSchema.xml";
 
 		    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance(); 
@@ -26,8 +26,8 @@ public class XercesDocumentBuilderFactory {
 		    
 		    org.w3c.dom.Document w3cdocument = builder.parse(xmlFile);
 		    System.out.println("Ausgabe " + w3cdocument.getElementsByTagName("data").item(0).getTextContent());
-
-	
+		    System.out.println("Ausgabe " + w3cdocument.getElementsByTagName("data").item(0).getFirstChild().getNodeName());
+		    System.out.println("Ausgabe " + w3cdocument.getElementsByTagName("data").item(0).getFirstChild().getNodeType());
 
 	}
 }

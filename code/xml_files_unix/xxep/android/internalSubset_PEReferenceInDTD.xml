@@ -1,0 +1,7 @@
+<!DOCTYPE data [
+<!ELEMENT data ANY>
+<!ENTITY % internal "<!ENTITY intern 'it_works'>">
+%internal;
+]>
+<data>&intern;</data>
+

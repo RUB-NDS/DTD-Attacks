@@ -199,7 +199,7 @@ public class TestXercesSaxParseFactory {
     public void testDOS_core() throws ParserConfigurationException, SAXException, IOException {
     	
 	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_core.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_core.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2752,6 +2752,25 @@ public class TestXercesSaxParseFactory {
   }
   
     
+  
+  @Test
+  public void testXXE_netdoc() throws IOException,SAXException, ParserConfigurationException {
+  	
+	  
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe_netdoc.xml");
+      
+      MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
+      MyDeclHandler myDeclHandler = new MyDeclHandler();
+      SAXParser saxParser = factory.newSAXParser();
+      
+      saxParser.setProperty("http://xml.org/sax/properties/declaration-handler", myDeclHandler);
+      
+      saxParser.parse(xmlInput, myDefaultHandler);
+	    
+	
+		String content =myDefaultHandler.getElementContent("data");
+		assertEquals("it_works", content);
+  }
     
     
 

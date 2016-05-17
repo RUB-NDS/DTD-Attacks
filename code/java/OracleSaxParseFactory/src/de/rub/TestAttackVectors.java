@@ -891,6 +891,20 @@ public class TestAttackVectors {
 	}
 
 	
+	@Test
+	public void testXXE_netdoc() throws SAXException, IOException, ParserConfigurationException {		
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe_netdoc.xml");
+		
+		SAXParser parser = factory.newSAXParser();	
+		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
+		parser.parse(xmlInput, myDefaultHandler);
+		
+		String content = myDefaultHandler.getElementContent("data");
+		
+		assertEquals("it_works", content);
+	}
+	
+	
 	
 	@Test
 	public void testXSLT() throws SAXException, IOException, ParserConfigurationException {		

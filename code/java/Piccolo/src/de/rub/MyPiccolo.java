@@ -94,7 +94,7 @@ public class MyPiccolo {
 //	     // reports false
 //		System.out.println("external-parameter-entities " + myPiccolo.getFeature("http://xml.org/sax/features/external-parameter-entities"));	
 //	     
-		 myPiccolo.parse("../../xml_files_windows/standard.xml");
+		 myPiccolo.parse("../../xml_files_windows/test/dos_infinite.xml");
 		 System.out.println("Ausgabe: " +myDefaultHandler.getElementContent("data"));
 		
 		

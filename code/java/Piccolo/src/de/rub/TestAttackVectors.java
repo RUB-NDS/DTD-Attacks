@@ -1079,115 +1079,15 @@ public class TestAttackVectors {
 	    }
 	    
 	    
-	    
-	    
-	    
-	    
-	   
-	    
+	    @Test
+	    public void testXXE_netdoc() throws IOException,SAXException, ParserConfigurationException {	    	
 
-	    
-	    
-	    
-	
-	    
-	    
-	    
-	    
-
-
-	    
-	    
-//	    no such feature is available - check the source code
-//	    @Test  
-//	    public void testXInclude_setFeature_xinclude() throws IOException, SAXException, ParserConfigurationException {
-//		
-//	    	// XInclude is not working unless Namespaces are also activated		
-//			
-//	    	try {
-//	    		myPiccolo.setFeature("http://apache.org/xml/features/xinclude",true);
-//	    		assertTrue(myPiccolo.getFeature("http://apache.org/xml/features/xinclude"));	
-//	    		
-//
-//	    	} catch (SAXNotRecognizedException e) {
-//	    		String message ="http://apache.org/xml/features/xinclude";
-//	    		assertEquals(message, e.getMessage().trim());
-//	    	}
-//
-//	    }
-	    
-	    
-
-	    
-	    
-	    // OBSOLETE: Feature can not be activated, see testXInclude_setFeature_xinclude 
-	    // public void testUrlInvocation_XInclude_setFeature_xinclude()
-	    
-	    
-	    //OBSOLETE: Namespaces are already activated
-//	    @Test
-//	    public void testURLInvocation_XInclude_setFeature_namespaces() throws Exception{
-//		
-//	    	
-//	    	assertTrue(myPiccolo.getFeature("http://xml.org/sax/features/namespaces"));
-//
-//	    	// reset the counter
-//	        SimpleClient http = new SimpleClient();
-//	        http.sendGet(url + "/reset");
-//	        String response = http.sendGet(url + "/getCounter");
-//	        assertEquals("0", response);
-//	        
-//	        myPiccolo.parse("../../xml_files_windows/url_invocation_xinclude.xml");
-//	        
-//	        response = http.sendGet(url + "/getCounter");
-//	        assertEquals("0", response);
-//	        
-//
-//		
-//	    }
-	    
-	   
-	    
-
-//	    @Test  
-//	    public void testURLInvocation_noNamespaceSchemaLocation_setFeature_validation_schema() throws Exception {
-//			
-//	    	//Feature is not available - check source code;
-//
-//	    	// we try validation instead
-//	    	
-//	    	try {
-//	    		myPiccolo.setFeature("http://xml.org/sax/features/validation",true);
-//		    	assertTrue(myPiccolo.getFeature("http://xml.org/sax/features/validation"));
-////		    	myPiccolo.parse("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
-//	    	}
-//	    	catch (SAXNotSupportedException e){
-//	    		String message = "validation is not supported";
-//	    		assertEquals(message, e.getMessage());
-//	    		
-//	    	}
-//	    }
-	    
-
-	    
-//	    there is no corresponding feature available in Piccolo
-//	    @Test  
-//	    public void testUrlInvocation_setFeature_load_external_dtd() throws IOException, SAXException, ParserConfigurationException {
-//			
-//	    	try {
-//	    		myPiccolo.setFeature("http://apache.org/xml/features/load-external-dtd",true);
-//	    		assertTrue(myPiccolo.getFeature("http://apache.org/xml/features/load-external-dtd"));	
-//	    		
-//
-//	    	} catch (SAXNotRecognizedException e) {
-//	    		String message ="http://apache.org/xml/features/load-external-dtd";
-//	    		assertEquals(message, e.getMessage().trim());
-//	    	}
-//
-//	    }
-
-	     
-	    
+	        myPiccolo.parse("../../xml_files_windows/xxe/xxe_netdoc.xml");
+		
+			String content =myDefaultHandler.getElementContent("data");
+			assertEquals("it_works", content);
+			
+	    }
 	    
 	    
 	    

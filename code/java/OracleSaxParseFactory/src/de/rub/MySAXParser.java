@@ -9,7 +9,7 @@ public class MySAXParser {
 
 	public static void main(String[] args) throws SAXException, IOException, ParserConfigurationException {
 		
-	  String xmlFile ="file:///C:/Christopher_Spaeth/code/xml_files_windows/standard.xml";      
+	  String xmlFile ="file:///C:/Christopher_Spaeth/code/xml_files_windows/optional/root.xml";      
       SAXParser parser = new SAXParser();      
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
       parser.setContentHandler(myDefaultHandler);        

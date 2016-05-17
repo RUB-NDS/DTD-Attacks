@@ -1,0 +1,5 @@
+<!DOCTYPE data [
+<!ELEMENT data (#PCDATA)>
+<!ENTITY file SYSTEM "file:///data/data/nds.rub.de.helloworld/xxe.txt">
+]>
+<data>&file;</data>
