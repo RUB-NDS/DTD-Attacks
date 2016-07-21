@@ -194,7 +194,7 @@ public class TestXercesDocumentBuilderFactory {
 				
 		
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos_core.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos/dos_core.xml");
 		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		int expectedCount = 25;
 		// we know that each word is 3 chars long
@@ -227,7 +227,7 @@ public class TestXercesDocumentBuilderFactory {
 		builder = factory.newDocumentBuilder();
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos_core.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos/dos_core.xml");
 			String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		} catch (SAXParseException e) {
 			String message = e.getMessage();
@@ -251,7 +251,7 @@ public class TestXercesDocumentBuilderFactory {
 		builder = factory.newDocumentBuilder();
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos_core.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos/dos_core.xml");
 			
 			// nothing to do for jdom/dom4j
 //			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
@@ -273,7 +273,7 @@ public class TestXercesDocumentBuilderFactory {
 				
 		
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos_indirections.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos/dos_indirections.xml");
 		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		int expectedCount = 10000;
 		// we know that each word is 3 chars long
@@ -305,7 +305,7 @@ public class TestXercesDocumentBuilderFactory {
 		builder = factory.newDocumentBuilder();
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos_indirections.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos/dos_indirections.xml");
 			String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		} catch (SAXParseException e) {
 			String message = e.getMessage();
@@ -324,7 +324,7 @@ public class TestXercesDocumentBuilderFactory {
 		builder = factory.newDocumentBuilder();
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos_indirections.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos/dos_indirections.xml");
 			
 			// nothing to do for jdom/dom4j
 //			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
@@ -350,7 +350,7 @@ public class TestXercesDocumentBuilderFactory {
 		
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/optional/dos_indirections_parameterEntity.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos/dos_indirections_parameterEntity.xml");
 			
 			// nothing to do for jdom / dom4j			
         }
@@ -368,7 +368,7 @@ public class TestXercesDocumentBuilderFactory {
 				
 		
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos_entitySize.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos/dos_entitySize.xml");
 		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		int expectedCount = 3400000;
 		// we know that each word is 3 chars long
@@ -400,7 +400,7 @@ public class TestXercesDocumentBuilderFactory {
 		builder = factory.newDocumentBuilder();
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos_entitySize.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos/dos_entitySize.xml");
 			String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		} catch (SAXParseException e) {
 			String message = e.getMessage();
@@ -419,7 +419,7 @@ public class TestXercesDocumentBuilderFactory {
 		builder = factory.newDocumentBuilder();
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos_entitySize.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos/dos_entitySize.xml");
 			
 			// nothing to do for jdom / dom4j 
 //			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
@@ -445,7 +445,7 @@ public class TestXercesDocumentBuilderFactory {
 		
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/optional/dos_recursion.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/dos/dos_recursion.xml");
 			
 			// nothing to do for jdom / dom4j			
         }
@@ -463,7 +463,7 @@ public class TestXercesDocumentBuilderFactory {
 	public void testInternalSubset_ExternalPEReferenceInDTD() throws SAXException, IOException, ParserConfigurationException {
 		
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		content = content.replaceAll("\\n","");
 		assertEquals("it_works", content);		
@@ -492,7 +492,7 @@ public class TestXercesDocumentBuilderFactory {
 		builder = factory.newDocumentBuilder();
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 			String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		} catch (SAXParseException e) {
 			String message = e.getMessage();
@@ -511,7 +511,7 @@ public class TestXercesDocumentBuilderFactory {
 	    
 	    try {
 	    	
-	    	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+	    	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 	    	
 			// nothing to do for jdom/dom4j
 //			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
@@ -538,7 +538,7 @@ public class TestXercesDocumentBuilderFactory {
 		
 		 try {
 	        	
-			 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+			 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 			 
 				// nothing to do for jdom/dom4j
 //				org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
@@ -561,7 +561,7 @@ public class TestXercesDocumentBuilderFactory {
 //    	assertFalse(factory.getFeature("http://xml.org/sax/features/external-general-entities"));
 //    	
 //		builder = factory.newDocumentBuilder();
-//		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+//		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 //		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 //		content = content.replaceAll("\\n","");
 //		assertEquals("it_works", content);				
@@ -584,7 +584,7 @@ public class TestXercesDocumentBuilderFactory {
     	assertFalse(factory.getFeature("http://xml.org/sax/features/external-parameter-entities"));
     	
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 //		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();
 		content = content.replaceAll("\\n","");
@@ -615,7 +615,7 @@ public class TestXercesDocumentBuilderFactory {
     	
     	
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 //		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();
 		content = content.replaceAll("\\n","");
@@ -644,7 +644,7 @@ public class TestXercesDocumentBuilderFactory {
   	
     	
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 //		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();
 		content = content.replaceAll("\\n","");
@@ -671,7 +671,7 @@ public class TestXercesDocumentBuilderFactory {
   	
     	
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 //		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();
 		content = content.replaceAll("\\n","");
@@ -697,7 +697,7 @@ public class TestXercesDocumentBuilderFactory {
 	public void testInternalSubset_PEReferenceInDTD() throws SAXException, IOException, ParserConfigurationException {
 		
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		content = content.replaceAll("\\n","");
 		assertEquals("it_works", content);		
@@ -726,7 +726,7 @@ public class TestXercesDocumentBuilderFactory {
 		builder = factory.newDocumentBuilder();
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 			String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		} catch (SAXParseException e) {
 			String message = e.getMessage();
@@ -746,7 +746,7 @@ public class TestXercesDocumentBuilderFactory {
 //		
 //	    try {
 //	    	
-//	    	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+//	    	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 //	    	
 //			// nothing to do for jdom/dom4j
 ////			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
@@ -774,7 +774,7 @@ public class TestXercesDocumentBuilderFactory {
 		
 		 try {
 	        	
-			 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+			 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 			 
 				// nothing to do for jdom/dom4j
 //				org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
@@ -792,7 +792,7 @@ public class TestXercesDocumentBuilderFactory {
 	public void testParameterEntity_core() throws SAXException, IOException, ParserConfigurationException {
 				
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_core.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");
 		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		content = content.replaceAll("\\n","");
 		assertEquals("it_works", content);		
@@ -820,7 +820,7 @@ public class TestXercesDocumentBuilderFactory {
 		builder = factory.newDocumentBuilder();
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_core.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");
 			String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		} catch (SAXParseException e) {
 			String message = e.getMessage();
@@ -838,7 +838,7 @@ public class TestXercesDocumentBuilderFactory {
 	    
 	    try {
 	    	
-	    	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_core.xml");
+	    	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");
 			// nothing to do for jdom/dom4j
 //			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 //			String jdomContent = jdomDocument.getRootElement().getText();			
@@ -865,7 +865,7 @@ public class TestXercesDocumentBuilderFactory {
 		
 		 try {
 	        	
-			 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_core.xml");   
+			 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");   
 				// nothing to do for jdom/dom4j
 //				org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 //				String jdomContent = jdomDocument.getRootElement().getText();			
@@ -887,7 +887,7 @@ public class TestXercesDocumentBuilderFactory {
 //    	assertFalse(factory.getFeature("http://xml.org/sax/features/external-general-entities"));
 //		
 //		builder = factory.newDocumentBuilder();
-//		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_core.xml");
+//		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");
 //		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();
 //		content = content.replaceAll("\\n","");
 //		assertEquals("it_works", content);
@@ -912,7 +912,7 @@ public class TestXercesDocumentBuilderFactory {
     	assertFalse(factory.getFeature("http://xml.org/sax/features/external-parameter-entities"));
 		
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_core.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");
 		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();	
 		assertEquals("", content);
 		
@@ -934,7 +934,7 @@ public class TestXercesDocumentBuilderFactory {
     	assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar"));
 		
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_core.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");
 		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();	
 		assertEquals("it_works", content);
 		
@@ -958,7 +958,7 @@ public class TestXercesDocumentBuilderFactory {
 		assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd"));
 		
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_core.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");
 //		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();
 		content = content.replaceAll("\\n","");
@@ -983,7 +983,7 @@ public class TestXercesDocumentBuilderFactory {
 	public void testParameterEntity_doctype() throws SAXException, IOException, ParserConfigurationException {
 		
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		content = content.replaceAll("\\n","");
 		assertEquals("it_works", content);	
@@ -1012,7 +1012,7 @@ public class TestXercesDocumentBuilderFactory {
 		builder = factory.newDocumentBuilder();
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 			String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		} catch (SAXParseException e) {
 			String message = e.getMessage();
@@ -1030,7 +1030,7 @@ public class TestXercesDocumentBuilderFactory {
 	    
 	    try {
 	    	
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 		
 		// nothing to do for jdom/dom4j
 //		org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
@@ -1058,7 +1058,7 @@ public class TestXercesDocumentBuilderFactory {
 		
 		 try {
 	        	
-			 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_doctype.xml");    
+			 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");    
 			 
 			 
 				// nothing to do for jdom/dom4j
@@ -1082,7 +1082,7 @@ public class TestXercesDocumentBuilderFactory {
 //    	
 //    	
 //		builder = factory.newDocumentBuilder();
-//		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+//		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 //		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 //		content = content.replaceAll("\\n","");
 //		assertEquals("it_works", content);	
@@ -1107,7 +1107,7 @@ public class TestXercesDocumentBuilderFactory {
     	
 		
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();
 		content = content.replaceAll("\\n","");
 		assertEquals("", content);		
@@ -1131,7 +1131,7 @@ public class TestXercesDocumentBuilderFactory {
     	
 		
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();
 		content = content.replaceAll("\\n","");
 		assertEquals("it_works", content);		
@@ -1156,7 +1156,7 @@ public class TestXercesDocumentBuilderFactory {
 		assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd"));
 		
 		builder = factory.newDocumentBuilder();
-		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+		org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 //		String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		String content = w3cDocument.getElementsByTagName("data").item(0).getTextContent();
 		content = content.replaceAll("\\n","");
@@ -1190,7 +1190,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_doctype.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1222,7 +1222,7 @@ public class TestXercesDocumentBuilderFactory {
 	        assertEquals("0", response);
 				
 			try {
-				 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_doctype.xml");
+				 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 			        
 				org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 				String jdomContent = jdomDocument.getRootElement().getText();
@@ -1259,7 +1259,7 @@ public class TestXercesDocumentBuilderFactory {
 	        
 	        try {
 	        	
-	        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_doctype.xml");
+	        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 				// nothing to do for jdom/dom4j
 //				org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 //				String jdomContent = jdomDocument.getRootElement().getText();			
@@ -1295,7 +1295,7 @@ public class TestXercesDocumentBuilderFactory {
 	        
 	        try {
 	        	
-	        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_doctype.xml");
+	        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 				// nothing to do for jdom/dom4j
 //				org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 //				String jdomContent = jdomDocument.getRootElement().getText();			
@@ -1330,7 +1330,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_doctype.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1360,7 +1360,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_doctype.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1386,7 +1386,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1416,7 +1416,7 @@ public class TestXercesDocumentBuilderFactory {
 	        assertEquals("0", response);
 				
 			try {
-				 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+				 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 			        
 				org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 				String jdomContent = jdomDocument.getRootElement().getText();
@@ -1454,7 +1454,7 @@ public class TestXercesDocumentBuilderFactory {
 	        
 	        try {
 	        	
-	        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+	        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 				// nothing to do for jdom/dom4j
 //				org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 //				String jdomContent = jdomDocument.getRootElement().getText();			
@@ -1492,7 +1492,7 @@ public class TestXercesDocumentBuilderFactory {
 	        
 	        try {
 	        	
-	        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+	        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 				// nothing to do for jdom/dom4j
 //				org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 //				String jdomContent = jdomDocument.getRootElement().getText();			
@@ -1525,7 +1525,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1551,7 +1551,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");
 			
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();			
@@ -1585,7 +1585,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1617,7 +1617,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");
 			
 	        org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1644,7 +1644,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_parameterEntity.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 			
 	        org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1674,7 +1674,7 @@ public class TestXercesDocumentBuilderFactory {
 	        assertEquals("0", response);
 				
 			try {
-				 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_parameterEntity.xml");
+				 org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 			        
 				org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 				String jdomContent = jdomDocument.getRootElement().getText();
@@ -1712,7 +1712,7 @@ public class TestXercesDocumentBuilderFactory {
 	        
 	        try {
 	        	
-	        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_parameterEntity.xml");
+	        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 				// nothing to do for jdom/dom4j
 //				org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 //				String jdomContent = jdomDocument.getRootElement().getText();			
@@ -1750,7 +1750,7 @@ public class TestXercesDocumentBuilderFactory {
 	        
 	        try {
 	        	
-	        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_parameterEntity.xml");
+	        	org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 				// nothing to do for jdom/dom4j
 //				org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 //				String jdomContent = jdomDocument.getRootElement().getText();			
@@ -1783,7 +1783,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_parameterEntity.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1811,7 +1811,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_parameterEntity.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1838,7 +1838,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_parameterEntity.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1866,7 +1866,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_schemaLocation.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1900,7 +1900,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_schemaLocation.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml");
 	        	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1932,7 +1932,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_schemaLocation.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1961,7 +1961,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_xinclude.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");
 	     
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -1996,7 +1996,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_xinclude.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -2029,7 +2029,7 @@ public class TestXercesDocumentBuilderFactory {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/url_invocation_xinclude.xml");
+	        org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");
 	        
 			org.jdom2.Document jdomDocument = jdomBuilder.build(w3cDocument);
 			String jdomContent = jdomDocument.getRootElement().getText();
@@ -2216,7 +2216,7 @@ public class TestXercesDocumentBuilderFactory {
 		builder = factory.newDocumentBuilder();
 		
 		try {
-			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+			org.w3c.dom.Document w3cDocument = builder.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 			String content = w3cDocument.getElementsByTagName("data").item(0).getFirstChild().getNodeValue();
 		} catch (SAXParseException e) {
 			String message = e.getMessage();

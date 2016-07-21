@@ -34,7 +34,7 @@ import org.xml.sax.SAXParseException;
  * 
  * @author dev
  *
- * Test cases for Xerces DOM *
+ * Test cases for Xerces SAX *
  * The test case "testDOS_entitySize" is not activated by default, because it takes too much time;
 *  Uncomment it, if you like to run it 
  *
@@ -224,7 +224,7 @@ public class TestXercesSaxParseFactory {
     public void testDOS_core_SecurityManager() throws ParserConfigurationException, SAXException, IOException {
     	
 		
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_core.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_core.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -254,7 +254,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
     	assertTrue(factory.getFeature("http://apache.org/xml/features/disallow-doctype-decl"));
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_core.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_core.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -279,7 +279,7 @@ public class TestXercesSaxParseFactory {
     
     @Test
     public void testDOS_core_setProperty_DeclHandler() throws SAXException, IOException, ParserConfigurationException {
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_core.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_core.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         
@@ -303,7 +303,7 @@ public class TestXercesSaxParseFactory {
     public void testDOS_indirections() throws ParserConfigurationException, SAXException, IOException {
     	
 		
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_indirections.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_indirections.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -329,7 +329,7 @@ public class TestXercesSaxParseFactory {
     public void testDOS_indirections_SecurityManager() throws ParserConfigurationException, SAXException, IOException {
     	
 		
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_indirections.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_indirections.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -357,7 +357,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
     	assertTrue(factory.getFeature("http://apache.org/xml/features/disallow-doctype-decl"));
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_indirections.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_indirections.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -381,7 +381,7 @@ public class TestXercesSaxParseFactory {
     
     @Test
     public void testDOS_indirections_setProperty_DeclHandler() throws SAXException, IOException, ParserConfigurationException {
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_indirections.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_indirections.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         
@@ -406,7 +406,7 @@ public class TestXercesSaxParseFactory {
     public void testDOS_indirections_parameterEntity() throws ParserConfigurationException, SAXException, IOException {
     	
 		
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/optional/dos_indirections_parameterEntity.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_indirections_parameterEntity.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -439,7 +439,7 @@ public class TestXercesSaxParseFactory {
 //    public void testDOS_entitySize() throws ParserConfigurationException, SAXException, IOException {
 //    	
 //		
-//    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_entitySize.xml");
+//    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_entitySize.xml");
 //    	    		        
 //        MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
 //        MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -463,7 +463,7 @@ public class TestXercesSaxParseFactory {
     public void testDOS_entitySize_SecurityManager() throws ParserConfigurationException, SAXException, IOException {
     	
 		
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_entitySize.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_entitySize.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -492,7 +492,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
     	assertTrue(factory.getFeature("http://apache.org/xml/features/disallow-doctype-decl"));
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_entitySize.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_entitySize.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -516,7 +516,7 @@ public class TestXercesSaxParseFactory {
     
     @Test
     public void testDOS_entitySize_setProperty_DeclHandler() throws SAXException, IOException, ParserConfigurationException {
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_entitySize.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_entitySize.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         
@@ -541,7 +541,7 @@ public class TestXercesSaxParseFactory {
     public void testDOS_recursion() throws ParserConfigurationException, SAXException, IOException {
     	
 		
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/optional/dos_recursion.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_recursion.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -597,7 +597,7 @@ public class TestXercesSaxParseFactory {
     
     @Test
     public void testInternalSubset_ExternalPEReferenceInDTD() throws ParserConfigurationException, SAXException, IOException {
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -617,7 +617,7 @@ public class TestXercesSaxParseFactory {
     public void testInternalSubset_ExternalPEReferenceInDTD_SecurityManager() throws ParserConfigurationException, SAXException, IOException {
     	
 		
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -646,7 +646,7 @@ public class TestXercesSaxParseFactory {
     @Test
     public void testInternalSubset_ExternalPEReferenceInDTD_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
     	
     	MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();
     	
@@ -682,7 +682,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
     	assertTrue(factory.getFeature("http://apache.org/xml/features/disallow-doctype-decl"));
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -713,7 +713,7 @@ public class TestXercesSaxParseFactory {
 //    	factory.setFeature("http://xml.org/sax/features/external-general-entities",false);    		
 //    	assertFalse(factory.getFeature("http://xml.org/sax/features/external-general-entities"));
 //    	
-//    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+//    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 //        
 //        MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
 //        MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -735,7 +735,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://xml.org/sax/features/external-parameter-entities",false);    		
     	assertFalse(factory.getFeature("http://xml.org/sax/features/external-parameter-entities"));
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -762,7 +762,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://xml.org/sax/features/validation", true);    		
     	assertTrue(factory.getFeature("http://xml.org/sax/features/validation"));
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -789,7 +789,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar",false);    		
     	assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar"));
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -815,7 +815,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd",false);    		
     	assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd"));
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -840,7 +840,7 @@ public class TestXercesSaxParseFactory {
     public void testInternalSubset_ExternalPEReferenceInDTD_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
     	
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
         
     	
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
@@ -875,7 +875,7 @@ public class TestXercesSaxParseFactory {
     	
   	   	
     
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -896,7 +896,7 @@ public class TestXercesSaxParseFactory {
     public void testInternalSubset_PEReferenceInDTD_SecurityManager() throws ParserConfigurationException, SAXException, IOException {
     	
 		
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -926,7 +926,7 @@ public class TestXercesSaxParseFactory {
 //    @Test
 //    public void testInternalSubset_PEReferenceInDTD_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
 //    	
-//    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+//    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 //        
 //    	MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();
 //        MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -957,7 +957,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
     	assertTrue(factory.getFeature("http://apache.org/xml/features/disallow-doctype-decl"));
     	    	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -984,7 +984,7 @@ public class TestXercesSaxParseFactory {
     @Test
     public void testInternalSubset_PEReferenceInDTD_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();
@@ -1011,7 +1011,7 @@ public class TestXercesSaxParseFactory {
     public void testParameterEntity_core() throws IOException, SAXException, ParserConfigurationException {
 	
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1031,7 +1031,7 @@ public class TestXercesSaxParseFactory {
     public void testParameterEntity_core_SecurityManager() throws ParserConfigurationException, SAXException, IOException {
     	
 		
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1061,7 +1061,7 @@ public class TestXercesSaxParseFactory {
     public void testParameterEntity_core_setEntityResolver() throws IOException, SAXException, ParserConfigurationException {
 	
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
         
 		MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1092,7 +1092,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
     	assertTrue(factory.getFeature("http://apache.org/xml/features/disallow-doctype-decl"));
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1127,7 +1127,7 @@ public class TestXercesSaxParseFactory {
 //    	factory.setFeature("http://xml.org/sax/features/external-general-entities",false);    		
 //    	assertFalse(factory.getFeature("http://xml.org/sax/features/external-general-entities"));
 //    		
-//		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+//		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
 //        
 //        MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
 //        MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1151,7 +1151,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://xml.org/sax/features/external-parameter-entities",false);    		
     	assertFalse(factory.getFeature("http://xml.org/sax/features/external-parameter-entities"));
     		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1173,7 +1173,7 @@ public class TestXercesSaxParseFactory {
 		factory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
 		assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar"));
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1195,7 +1195,7 @@ public class TestXercesSaxParseFactory {
 		factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd",false);
 		assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd"));
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1214,7 +1214,7 @@ public class TestXercesSaxParseFactory {
     public void testParameterEntity_core_setProperty_DeclHandler() throws IOException, SAXException, ParserConfigurationException {
 	
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();
@@ -1248,7 +1248,7 @@ public class TestXercesSaxParseFactory {
     public void testParameterEntity_doctype() throws IOException, SAXException, ParserConfigurationException {
 	
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1266,7 +1266,7 @@ public class TestXercesSaxParseFactory {
   public void testParameterEntity_doctype_SecurityManager() throws ParserConfigurationException, SAXException, IOException {
   	
 		
-  	InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+  	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
   	    		        
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
       MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1297,7 +1297,7 @@ public class TestXercesSaxParseFactory {
     public void testParameterEntity_doctype_setEntityResolver() throws IOException, SAXException, ParserConfigurationException {
 	
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
         
 		MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1329,7 +1329,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
     	assertTrue(factory.getFeature("http://apache.org/xml/features/disallow-doctype-decl"));
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1360,7 +1360,7 @@ public class TestXercesSaxParseFactory {
 //    	factory.setFeature("http://xml.org/sax/features/external-general-entities",false);    		
 //    	assertFalse(factory.getFeature("http://xml.org/sax/features/external-general-entities"));
 //    	
-//		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+//		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 //        
 //        MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
 //        MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1380,7 +1380,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://xml.org/sax/features/external-parameter-entities",false);    		
     	assertFalse(factory.getFeature("http://xml.org/sax/features/external-parameter-entities"));
     	
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1400,7 +1400,7 @@ public class TestXercesSaxParseFactory {
 		factory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar", false);
 		assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar"));
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1421,7 +1421,7 @@ public class TestXercesSaxParseFactory {
 		factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd",false);
 		assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd"));
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1441,7 +1441,7 @@ public class TestXercesSaxParseFactory {
     public void testParameterEntity_doctype_setProperty_DeclHandler() throws IOException, SAXException, ParserConfigurationException {
 	
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();
@@ -1478,7 +1478,7 @@ public class TestXercesSaxParseFactory {
     public void testURLInvocation_doctype() throws Exception{
 	
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1503,7 +1503,7 @@ public class TestXercesSaxParseFactory {
     @Test
     public void testURLInvocation_doctype_SecurityManager () throws Exception{
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_doctype.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
     	
     	MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
     	MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1549,7 +1549,7 @@ public class TestXercesSaxParseFactory {
     
     @Test
     public void testURLInvocation_doctype_setEntityResolver() throws Exception {
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_doctype.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
         
         MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();
         
@@ -1582,7 +1582,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
     	assertTrue(factory.getFeature("http://apache.org/xml/features/disallow-doctype-decl"));
     	
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1620,7 +1620,7 @@ public class TestXercesSaxParseFactory {
   		factory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar",false);
   		assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar"));
   		
-  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_doctype.xml");
+  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
           
           MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
           MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1648,7 +1648,7 @@ public class TestXercesSaxParseFactory {
   		factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd",false);
   		assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd"));
   		
-  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_doctype.xml");
+  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
           
           MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
           MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1672,7 +1672,7 @@ public class TestXercesSaxParseFactory {
     public void testURLInvocation_doctype_setProperty_DeclHandler() throws Exception{
 	
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();
@@ -1701,7 +1701,7 @@ public class TestXercesSaxParseFactory {
     public void testURLInvocation_externalGeneralEntity() throws Exception{
 	
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1726,7 +1726,7 @@ public class TestXercesSaxParseFactory {
     @Test
     public void testURLInvocation_externalGeneralEntity_SecurityManager () throws Exception{
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
     	
     	MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
     	MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1766,7 +1766,7 @@ public class TestXercesSaxParseFactory {
     public void testURLInvocation_externalGeneralEntity_setEntityResolver() throws Exception{
 	
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
         
 		MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1806,7 +1806,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
     	assertTrue(factory.getFeature("http://apache.org/xml/features/disallow-doctype-decl"));
     	
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1846,7 +1846,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://xml.org/sax/features/external-general-entities",false);    		
     	assertFalse(factory.getFeature("http://xml.org/sax/features/external-general-entities"));
     	
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1871,7 +1871,7 @@ public class TestXercesSaxParseFactory {
     public void testURLInvocation_externalGeneralEntity_setProperty_DeclHandler() throws Exception{
 	
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();
@@ -1905,7 +1905,7 @@ public class TestXercesSaxParseFactory {
     public void testURLInvocation_parameterEntity() throws Exception{
 	
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1930,7 +1930,7 @@ public class TestXercesSaxParseFactory {
     @Test
     public void testURLInvocation_parameterEntity_SecurityManager () throws Exception{
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
     	
     	MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
     	MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -1970,7 +1970,7 @@ public class TestXercesSaxParseFactory {
     public void testURLInvocation_parameterEntity_setEntityResolver() throws Exception{
 	
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
         
 		MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2010,7 +2010,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
     	assertTrue(factory.getFeature("http://apache.org/xml/features/disallow-doctype-decl"));
     	
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2050,7 +2050,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://xml.org/sax/features/external-parameter-entities",false);    		
     	assertFalse(factory.getFeature("http://xml.org/sax/features/external-parameter-entities"));
     	
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2079,7 +2079,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar",false);    		
     	assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-dtd-grammar"));
     	
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2109,7 +2109,7 @@ public class TestXercesSaxParseFactory {
     	factory.setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd",false);    		
     	assertFalse(factory.getFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd"));
     	
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2135,7 +2135,7 @@ public class TestXercesSaxParseFactory {
     public void testURLInvocation_parameterEntity_setProperty_DeclHandler() throws Exception{
 	
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();
@@ -2168,7 +2168,7 @@ public class TestXercesSaxParseFactory {
     public void testURLInvocation_schemaLocation() throws Exception{
   	
   			
-  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_schemaLocation.xml");
+  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
         SAXParser saxParser = factory.newSAXParser();
@@ -2194,7 +2194,7 @@ public class TestXercesSaxParseFactory {
         factory.setFeature("http://apache.org/xml/features/validation/schema", true);
         assertTrue(factory.getFeature("http://apache.org/xml/features/validation/schema"));	
     	        
-  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_schemaLocation.xml");
+  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
         SAXParser saxParser = factory.newSAXParser();
@@ -2224,7 +2224,7 @@ public class TestXercesSaxParseFactory {
         factory.setFeature("http://apache.org/xml/features/validation/schema", true);
         assertTrue(factory.getFeature("http://apache.org/xml/features/validation/schema"));	
     	        
-  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_schemaLocation.xml");
+  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
         SAXParser saxParser = factory.newSAXParser();
@@ -2248,7 +2248,7 @@ public class TestXercesSaxParseFactory {
 	
 	  assertFalse(factory.getFeature("http://xml.org/sax/features/namespaces"));
 			
-	  InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_xinclude.xml");
+	  InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");
       
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
       SAXParser saxParser = factory.newSAXParser();
@@ -2274,7 +2274,7 @@ public class TestXercesSaxParseFactory {
    	factory.setFeature("http://apache.org/xml/features/xinclude", true);
    	assertTrue(factory.getFeature("http://apache.org/xml/features/xinclude"));
    	
-	InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_xinclude.xml");
+	InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");
       
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
       SAXParser saxParser = factory.newSAXParser();
@@ -2304,7 +2304,7 @@ public class TestXercesSaxParseFactory {
    	factory.setFeature("http://apache.org/xml/features/xinclude", true);
    	assertTrue(factory.getFeature("http://apache.org/xml/features/xinclude"));
    	
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_xinclude.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");
       
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
       SAXParser saxParser = factory.newSAXParser();
@@ -2334,7 +2334,7 @@ public class TestXercesSaxParseFactory {
 ////	   	factory.setFeature("http://apache.org/xml/features/xinclude", true);
 ////	   	assertTrue(factory.getFeature("http://apache.org/xml/features/xinclude"));
 //	   	
-//			InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_xinclude.xml");
+//			InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");
 //	      
 //	      MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
 //	      SAXParser saxParser = factory.newSAXParser();
@@ -2354,7 +2354,7 @@ public class TestXercesSaxParseFactory {
   public void testURLInvocation_noNamespaceSchemaLocation() throws Exception{
 	
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");
       
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
       SAXParser saxParser = factory.newSAXParser();
@@ -2381,7 +2381,7 @@ public class TestXercesSaxParseFactory {
       factory.setFeature("http://apache.org/xml/features/validation/schema", true);
       assertTrue(factory.getFeature("http://apache.org/xml/features/validation/schema"));	
   	        
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");
       
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
       SAXParser saxParser = factory.newSAXParser();
@@ -2411,7 +2411,7 @@ public class TestXercesSaxParseFactory {
       factory.setFeature("http://apache.org/xml/features/validation/schema", true);
       assertTrue(factory.getFeature("http://apache.org/xml/features/validation/schema"));	
   	        
-      InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
+      InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");
       
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
       SAXParser saxParser = factory.newSAXParser();
@@ -2543,7 +2543,7 @@ public class TestXercesSaxParseFactory {
   public void testXXE() throws IOException,SAXException, ParserConfigurationException {
   	
 	  
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
       
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
       MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2562,7 +2562,7 @@ public class TestXercesSaxParseFactory {
   public void testXXE_SecurityManager() throws ParserConfigurationException, SAXException, IOException {
   	
 		
-  	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe.xml");
+  	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
   	    		        
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
       MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2592,7 +2592,7 @@ public class TestXercesSaxParseFactory {
   public void testXXE_SecurityManager_set_0() throws ParserConfigurationException, SAXException, IOException {
   	
 		
-  	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe.xml");
+  	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
   	    		        
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
       MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2615,7 +2615,7 @@ public class TestXercesSaxParseFactory {
   @Test
   public void testXXE_setEntityResolver() throws IOException,SAXException, ParserConfigurationException {
 	
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
       
 		MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();
       MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2647,7 +2647,7 @@ public class TestXercesSaxParseFactory {
   	assertTrue(factory.getFeature("http://apache.org/xml/features/disallow-doctype-decl"));
   	
   	
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
       
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
       MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2681,7 +2681,7 @@ public class TestXercesSaxParseFactory {
 	    
 	    
 	    
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
       
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
       MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2709,7 +2709,7 @@ public class TestXercesSaxParseFactory {
 	    
 	   
 	    
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
       
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
       MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -2730,7 +2730,7 @@ public class TestXercesSaxParseFactory {
   @Test
   public void testXXE_setProperty_setProperty_DeclHandler() throws IOException,SAXException, ParserConfigurationException {
 	
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
       
       MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
       MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();

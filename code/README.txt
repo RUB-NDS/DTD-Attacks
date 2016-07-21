@@ -113,3 +113,21 @@ Folder structure of /code/ruby:
 Steps:
 1. Open a command prompt and navigate to the directory /code/ruby/parserName (e.g. nokogiri)
 2. Execute all tests by typing "ruby test*.rb" (e.g. testNokogiri.rb )
+
+
+
+***********************************************
+Android
+***********************************************
+Folder structure of /code/android:
+
+    <DIR>          Parsers
+    <DIR>          SimpleWebServer
+	
+Steps:
+Instead of the webserver on your local machine, start the SimpleWebServer App on the device.
+Place the test files into the root directory of /data/data/de.rub.nds.parsers (adb push <filename>)
+1. Open Android Developer Studio and select the corresponding Android Instrumentation Test (e.g. DocumentBuilderFactoryTest)
+2. Open the context menu and select "Run DocumentBuilderFactoryTest"
+3. Choose a device or emulator to run the tests on and confirm
+

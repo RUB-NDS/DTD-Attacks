@@ -55,39 +55,39 @@ class MyContentHandlerTest(unittest.TestCase):
 
 	def testDOS_core(self):
 		with self.assertRaises(EntitiesForbidden):
-			self.parser.parse('../../xml_files_windows/dos_core.xml')                      
+			self.parser.parse('../../xml_files_windows/dos/dos_core.xml')                      
 			
 
 	def testDOS_indirections(self):
 		with self.assertRaises(EntitiesForbidden):
-			self.parser.parse('../../xml_files_windows/dos_indirections.xml')                      
+			self.parser.parse('../../xml_files_windows/dos/dos_indirections.xml')                      
 		
 
 	def testDOS_entitySize(self):
 		with self.assertRaises(EntitiesForbidden):
-			self.parser.parse('../../xml_files_windows/dos_entitySize.xml')                      
+			self.parser.parse('../../xml_files_windows/dos/dos_entitySize.xml')                      
 		
 
 	def testXXE(self):
 		with self.assertRaises(EntitiesForbidden):
-			self.parser.parse('../../xml_files_windows/xxe.xml')                       
+			self.parser.parse('../../xml_files_windows/xxe/xxe.xml')                       
 		
 
 	def testInternalSubset_ExternalPEReferenceInDTD(self):                      
 		with self.assertRaises(EntitiesForbidden):
-			self.parser.parse('../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml')
+			self.parser.parse('../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml')
 		
 		
 
 	def testInternalSubset_PEReferenceInDTD(self):                              
 		with self.assertRaises(EntitiesForbidden):
-			self.parser.parse('../../xml_files_windows/internalSubset_PEReferenceInDTD.xml')
+			self.parser.parse('../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml')
 		                          	
 		
 		
 	def testParameterEntity_core(self):		
 		with self.assertRaises(EntitiesForbidden):
-			self.parser.parse('../../xml_files_windows/parameterEntity_core.xml')
+			self.parser.parse('../../xml_files_windows/xxep/parameterEntity_core.xml')
 		
 
 	'''
@@ -95,7 +95,7 @@ class MyContentHandlerTest(unittest.TestCase):
 	'''
 	def testParameterEntity_doctype(self):
 		with self.assertRaises(ExternalReferenceForbidden):
-			self.parser.parse('../../xml_files_windows/parameterEntity_doctype.xml')
+			self.parser.parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml')
 		
 		
 	'''
@@ -110,7 +110,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		self.assertEqual("0", request_content)   
 		
 		with self.assertRaises(ExternalReferenceForbidden):
-			self.parser.parse('../../xml_files_windows/url_invocation_doctype.xml')                  
+			self.parser.parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml')                  
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -125,7 +125,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		self.assertEqual("0", request_content)   
 		
 		with self.assertRaises(EntitiesForbidden):		
-			self.parser.parse('../../xml_files_windows/url_invocation_externalGeneralEntity.xml')                     
+			self.parser.parse('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml')                     
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -142,7 +142,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		self.assertEqual("0", request_content)   
 		
 		with self.assertRaises(EntitiesForbidden):	
-			self.parser.parse('../../xml_files_windows/url_invocation_parameterEntity.xml')                      
+			self.parser.parse('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -160,7 +160,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		self.assertEqual("0", request_content)   
 
 
-		self.parser.parse('../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml')                
+		self.parser.parse('../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml')                
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -176,7 +176,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.parser.parse('../../xml_files_windows/url_invocation_schemaLocation.xml')                      
+		self.parser.parse('../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -191,7 +191,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.parser.parse('../../xml_files_windows/url_invocation_xinclude.xml')                      
+		self.parser.parse('../../xml_files_windows/ssrf/url_invocation_xinclude.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             

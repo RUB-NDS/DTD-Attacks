@@ -19,7 +19,7 @@ class TestNokogiri < Test::Unit::TestCase
 
 
     def testDOS_core
-        f = File.open("../../xml_files_windows/dos_core.xml")
+        f = File.open("../../xml_files_windows/dos/dos_core.xml")
    
           doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
@@ -35,7 +35,7 @@ class TestNokogiri < Test::Unit::TestCase
     end
 =begin
     def testDOS_core_ParseOptions_HUGE 
-        f = File.open("../../xml_files_windows/dos_core.xml")
+        f = File.open("../../xml_files_windows/dos/dos_core.xml")
          doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -56,7 +56,7 @@ IF options=Nokogiri::XML::ParseOptions::STRICT THEN
 Nokogiri::XML::SyntaxError: Detected an entity reference loop
 =end
     def testDOS_indirections
-        f = File.open("../../xml_files_windows/dos_indirections.xml")
+        f = File.open("../../xml_files_windows/dos/dos_indirections.xml")
    
         #assert_raise(Nokogiri::XML::SyntaxError ) {
           doc = Nokogiri::XML::Document.parse(f,  
@@ -72,7 +72,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
     end
 
     def testDOS_indirections_ParseOptions_HUGE 
-        f = File.open("../../xml_files_windows/dos_indirections.xml")
+        f = File.open("../../xml_files_windows/dos/dos_indirections.xml")
          doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -88,7 +88,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
     end
 	
 	def testDOS_indirections_parameterEntity
-        f = File.open("../../xml_files_windows/optional/dos_indirections_parameterEntity.xml")
+        f = File.open("../../xml_files_windows/dos/dos_indirections_parameterEntity.xml")
    
         #assert_raise(Nokogiri::XML::SyntaxError ) {
           doc = Nokogiri::XML::Document.parse(f,  
@@ -105,7 +105,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 
 
     def testDOS_entitySize
-        f = File.open("../../xml_files_windows/dos_entitySize.xml")
+        f = File.open("../../xml_files_windows/dos/dos_entitySize.xml")
 
           doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
@@ -121,7 +121,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 
 =begin
     def testDOS_entitySize_ParseOptions_HUGE 
-        f = File.open("../../xml_files_windows/dos_entitySize.xml")
+        f = File.open("../../xml_files_windows/dos/dos_entitySize.xml")
          doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -138,7 +138,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 =end
 
 	def testDOS_recursion
-        f = File.open("../../xml_files_windows/optional/dos_recursion.xml")
+        f = File.open("../../xml_files_windows/dos/dos_recursion.xml")
 
           doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
@@ -159,7 +159,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 
 
     def    testInternalSubset_ExternalPEReferenceInDTD
-        f = File.open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml")
+        f = File.open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml")
 
          doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
@@ -172,7 +172,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
     end
 	
 	def testInternalSubset_ExternalPEReferenceInDTD_ParseOptions_DTDATTR
-        f = File.open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml")
+        f = File.open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml")
 
          doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
@@ -186,7 +186,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
     end
 	
 	def testInternalSubset_ExternalPEReferenceInDTD_ParseOptions_DTDLOAD
-        f = File.open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml")
+        f = File.open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml")
 
          doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
@@ -200,7 +200,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
     end
 	
 	def testInternalSubset_ExternalPEReferenceInDTD_ParseOptions_DTDVALID
-        f = File.open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml")
+        f = File.open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml")
 
          doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
@@ -215,7 +215,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 	
 
     def   testInternalSubset_ExternalPEReferenceInDTD_ParseOptions_NOENT 
-        f = File.open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml")
+        f = File.open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml")
          doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -228,7 +228,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 
    def testInternalSubset_PEReferenceInDTD
  
-       f = File.open("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml")
+       f = File.open("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml")
        doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil)
@@ -241,7 +241,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 	
 	def testParameterEntity_core
 
-        f = File.open("../../xml_files_windows/parameterEntity_core.xml")
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_core.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil)
@@ -253,7 +253,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 	
 	def testParameterEntity_core_ParseOptions_DTDATTR
 
-        f = File.open("../../xml_files_windows/parameterEntity_core.xml")
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_core.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -267,7 +267,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
     end 
 	
 	def   testParameterEntity_core_ParseOptions_DTDATTR_NONET    
-        f = File.open("../../xml_files_windows/parameterEntity_core.xml") 
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_core.xml") 
        doc = Nokogiri::XML::Document.parse(f,  
                                            url=nil,                                  
                                            encoding=nil,                              
@@ -284,7 +284,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 	
 	def testParameterEntity_core_ParseOptions_DTDLOAD
 
-        f = File.open("../../xml_files_windows/parameterEntity_core.xml")
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_core.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -299,7 +299,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 
 	def testParameterEntity_core_ParseOptions_DTDLOAD_NONET
 
-        f = File.open("../../xml_files_windows/parameterEntity_core.xml")
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_core.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -315,7 +315,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 
     def testParameterEntity_core_ParseOptions_DTDVALID
 
-        f = File.open("../../xml_files_windows/parameterEntity_core.xml")
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_core.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -330,7 +330,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 	
 	def testParameterEntity_core_ParseOptions_DTDVALID_NONET
 
-        f = File.open("../../xml_files_windows/parameterEntity_core.xml")
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_core.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -345,7 +345,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 
     def testParameterEntity_core_ParseOptions_NOENT
 
-        f = File.open("../../xml_files_windows/parameterEntity_core.xml")
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_core.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -360,7 +360,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 
     def testParameterEntity_core_ParseOptions_NOENT_NONET
 
-        f = File.open("../../xml_files_windows/parameterEntity_core.xml")
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_core.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                             url=nil,                                  
                                             encoding=nil,                              
@@ -375,7 +375,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 
 
     def   testParameterEntity_doctype    
-        f = File.open("../../xml_files_windows/parameterEntity_doctype.xml")
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_doctype.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil)
@@ -385,7 +385,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
     end
 	
 	def   testParameterEntity_doctype_ParseOptions_DTDATTR    
-        f = File.open("../../xml_files_windows/parameterEntity_doctype.xml") 
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_doctype.xml") 
        doc = Nokogiri::XML::Document.parse(f,  
                                            url=nil,                                  
                                            encoding=nil,                              
@@ -398,7 +398,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
     end
 	
 	def   testParameterEntity_doctype_ParseOptions_DTDATTR_NONET    
-        f = File.open("../../xml_files_windows/parameterEntity_doctype.xml") 
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_doctype.xml") 
        doc = Nokogiri::XML::Document.parse(f,  
                                            url=nil,                                  
                                            encoding=nil,                              
@@ -412,7 +412,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
     end
 
     def   testParameterEntity_doctype_ParseOptions_DTDLOAD    
-        f = File.open("../../xml_files_windows/parameterEntity_doctype.xml") 
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_doctype.xml") 
        doc = Nokogiri::XML::Document.parse(f,  
                                            url=nil,                                  
                                            encoding=nil,                              
@@ -425,7 +425,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
     end
 
     def   testParameterEntity_doctype_ParseOptions_DTDLOAD_NONET
-        f = File.open("../../xml_files_windows/parameterEntity_doctype.xml") 
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_doctype.xml") 
        doc = Nokogiri::XML::Document.parse(f,  
                                            url=nil,                                  
                                            encoding=nil,                              
@@ -440,7 +440,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
     end
 	
 	def   testParameterEntity_doctype_ParseOptions_DTDVALID
-        f = File.open("../../xml_files_windows/parameterEntity_doctype.xml") 
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_doctype.xml") 
        doc = Nokogiri::XML::Document.parse(f,  
                                            url=nil,                                  
                                            encoding=nil,                              
@@ -453,7 +453,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
     end
 	
 	def   testParameterEntity_doctype_ParseOptions_DTDVALID_NONET
-        f = File.open("../../xml_files_windows/parameterEntity_doctype.xml") 
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_doctype.xml") 
        doc = Nokogiri::XML::Document.parse(f,  
                                            url=nil,                                  
                                            encoding=nil,                              
@@ -468,7 +468,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
 
 
     def   testParameterEntity_doctype_ParseOptions_NOENT
-        f = File.open("../../xml_files_windows/parameterEntity_doctype.xml")  
+        f = File.open("../../xml_files_windows/xxep/parameterEntity_doctype.xml")  
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -495,7 +495,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_doctype.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_doctype.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil)
@@ -518,7 +518,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_doctype.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_doctype.xml")
           doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -542,7 +542,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_doctype.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_doctype.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                             url=nil,                                  
                                             encoding=nil,                              
@@ -571,7 +571,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_doctype.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_doctype.xml")
           doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -595,7 +595,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_doctype.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_doctype.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                             url=nil,                                  
                                             encoding=nil,                              
@@ -622,7 +622,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_doctype.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_doctype.xml")
           doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -646,7 +646,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_doctype.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_doctype.xml")
           doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -671,7 +671,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_doctype.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_doctype.xml")
           doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -697,7 +697,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil)
@@ -718,7 +718,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,
@@ -742,7 +742,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,
@@ -767,7 +767,7 @@ Nokogiri::XML::SyntaxError: Detected an entity reference loop
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,
@@ -795,7 +795,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
 		
 		assert_raise(Nokogiri::XML::SyntaxError ) {
 		
-			f = File.open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml")
+			f = File.open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml")
 			doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,
@@ -822,7 +822,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml")
 #        doc = Nokogiri::XML(f) do |config|
 #           config.noent
 #        end 
@@ -856,7 +856,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
 	   
 		assert_raise(Nokogiri::XML::SyntaxError ) {
 		
-			f = File.open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml")
+			f = File.open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml")
 			doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -880,7 +880,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil)
@@ -904,7 +904,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_parameterEntity.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml")
          doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil)
@@ -927,7 +927,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_parameterEntity.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml")
 		
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
@@ -952,7 +952,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_parameterEntity.xml") 
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml") 
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -978,7 +978,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_parameterEntity.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml")
 		
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
@@ -1003,7 +1003,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_parameterEntity.xml") 
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml") 
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -1029,7 +1029,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_parameterEntity.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml")
 #        doc = Nokogiri::XML(f) do |config|
 #           config.noent
 #        end 
@@ -1058,7 +1058,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_parameterEntity.xml") 
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml") 
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -1085,7 +1085,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_parameterEntity.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml")
 #        doc = Nokogiri::XML(f) do |config|
 #           config.noent
 #        end 
@@ -1115,7 +1115,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_parameterEntity.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml")
          doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -1142,7 +1142,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_schemaLocation.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil)
@@ -1162,7 +1162,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_xinclude.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_xinclude.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil)
@@ -1183,7 +1183,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_xinclude.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_xinclude.xml")
          doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil,                              
@@ -1205,7 +1205,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
        result = result.strip()
        assert_equal("0", result)
 
-        f = File.open("../../xml_files_windows/url_invocation_xinclude.xml")
+        f = File.open("../../xml_files_windows/ssrf/url_invocation_xinclude.xml")
 
         assert_raises(Nokogiri::XML::SyntaxError) {
 
@@ -1272,7 +1272,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
     end
   
     def    testXXE
-        f = File.open("../../xml_files_windows/xxe.xml")
+        f = File.open("../../xml_files_windows/xxe/xxe.xml")
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
                                                encoding=nil)
@@ -1283,7 +1283,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
     end
 	
 	def testXXE_ParseOptions_DTDLOAD
-        f = File.open("../../xml_files_windows/xxe.xml")
+        f = File.open("../../xml_files_windows/xxe/xxe.xml")
 
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
@@ -1297,7 +1297,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
     end
 	
 	def testXXE_ParseOptions_DTDLOAD
-        f = File.open("../../xml_files_windows/xxe.xml")
+        f = File.open("../../xml_files_windows/xxe/xxe.xml")
 
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
@@ -1311,7 +1311,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
     end
 	
 	def testXXE_ParseOptions_DTDVALID
-        f = File.open("../../xml_files_windows/xxe.xml")
+        f = File.open("../../xml_files_windows/xxe/xxe.xml")
 
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  
@@ -1325,7 +1325,7 @@ Nokogiri::XML::SyntaxError: Entity 'remote' not defined
     end
     
     def testXXE_ParseOptions_NOENT
-        f = File.open("../../xml_files_windows/xxe.xml")
+        f = File.open("../../xml_files_windows/xxe/xxe.xml")
 
         doc = Nokogiri::XML::Document.parse(f,  
                                                url=nil,                                  

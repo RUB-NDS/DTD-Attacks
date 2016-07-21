@@ -26,7 +26,7 @@ class Test(unittest.TestCase):
 
 	def testDOS_core(self):
 		parser = XMLParser()
-		tree = parse('../../xml_files_windows/dos_core.xml',parser)
+		tree = parse('../../xml_files_windows/dos/dos_core.xml',parser)
 		root = tree.getroot()
 		count = root.text.count("dos")
 		expectedCount = 25
@@ -34,7 +34,7 @@ class Test(unittest.TestCase):
 
 	def testDOS_core_resolve_entities (self):
 		parser = XMLParser(resolve_entities=False)
-		tree = parse('../../xml_files_windows/dos_core.xml',parser)
+		tree = parse('../../xml_files_windows/dos/dos_core.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 
@@ -44,12 +44,12 @@ class Test(unittest.TestCase):
 	def testDOS_indirections(self):
 		with self.assertRaises(XMLSyntaxError):
 			parser = XMLParser()
-			tree = parse('../../xml_files_windows/dos_indirections.xml',parser)
+			tree = parse('../../xml_files_windows/dos/dos_indirections.xml',parser)
 
 
 	def testDOS_indirections_huge_tree(self):
 		parser = XMLParser(huge_tree=True)
-		tree = parse('../../xml_files_windows/dos_indirections.xml',parser)
+		tree = parse('../../xml_files_windows/dos/dos_indirections.xml',parser)
 		root = tree.getroot()
 		count = root.text.count("dos")
 		expectedCount = 10000 
@@ -58,14 +58,14 @@ class Test(unittest.TestCase):
 
 	def testDOS_indirections_huge_tree_resolve_entities (self):
 		parser = XMLParser(huge_tree=True, resolve_entities=False)
-		tree = parse('../../xml_files_windows/dos_indirections.xml',parser)
+		tree = parse('../../xml_files_windows/dos/dos_indirections.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 
 
 	def testDOS_entitySize(self):
 			parser = XMLParser()
-			tree = parse('../../xml_files_windows/dos_entitySize.xml',parser)
+			tree = parse('../../xml_files_windows/dos/dos_entitySize.xml',parser)
 			root = tree.getroot()
 			count = root.text.count("dos")
 			expectedCount = 3400000 
@@ -73,14 +73,14 @@ class Test(unittest.TestCase):
 
 	def testDOS_entitySize_resolve_entities (self):
 		parser = XMLParser(resolve_entities=False)
-		tree = parse('../../xml_files_windows/dos_entitySize.xml',parser)
+		tree = parse('../../xml_files_windows/dos/dos_entitySize.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 		
 	def testDOS_indirections_parameterEntity(self):
 		with self.assertRaises(XMLSyntaxError):
 			parser = XMLParser()
-			tree = parse('../../xml_files_windows/optional/dos_indirections_parameterEntity.xml',parser)
+			tree = parse('../../xml_files_windows/dos/dos_indirections_parameterEntity.xml',parser)
 		
 	'''
 	XMLSyntaxError: Detected an entity reference loop, line 1, column 4
@@ -88,82 +88,82 @@ class Test(unittest.TestCase):
 	def testDOS_recursion (self):	
 		with self.assertRaises(XMLSyntaxError):
 			parser = XMLParser()	
-			tree = parse('../../xml_files_windows/optional/dos_recursion.xml',parser)
+			tree = parse('../../xml_files_windows/dos/dos_recursion.xml',parser)
 		
 
 	def testXXE(self):
 		parser = XMLParser()
-		tree = parse('../../xml_files_windows/xxe.xml',parser)
+		tree = parse('../../xml_files_windows/xxe/xxe.xml',parser)
 		root = tree.getroot()
 		self.assertEquals('it_works', root.text)
 
 	def testXXE_resolve_entities(self):
 		parser = XMLParser(resolve_entities=False)
-		tree = parse('../../xml_files_windows/xxe.xml',parser)
+		tree = parse('../../xml_files_windows/xxe/xxe.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 		
 	def testXXE_attribute_defaults_resolve_entities(self):
 		parser = XMLParser(attribute_defaults=True, resolve_entities=False)
-		tree = parse('../../xml_files_windows/xxe.xml',parser)
+		tree = parse('../../xml_files_windows/xxe/xxe.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)	
 
 	def testXXE_dtd_validation_resolve_entities(self):
 		parser = XMLParser(dtd_validation=True, resolve_entities=False)
-		tree = parse('../../xml_files_windows/xxe.xml',parser)
+		tree = parse('../../xml_files_windows/xxe/xxe.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 		
 	
 	def testXXE_load_dtd_resolve_entities(self):
 		parser = XMLParser(load_dtd=True, resolve_entities=False)
-		tree = parse('../../xml_files_windows/xxe.xml',parser)
+		tree = parse('../../xml_files_windows/xxe/xxe.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 		
 								 
 	def testInternalSubset_ExternalPEReferenceInDTD(self):                      
 		parser = XMLParser()
-		tree = parse('../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml',parser)
 		root = tree.getroot()
 		self.assertEquals("it_works", root.text)
 		
 	def testInternalSubset_ExternalPEReferenceInDTD_attribute_defaults_resolve_entities(self):                      
 		parser = XMLParser(attribute_defaults=True, resolve_entities=False)
-		tree = parse('../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 
 	def testInternalSubset_ExternalPEReferenceInDTD_dtd_validation_resolve_entities(self):                      
 		parser = XMLParser(dtd_validation=True,resolve_entities=False)
-		tree = parse('../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 		
 	def testInternalSubset_ExternalPEReferenceInDTD_load_dtd_resolve_entities(self):                      
 		parser = XMLParser(load_dtd=True,resolve_entities=False)
-		tree = parse('../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 
 
 	def testInternalSubset_ExternalPEReferenceInDTD_resolve_entities(self):                      
 		parser = XMLParser(resolve_entities=False)
-		tree = parse('../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 
 		
 	def testInternalSubset_PEReferenceInDTD(self):                              
 		parser = XMLParser()
-		tree = parse('../../xml_files_windows/internalSubset_PEReferenceInDTD.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml',parser)
 		root = tree.getroot()
 		self.assertEquals("it_works", root.text)
 
 	def testInternalSubset_PEReferenceInDTD_resolve_entities(self):                              
 		parser = XMLParser(resolve_entities=False)
-		tree = parse('../../xml_files_windows/internalSubset_PEReferenceInDTD.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 
@@ -175,14 +175,14 @@ class Test(unittest.TestCase):
 		with self.assertRaises(XMLSyntaxError):
 		#gives an XMLSyntaxError when trying to access resource
 			parser = XMLParser()
-			tree = parse('../../xml_files_windows/parameterEntity_core.xml',parser)
+			tree = parse('../../xml_files_windows/xxep/parameterEntity_core.xml',parser)
 	'''
 	XMLSyntaxError: Entity 'all' not defined, line 10, column 12	
 	'''
 	def testParameterEntity_core_attribute_defaults(self):
 		with self.assertRaises(XMLSyntaxError):
 			parser = XMLParser(attribute_defaults=True)
-			tree = parse('../../xml_files_windows/parameterEntity_core.xml',parser)
+			tree = parse('../../xml_files_windows/xxep/parameterEntity_core.xml',parser)
 
 	
 	'''
@@ -190,7 +190,7 @@ class Test(unittest.TestCase):
 	def testParameterEntity_core_attribute_defaults_no_network(self):
 		#with self.assertRaises(XMLSyntaxError):
 		parser = XMLParser(attribute_defaults=True, no_network=False)
-		tree = parse('../../xml_files_windows/parameterEntity_core.xml',parser)	
+		tree = parse('../../xml_files_windows/xxep/parameterEntity_core.xml',parser)	
 		root = tree.getroot()
 		self.assertEquals("it_works", root.text)
 	'''
@@ -201,18 +201,18 @@ class Test(unittest.TestCase):
 	def testParameterEntity_core_dtd_validation(self):
 		with self.assertRaises(XMLSyntaxError):
 			parser = XMLParser(dtd_validation=True)
-			tree = parse('../../xml_files_windows/parameterEntity_core.xml',parser)
+			tree = parse('../../xml_files_windows/xxep/parameterEntity_core.xml',parser)
 
 	def testParameterEntity_core_no_network(self):
 		parser = XMLParser(no_network=False)
-		tree = parse('../../xml_files_windows/parameterEntity_core.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/parameterEntity_core.xml',parser)
 		root = tree.getroot()
 		self.assertEquals("it_works", root.text)
 
 
 	def testParameterEntity_core_no_network_resolve_entities(self):
 		parser = XMLParser(no_network=False, resolve_entities=False)
-		tree = parse('../../xml_files_windows/parameterEntity_core.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/parameterEntity_core.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 
@@ -222,7 +222,7 @@ class Test(unittest.TestCase):
 	def testParameterEntity_doctype(self):
 		with self.assertRaises(XMLSyntaxError):
 			parser = XMLParser()
-			tree = parse('../../xml_files_windows/parameterEntity_doctype.xml',parser)
+			tree = parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml',parser)
 
 	'''
 	XMLSyntaxError: Entity 'all' not defined, line 3, column 12
@@ -230,19 +230,19 @@ class Test(unittest.TestCase):
 	def testParameterEntity_doctype_attribute_defaults(self):
 		with self.assertRaises(XMLSyntaxError):
 			parser = XMLParser(attribute_defaults=True)
-			tree = parse('../../xml_files_windows/parameterEntity_doctype.xml',parser)
+			tree = parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml',parser)
 
 		
 	def testParameterEntity_doctype_attribute_defaults_no_network(self):		
 		parser = XMLParser(attribute_defaults=True, no_network=False)
-		tree = parse('../../xml_files_windows/parameterEntity_doctype.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml',parser)
 		root = tree.getroot()
 		self.assertEquals("it_works", root.text)
 		
 		
 	def testParameterEntity_doctype_attribute_defaults_no_network_resolve_entities(self):
 		parser = XMLParser(attribute_defaults=True, no_network=False, resolve_entities=False)
-		tree = parse('../../xml_files_windows/parameterEntity_doctype.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 		
@@ -252,17 +252,17 @@ class Test(unittest.TestCase):
 	def testParameterEntity_doctype_dtd_validation(self):
 		with self.assertRaises(XMLSyntaxError):
 			parser = XMLParser(dtd_validation=True)
-			tree = parse('../../xml_files_windows/parameterEntity_doctype.xml',parser)
+			tree = parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml',parser)
 
 	def testParameterEntity_doctype_dtd_validation_no_network(self):		
 		parser = XMLParser(dtd_validation=True, no_network=False)
-		tree = parse('../../xml_files_windows/parameterEntity_doctype.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml',parser)
 		root = tree.getroot()
 		self.assertEquals("it_works", root.text)
 	
 	def testParameterEntity_doctype_dtd_validation_no_network_resolve_entities(self):
 		parser = XMLParser(dtd_validation=True, no_network=False, resolve_entities=False)
-		tree = parse('../../xml_files_windows/parameterEntity_doctype.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 	
@@ -274,18 +274,18 @@ class Test(unittest.TestCase):
 		# this is only inserted to make this setting clear
 		with self.assertRaises(XMLSyntaxError):
 			parser = XMLParser(load_dtd=True, no_network=True)
-			tree = parse('../../xml_files_windows/parameterEntity_doctype.xml',parser)
+			tree = parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml',parser)
 
 		
 	def testParameterEntity_doctype_load_dtd_no_network(self):		
 		parser = XMLParser(load_dtd=True, no_network=False)
-		tree = parse('../../xml_files_windows/parameterEntity_doctype.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml',parser)
 		root = tree.getroot()
 		self.assertEquals("it_works", root.text)
 		
 	def testParameterEntity_doctype_load_dtd_no_network_resolve_entities(self):
 		parser = XMLParser(load_dtd=True, no_network=False, resolve_entities=False)
-		tree = parse('../../xml_files_windows/parameterEntity_doctype.xml',parser)
+		tree = parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml',parser)
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 		
@@ -297,7 +297,7 @@ class Test(unittest.TestCase):
 	def testParameterEntity_doctype_no_network(self):
 		with self.assertRaises(XMLSyntaxError):
 			parser = XMLParser(no_network=False)
-			tree = parse('../../xml_files_windows/parameterEntity_doctype.xml',parser)
+			tree = parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml',parser)
 
 
 	def testURLInvocation_doctype(self):
@@ -309,7 +309,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)      
 
-		root = parse('../../xml_files_windows/url_invocation_doctype.xml', parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml', parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -325,7 +325,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)      
 
-		root = parse('../../xml_files_windows/url_invocation_doctype.xml', parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml', parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -341,7 +341,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)      
 
-		root = parse('../../xml_files_windows/url_invocation_doctype.xml', parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml', parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -358,7 +358,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)      
 
-		root = parse('../../xml_files_windows/url_invocation_doctype.xml', parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml', parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -374,7 +374,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)      
 
-		root = parse('../../xml_files_windows/url_invocation_doctype.xml', parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml', parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -391,7 +391,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)      
 
-		root = parse('../../xml_files_windows/url_invocation_doctype.xml', parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml', parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -413,7 +413,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)      
 
-		root = parse('../../xml_files_windows/url_invocation_doctype.xml', parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml', parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -431,7 +431,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)      
 
-		root = parse('../../xml_files_windows/url_invocation_doctype.xml', parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml', parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -447,7 +447,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)      
 
-		root = parse('../../xml_files_windows/url_invocation_doctype.xml', parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml', parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -468,7 +468,7 @@ class Test(unittest.TestCase):
 
 		parser = XMLParser() 
 		with self.assertRaises(XMLSyntaxError):
-			root = parse('../../xml_files_windows/url_invocation_externalGeneralEntity.xml',parser)
+			root = parse('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml',parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -488,7 +488,7 @@ class Test(unittest.TestCase):
 
 		parser = XMLParser(attribute_defaults=True) 
 		with self.assertRaises(XMLSyntaxError):
-			root = parse('../../xml_files_windows/url_invocation_externalGeneralEntity.xml',parser)
+			root = parse('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml',parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -508,7 +508,7 @@ class Test(unittest.TestCase):
 
 		parser = XMLParser(dtd_validation=True) 
 		with self.assertRaises(XMLSyntaxError):
-			root = parse('../../xml_files_windows/url_invocation_externalGeneralEntity.xml',parser)
+			root = parse('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml',parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -526,7 +526,7 @@ class Test(unittest.TestCase):
 
 		parser = XMLParser(no_network=False) 
 
-		root = parse('../../xml_files_windows/url_invocation_externalGeneralEntity.xml',parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml',parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -544,7 +544,7 @@ class Test(unittest.TestCase):
 
 		parser = XMLParser(no_network=False, resolve_entities=False) 
 
-		root = parse('../../xml_files_windows/url_invocation_externalGeneralEntity.xml',parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml',parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -560,7 +560,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)     
 
 		parser = XMLParser() 
-		root = parse('../../xml_files_windows/url_invocation_parameterEntity.xml',parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml',parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -576,7 +576,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)      
 
 		parser = XMLParser(attribute_defaults=True) 
-		root = parse('../../xml_files_windows/url_invocation_parameterEntity.xml',parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml',parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -592,7 +592,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)      
 
 		parser = XMLParser(dtd_validation=True) 
-		root = parse('../../xml_files_windows/url_invocation_parameterEntity.xml',parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml',parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -608,7 +608,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)     
 
 		parser = XMLParser(load_dtd=True) 
-		root = parse('../../xml_files_windows/url_invocation_parameterEntity.xml',parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml',parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -625,7 +625,7 @@ class Test(unittest.TestCase):
 
 		parser = XMLParser(no_network=False) 
 
-		root = parse('../../xml_files_windows/url_invocation_parameterEntity.xml',parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml',parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -643,12 +643,12 @@ class Test(unittest.TestCase):
 
 		parser = XMLParser(no_network=False, resolve_entities=False) 
 
-		root = parse('../../xml_files_windows/url_invocation_parameterEntity.xml',parser)
+		root = parse('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml',parser)
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
-		request_content = r.text.replace("\r\n","")                             
-		self.assertEqual("1", request_content)                                  
+		request_content = r.text.replace("\r\n","")     	
+		self.assertEqual("0", request_content)                                  
 
 
 	def testURLInvocation_schemaLocation(self):                      
@@ -660,7 +660,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)
 
 		parser = XMLParser()
-		parse('../../xml_files_windows/url_invocation_schemaLocation.xml',
+		parse('../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml',
 		parser)                      
 
 		#Check if a request has been made
@@ -682,7 +682,7 @@ class Test(unittest.TestCase):
 		parser = XMLParser() 
 
 
-		root= parse('../../xml_files_windows/url_invocation_xinclude.xml', parser)                      
+		root= parse('../../xml_files_windows/ssrf/url_invocation_xinclude.xml', parser)                      
 
 
 		#Check if a request has been made
@@ -704,7 +704,7 @@ class Test(unittest.TestCase):
 
 		with self.assertRaises(XIncludeError):
 			parser = XMLParser() 
-			tree = parse('../../xml_files_windows/url_invocation_xinclude.xml',parser)
+			tree = parse('../../xml_files_windows/ssrf/url_invocation_xinclude.xml',parser)
 			#http://stackoverflow.com/questions/8827782/python-lxml-using-xiinclude-with-multiple-xml-fragments
 			tree.xinclude()
 			root = tree.getroot()
@@ -725,7 +725,7 @@ class Test(unittest.TestCase):
 
 		parser = XMLParser(no_network=False) 
 
-		tree = parse('../../xml_files_windows/url_invocation_xinclude.xml', parser)
+		tree = parse('../../xml_files_windows/ssrf/url_invocation_xinclude.xml', parser)
 
 		#http://stackoverflow.com/questions/8827782/python-lxml-using-xiinclude-with-multiple-xml-fragments
 		tree.xinclude()
@@ -747,7 +747,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)
 
 		parser = XMLParser()
-		parse('../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml',
+		parse('../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml',
 		parser)                      
 
 		#Check if a request has been made
@@ -768,7 +768,7 @@ class Test(unittest.TestCase):
 		xmlschema = XMLSchema(xmlschema_doc)
 		#        parser = XMLParser(schema=XMLSchema(file="../../xml_files_windows/test/xxe.xsd"))
 		parser = XMLParser(schema = xmlschema)
-		doc = parse('../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml',
+		doc = parse('../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml',
 		parser)                      
 		#xmlschema.validate(doc) 
 		#Check if a request has been made

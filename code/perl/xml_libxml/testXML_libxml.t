@@ -53,7 +53,7 @@ is($content, "4", "testDefault_noAttack");
 #####################
 #testDOS_core                                                    
 #####
-$file = "../../xml_files_windows/dos_core.xml";
+$file = "../../xml_files_windows/dos/dos_core.xml";
 $dom = XML::LibXML->load_xml(
           location => $file
                 # parser options ...
@@ -69,7 +69,7 @@ is($real_count, $expected_count, "testDOS_core");
 #####################
 #testDOS_core_expand_entities                                                   
 #####
-$file = "../../xml_files_windows/dos_core.xml";
+$file = "../../xml_files_windows/dos/dos_core.xml";
 $dom = XML::LibXML->load_xml(
           location => $file,
           expand_entities => 0
@@ -87,7 +87,7 @@ is($real_count, $expected_count, "testDOS_core_expand_entities");
 ######################
 ## testDOS_entitySize
 ####
-$file = "../../xml_files_windows/dos_entitySize.xml";                                
+$file = "../../xml_files_windows/dos/dos_entitySize.xml";                                
 $dom = XML::LibXML->load_xml(
           location => $file,
           # parser options ...
@@ -108,7 +108,7 @@ is($real_count, $expected_count, "testDOS_entitySize");
 #####################
 #testDOS_entitySize_huge                                                   
 #####
-#$file = "../../xml_files_windows/dos_entitySize.xml";
+#$file = "../../xml_files_windows/dos/dos_entitySize.xml";
 #$dom = XML::LibXML->load_xml(
 #          location => $file,
 #                huge => 1
@@ -128,7 +128,7 @@ is($real_count, $expected_count, "testDOS_entitySize");
 ######################
 ## testDOS_indirections
 ####
-$file = "../../xml_files_windows/dos_indirections.xml";
+$file = "../../xml_files_windows/dos/dos_indirections.xml";
 
 throws_ok { $dom = XML::LibXML->load_xml(
           location => $file
@@ -140,7 +140,7 @@ throws_ok { $dom = XML::LibXML->load_xml(
 #####################
 #testDOS_indirections_huge                                                   
 #####
-$file = "../../xml_files_windows/dos_indirections.xml";
+$file = "../../xml_files_windows/dos/dos_indirections.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -159,7 +159,7 @@ is($real_count, $expected_count, "testDOS_indirections_huge");
 ######################
 ## testDOS_indirections_parameterEntity
 ####
-$file = "../../xml_files_windows/optional/dos_indirections_parameterEntity.xml";
+$file = "../../xml_files_windows/dos/dos_indirections_parameterEntity.xml";
 
 throws_ok { $dom = XML::LibXML->load_xml(
           location => $file
@@ -173,7 +173,7 @@ throws_ok { $dom = XML::LibXML->load_xml(
 ######################
 ## testDOS_recursion
 ####
-$file = "../../xml_files_windows/optional/dos_recursion.xml";
+$file = "../../xml_files_windows/dos/dos_recursion.xml";
 
 throws_ok { $dom = XML::LibXML->load_xml(
           location => $file
@@ -185,7 +185,7 @@ throws_ok { $dom = XML::LibXML->load_xml(
 ######################
 ## testInternalSubset_ExternalPEReferenceInDTD
 ####	                            
-$file = "../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+$file = "../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file
@@ -200,7 +200,7 @@ is($content, "it_works", "testInternalSubset_ExternalPEReferenceInDTD");
 ######################
 ## testInternalSubset_ExternalPEReferenceInDTD_expand_entities
 ####	                            
-$file = "../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+$file = "../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -217,7 +217,7 @@ is($content, "it_works", "testInternalSubset_ExternalPEReferenceInDTD_expand_ent
 ######################
 ## testInternalSubset_ExternalPEReferenceInDTD_load_ext_dtd
 ####	                            
-$file = "../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+$file = "../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
 
 throws_ok {$dom = XML::LibXML->load_xml(
           location => $file,
@@ -238,7 +238,7 @@ throws_ok {$dom = XML::LibXML->load_xml(
 ######################
 ## testInternalSubset_ExternalPEReferenceInDTD_load_ext_dtd_complete_attributes
 ####	                            
-$file = "../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+$file = "../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
 
 throws_ok {$dom = XML::LibXML->load_xml(
           location => $file,
@@ -255,7 +255,7 @@ throws_ok {$dom = XML::LibXML->load_xml(
 ######################
 ## testInternalSubset_ExternalPEReferenceInDTD_load_ext_dtd_validation
 ####	                            
-$file = "../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+$file = "../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
 
 throws_ok {$dom = XML::LibXML->load_xml(
           location => $file,
@@ -268,7 +268,7 @@ throws_ok {$dom = XML::LibXML->load_xml(
 ######################
 ## testInternalSubset_ExternalPEReferenceInDTD_load_ext_dtd_expand_entities
 ####	                            
-#$file = "../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+#$file = "../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
 #
 #throws_ok {$dom = XML::LibXML->load_xml(
 #          location => $file,
@@ -281,7 +281,7 @@ throws_ok {$dom = XML::LibXML->load_xml(
 ######################
 ## testInternalSubset_PEReferenceInDTD
 ####	
-$file = "../../xml_files_windows/internalSubset_PEReferenceInDTD.xml";
+$file = "../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file
@@ -295,7 +295,7 @@ is($content, "it_works", "testInternalSubset_PEReferenceInDTD");
 ######################
 ## testInternalSubset_PEReferenceInDTD_expand_entities
 ####	
-$file = "../../xml_files_windows/internalSubset_PEReferenceInDTD.xml";
+$file = "../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -310,7 +310,7 @@ is($content, "it_works", "testInternalSubset_PEReferenceInDTD_expand_entities");
 ## testParameterEntity_core
 ####	
 
-$file = "../../xml_files_windows/parameterEntity_core.xml";
+$file = "../../xml_files_windows/xxep/parameterEntity_core.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file
@@ -325,7 +325,7 @@ is($content, "it_works", "testParameterEntity_core");
 ## testParameterEntity_core_expand_entities
 ####	
 
-#$file = "../../xml_files_windows/parameterEntity_core.xml";
+#$file = "../../xml_files_windows/xxep/parameterEntity_core.xml";
 #
 #$dom = XML::LibXML->load_xml(
 #          location => $file,
@@ -337,12 +337,12 @@ is($content, "it_works", "testParameterEntity_core");
 
 
 
-# Exception: ../../xml_files_windows/parameterEntity_core.xml:9: parser error : Entity 'all' not defined        <data>&all;</data>
+# Exception: ../../xml_files_windows/xxep/parameterEntity_core.xml:9: parser error : Entity 'all' not defined        <data>&all;</data>
 ######################
 ## testParameterEntity_core_load_ext_dtd
 ####	
 
-$file = "../../xml_files_windows/parameterEntity_core.xml";
+$file = "../../xml_files_windows/xxep/parameterEntity_core.xml";
 
 throws_ok{$dom = XML::LibXML->load_xml(
           location => $file,
@@ -351,12 +351,12 @@ throws_ok{$dom = XML::LibXML->load_xml(
 
 
 # Exception: I/O error : Attempt to load network entity http://127.0.0.1:5000/combine.dtd
-# ../../xml_files_windows/parameterEntity_core.xml:9: parser error : Entity 'all' not defined    <data>&all;</data>                   
+# ../../xml_files_windows/xxep/parameterEntity_core.xml:9: parser error : Entity 'all' not defined    <data>&all;</data>                   
 ######################
 ## testParameterEntity_core_no_network
 ####	
 
-$file = "../../xml_files_windows/parameterEntity_core.xml";
+$file = "../../xml_files_windows/xxep/parameterEntity_core.xml";
 
 throws_ok{$dom = XML::LibXML->load_xml(
           location => $file,
@@ -368,7 +368,7 @@ throws_ok{$dom = XML::LibXML->load_xml(
 ######################
 ## testParameterEntity_doctype
 ####	
-$file = "../../xml_files_windows/parameterEntity_doctype.xml";
+$file = "../../xml_files_windows/xxep/parameterEntity_doctype.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file
@@ -381,7 +381,7 @@ is($content, "it_works", "testParameterEntity_doctype");
 ######################
 ## testParameterEntity_doctype_expand_entities
 ####	
-#$file = "../../xml_files_windows/parameterEntity_doctype.xml";#
+#$file = "../../xml_files_windows/xxep/parameterEntity_doctype.xml";#
 #
 #$dom = XML::LibXML->load_xml(
 #          location => $file,
@@ -395,11 +395,11 @@ is($content, "it_works", "testParameterEntity_doctype");
 
 
 
-# Exception:  ../../xml_files_windows/parameterEntity_doctype.xml:3: parser error : Entity 'all' not defined    <data>&all;</data>
+# Exception:  ../../xml_files_windows/xxep/parameterEntity_doctype.xml:3: parser error : Entity 'all' not defined    <data>&all;</data>
 ######################
 ## testParameterEntity_doctype_load_ext_dtd
 ####	
-$file = "../../xml_files_windows/parameterEntity_doctype.xml";
+$file = "../../xml_files_windows/xxep/parameterEntity_doctype.xml";
 
 throws_ok{$dom = XML::LibXML->load_xml(
           location => $file,
@@ -408,11 +408,11 @@ throws_ok{$dom = XML::LibXML->load_xml(
 
 
 # Exception:  I/O error : Attempt to load network entity http://127.0.0.1:5000/parameterEntity_doctype.dtd
- # ../../xml_files_windows/parameterEntity_doctype.xml:3: parser error : Entity 'all' not defined        <data>&all;</data>
+ # ../../xml_files_windows/xxep/parameterEntity_doctype.xml:3: parser error : Entity 'all' not defined        <data>&all;</data>
 ######################
 ## testParameterEntity_doctype_no_network
 ####	
-$file = "../../xml_files_windows/parameterEntity_doctype.xml";
+$file = "../../xml_files_windows/xxep/parameterEntity_doctype.xml";
 
 throws_ok{$dom = XML::LibXML->load_xml(
           location => $file,
@@ -433,7 +433,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_doctype.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_doctype.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file
@@ -460,7 +460,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_doctype.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_doctype.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -491,7 +491,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_doctype.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_doctype.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -520,7 +520,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_doctype.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_doctype.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -550,7 +550,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_doctype.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_doctype.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -590,7 +590,7 @@ $request = $ua->get($URL.'/getCounter');
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_doctype.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_doctype.xml";
 
 throws_ok{$dom = XML::LibXML->load_xml(
           location => $file,
@@ -619,7 +619,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_externalGeneralEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file
@@ -647,7 +647,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_externalGeneralEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -675,7 +675,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_externalGeneralEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -704,7 +704,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_externalGeneralEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -733,7 +733,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_externalGeneralEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -761,7 +761,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_externalGeneralEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -790,7 +790,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_externalGeneralEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -809,7 +809,7 @@ is($response, "0", "testURLInvocation_externalGeneralEntity_load_ext_dtd_validat
 
 
 #Exception:  I/O error : Attempt to load network entity http://127.0.0.1:5000/test.xml
- # ../../xml_files_windows/url_invocation_externalGeneralEntity.xml:5: parser error : Failure to process entity remote <data>&remote;</data>                      ^
+ # ../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml:5: parser error : Failure to process entity remote <data>&remote;</data>                      ^
 ######################
 ## testURLInvocaton_externalGeneralEntity_no_network
 ####	
@@ -823,7 +823,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_externalGeneralEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
 
 throws_ok{$dom = XML::LibXML->load_xml(
           location => $file,
@@ -851,7 +851,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_parameterEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file
@@ -879,7 +879,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_parameterEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -907,7 +907,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_parameterEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -936,7 +936,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_parameterEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -967,7 +967,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_parameterEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -1003,7 +1003,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_parameterEntity.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
 
 throws_ok{$dom = XML::LibXML->load_xml(
           location => $file,
@@ -1031,7 +1031,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file
@@ -1060,7 +1060,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_schemaLocation.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file
@@ -1090,7 +1090,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_xinclude.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_xinclude.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file
@@ -1119,7 +1119,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_xinclude.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_xinclude.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -1136,7 +1136,7 @@ is($response, "1", "testURLInvocation_XInclude_xinclude");
 
 
 # Exception:  I/O error : Attempt to load network entity http://127.0.0.1:5000/test.xml
-# ../../xml_files_windows/url_invocation_xinclude.xml:0: XInclude error :could not load http://127.0.0.1:5000/test.xml, and no fallback was found
+# ../../xml_files_windows/ssrf/url_invocation_xinclude.xml:0: XInclude error :could not load http://127.0.0.1:5000/test.xml, and no fallback was found
 ######################
 ## testURLInvocation_XInclude_xinclude_no_network
 ####	
@@ -1150,7 +1150,7 @@ $response = $request->decoded_content;
 $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
-$file = "../../xml_files_windows/url_invocation_xinclude.xml";
+$file = "../../xml_files_windows/ssrf/url_invocation_xinclude.xml";
 
 throws_ok{$dom = XML::LibXML->load_xml(
           location => $file,
@@ -1241,7 +1241,7 @@ is($content, "xsl:stylesheet", "testXSLT");
 ######################
 ## testXXE
 ####	
-$file = "../../xml_files_windows/xxe.xml";
+$file = "../../xml_files_windows/xxe/xxe.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file
@@ -1255,7 +1255,7 @@ is($content, "it_works", "testXXE");
 ######################
 ## testXXE_expand_entities
 ####	
-$file = "../../xml_files_windows/xxe.xml";
+$file = "../../xml_files_windows/xxe/xxe.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -1269,7 +1269,7 @@ is($content, "", "testXXE_expand_entities");
 ######################
 ## testXXE_expand_entities_complete_attributes
 ####	
-$file = "../../xml_files_windows/xxe.xml";
+$file = "../../xml_files_windows/xxe/xxe.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -1283,7 +1283,7 @@ is($content, "", "testXXE_expand_entities_complete_attributes");
 ######################
 ## testXXE_expand_entities_validation
 ####	
-$file = "../../xml_files_windows/xxe.xml";
+$file = "../../xml_files_windows/xxe/xxe.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -1299,7 +1299,7 @@ is($content, "it_works", "testXXE_expand_entities_validation");
 ######################
 ## testXXE_load_ext_dtd
 ####	
-$file = "../../xml_files_windows/xxe.xml";
+$file = "../../xml_files_windows/xxe/xxe.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -1312,7 +1312,7 @@ is($content, "", "testXXE_load_ext_dtd");
 ######################
 ## testXXE_load_ext_dtd_complete_attributes
 ####	
-$file = "../../xml_files_windows/xxe.xml";
+$file = "../../xml_files_windows/xxe/xxe.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,
@@ -1327,7 +1327,7 @@ is($content, "", "testXXE_load_ext_dtd_complete_attributes");
 ######################
 ## testXXE_load_ext_dtd_validation
 ####	
-$file = "../../xml_files_windows/xxe.xml";
+$file = "../../xml_files_windows/xxe/xxe.xml";
 
 $dom = XML::LibXML->load_xml(
           location => $file,

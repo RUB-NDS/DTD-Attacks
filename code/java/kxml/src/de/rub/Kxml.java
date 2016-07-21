@@ -18,7 +18,7 @@ public class Kxml {
 
     public static void main(String[] args) throws XmlPullParserException, IOException {
        
-        String xmlFile = "C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml";
+        String xmlFile = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml";
     	
         
         XmlPullParserFactory factory = null;

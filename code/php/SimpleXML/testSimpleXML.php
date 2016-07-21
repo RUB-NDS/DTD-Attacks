@@ -25,7 +25,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
     
 	public function testDOS_core() {
-		$data = simplexml_load_file("../../xml_files_windows/dos_core.xml",
+		$data = simplexml_load_file("../../xml_files_windows/dos/dos_core.xml",
 				$class_name="SimpleXMLElement"
 				);
 		$content = $data->__toString();
@@ -38,7 +38,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 
 /**	
 	public function testDOS_core_LIBXML_PARSEHUGE() {
-		$data = simplexml_load_file("../../xml_files_windows/dos_core.xml",
+		$data = simplexml_load_file("../../xml_files_windows/dos/dos_core.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_PARSEHUGE
 		);
@@ -56,7 +56,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	 * simplexml_load_file(): Entity: line 1: parser error : Detected an entity reference loop
 	 */
 	public function testDOS_indirections() {
-		$data = simplexml_load_file("../../xml_files_windows/dos_indirections.xml",
+		$data = simplexml_load_file("../../xml_files_windows/dos/dos_indirections.xml",
 				$class_name="SimpleXMLElement"				
 		);
 	
@@ -70,7 +70,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	}
 	
 	public function testDOS_indirections_LIBXML_PARSEHUGE() {
-		$data = simplexml_load_file("../../xml_files_windows/dos_indirections.xml",
+		$data = simplexml_load_file("../../xml_files_windows/dos/dos_indirections.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_PARSEHUGE
 		);
@@ -88,7 +88,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	 parser error : PEReferences forbidden in internal subset
 	 */
 	public function testDOS_indirections_parameterEntity() {
-		$data = simplexml_load_file("../../xml_files_windows/optional/dos_indirections_parameterEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/dos/dos_indirections_parameterEntity.xml",
 				$class_name="SimpleXMLElement"				
 		);
 		$content = $data->__toString();
@@ -101,7 +101,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	
 	public function testDOS_entitySize() {
-		$data = simplexml_load_file("../../xml_files_windows/dos_entitySize.xml",
+		$data = simplexml_load_file("../../xml_files_windows/dos/dos_entitySize.xml",
 				$class_name="SimpleXMLElement"
 		);
 	
@@ -115,7 +115,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 /*	
 	public function testDOS_entitySize_LIBXML_PARSEHUGE() {
-		$data = simplexml_load_file("../../xml_files_windows/dos_entitySize.xml",
+		$data = simplexml_load_file("../../xml_files_windows/dos/dos_entitySize.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_PARSEHUGE
 		);
@@ -133,7 +133,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	simplexml_load_file(): Entity: line 1: parser error : Detected an entity reference loop
 	**/
 	public function testDOS_recursion() {
-		$data = simplexml_load_file("../../xml_files_windows/optional/dos_recursion.xml",
+		$data = simplexml_load_file("../../xml_files_windows/dos/dos_recursion.xml",
 				$class_name="SimpleXMLElement"
 		);
 	
@@ -151,17 +151,17 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	/**
 	 * @expectedException PHPUnit_Framework_Error
 	 * simplexml_load_file():
-	 * ../../xml_files_windows/dtd/externalParameterEntity/internalSubset_ExternalPEReferenceInDTD.xml:6:
+	 * ../../xml_files_windows/dtd/externalParameterEntity/xxep/internalSubset_ExternalPEReferenceInDTD.xml:6:
 	 * parser error : Entity 'intern' not defined
 	 */
 	public function testInternalSubset_ExternalPEReferenceInDTD() {
-		$data = simplexml_load_file("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 				$class_name="SimpleXMLElement"
 		);
 	}
 	
 	public function testInternalSubset_ExternalPEReferenceInDTD_LIBXML_DTDATTR() {
-		$data = simplexml_load_file("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 				$class_name="SimpleXMLElement",
 				$options = LIBXML_DTDATTR
 		);
@@ -173,7 +173,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	}
 	
 	public function testInternalSubset_ExternalPEReferenceInDTD_LIBXML_DTDLOAD() {
-		$data = simplexml_load_file("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 				$class_name="SimpleXMLElement",
 				$options = LIBXML_DTDLOAD
 		);
@@ -185,7 +185,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	}
 	
 	public function testInternalSubset_ExternalPEReferenceInDTD_LIBXML_DTDVALID() {
-		$data = simplexml_load_file("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 				$class_name="SimpleXMLElement",
 				$options = LIBXML_DTDVALID
 		);
@@ -198,7 +198,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	
 	public function testInternalSubset_ExternalPEReferenceInDTD_LIBXML_NOENT() {
-		$data = simplexml_load_file("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 				$class_name="SimpleXMLElement",
 				$options = LIBXML_NOENT
 		);
@@ -215,7 +215,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 		libxml_disable_entity_loader(true);
 	
-		$data = simplexml_load_file("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 				$class_name="SimpleXMLElement",
 				$options = LIBXML_NOENT
 		);
@@ -231,7 +231,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	
 	public function testInternalSubset_PEReferenceInDTD() {
-		$data = simplexml_load_file("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml",
 				$class_name="SimpleXMLElement"
 		);
 	
@@ -244,7 +244,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	/* sinnlos
 	public function testInternalSubset_PEReferenceInDTD_LIBXML_NOENT() {
-		$data = simplexml_load_file("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_NOENT
 		);
@@ -260,11 +260,11 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
     /**
      * @expectedException PHPUnit_Framework_Error
-	 simplexml_load_file(): ../../xml_files_windows/parameterEntity_core.xml:10: parser error : Entity 'all' not defined
+	 simplexml_load_file(): ../../xml_files_windows/xxep/parameterEntity_core.xml:10: parser error : Entity 'all' not defined
      */
     public function testParameterEntity_core() {
     
-    	$data = simplexml_load_file("../../xml_files_windows/parameterEntity_core.xml",
+    	$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_core.xml",
     			$class_name="SimpleXMLElement");
     
     	$content = $data->__toString();
@@ -275,7 +275,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
     }
 	
 	public function testParameterEntity_core_LIBXML_DTDATTR() {
-		$data = simplexml_load_file("../../xml_files_windows/parameterEntity_core.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_core.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDATTR);
 	
@@ -291,7 +291,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	parser error : Entity 'all' not defined
 	*/
 	public function testParameterEntity_core_LIBXML_DTDATTR_NONET() {
-		$data = simplexml_load_file("../../xml_files_windows/parameterEntity_core.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_core.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDATTR|LIBXML_NONET);
 	/*
@@ -305,7 +305,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	
 	public function testParameterEntity_core_LIBXML_DTDLOAD() {
-		$data = simplexml_load_file("../../xml_files_windows/parameterEntity_core.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_core.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDLOAD);
 	
@@ -318,11 +318,11 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	 /**
 	 *  @expectedException PHPUnit_Framework_Error
-	 simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/parameterEntity_core.dtd../../xml_files_windows/parameterEntity_core.xml:10: parser error : Entity 'all' not defined
+	 simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/parameterEntity_core.dtd../../xml_files_windows/xxep/parameterEntity_core.xml:10: parser error : Entity 'all' not defined
 	 */
 	 
 	 public function testParameterEntity_core_LIBXML_DTDLOAD_NONET() {
-		$data = simplexml_load_file("../../xml_files_windows/parameterEntity_core.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_core.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDLOAD|LIBXML_NONET);
 	/*
@@ -337,7 +337,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 
 	public function testParameterEntity_core_LIBXML_DTDVALID() {
-		$data = simplexml_load_file("../../xml_files_windows/parameterEntity_core.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_core.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDVALID);
 	
@@ -349,10 +349,10 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	}
 	 /**
      *  @expectedException PHPUnit_Framework_Error
-	 simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/parameterEntity_core.dtd../../xml_files_windows/parameterEntity_core.xml:10: parser error : Entity 'all' not defined
+	 simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/parameterEntity_core.dtd../../xml_files_windows/xxep/parameterEntity_core.xml:10: parser error : Entity 'all' not defined
 	 */
 	public function testParameterEntity_core_LIBXML_DTDVALID_NONET() {
-		$data = simplexml_load_file("../../xml_files_windows/parameterEntity_core.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_core.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDVALID|LIBXML_NONET);
 /*	
@@ -366,7 +366,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	
 	public function testParameterEntity_core_LIBXML_NOENT() {
-		$data = simplexml_load_file("../../xml_files_windows/parameterEntity_core.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_core.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_NOENT);
 	
@@ -379,11 +379,11 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
     /**
      *  @expectedException PHPUnit_Framework_Error
     * simplexml_load_file(): Attempt to load network entity 
-    * http://127.0.0.1:5000/combine.dtd../../xml_files_windows/parameterEntity_core.xml:9: 
+    * http://127.0.0.1:5000/combine.dtd../../xml_files_windows/xxep/parameterEntity_core.xml:9: 
     * parser error : Entity 'all' not defined
     */ 
     public function testParameterEntity_core_LIBXML_NOENT_NONET() {
-		$data = simplexml_load_file("../../xml_files_windows/parameterEntity_core.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_core.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_NOENT|LIBXML_NONET);
 	
@@ -399,7 +399,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_LIBXML_NOENT_disable_entity_loader() {
 		libxml_disable_entity_loader(true);
 		
-		$data = simplexml_load_file("../../xml_files_windows/parameterEntity_core.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_core.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_NOENT);
 	
@@ -416,11 +416,11 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	/**
 	 * @expectedException PHPUnit_Framework_Error 
-	 * simplexml_load_file(): ../../xml_files_windows/parameterEntity_doctype.xml:3: parser error : Entity 'all' not defined 
+	 * simplexml_load_file(): ../../xml_files_windows/xxep/parameterEntity_doctype.xml:3: parser error : Entity 'all' not defined 
 	 */
 	
 	public function testParameterEntity_doctype() {
-		$data = simplexml_load_file("../../xml_files_windows/parameterEntity_doctype.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 				$class_name="SimpleXMLElement");
 		
 		$content = $data->__toString();
@@ -433,7 +433,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	 public function testParameterEntity_doctype_LIBXML_DTDATTR() {
 
-    	$data = simplexml_load_file("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
             $class_name="SimpleXMLElement",
             $options=LIBXML_DTDATTR
                     );
@@ -452,7 +452,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
      */
     public function testParameterEntity_doctype_LIBXML_DTDATTR_NONET() {
     
-    	$data = simplexml_load_file("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
     			$class_name="SimpleXMLElement",
     			$options=LIBXML_DTDATTR|LIBXML_NONET
     	);
@@ -462,7 +462,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 
     public function testParameterEntity_doctype_LIBXML_DTDLOAD() {
 
-    	$data = simplexml_load_file("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
             $class_name="SimpleXMLElement",
             $options=LIBXML_DTDLOAD
                     );
@@ -478,11 +478,11 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 
     /**
      * @expectedException PHPUnit_Framework_Error 
-     * simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/parameterEntity_doctype.dtd../../xml_files_windows/parameterEntity_doctype.xml:3: parser error : Entity 'all' not defined
+     * simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/parameterEntity_doctype.dtd../../xml_files_windows/xxep/parameterEntity_doctype.xml:3: parser error : Entity 'all' not defined
      */
     public function testParameterEntity_doctype_LIBXML_DTDLOAD_NONET() {
     
-    	$data = simplexml_load_file("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
     			$class_name="SimpleXMLElement",
     			$options=LIBXML_DTDLOAD|LIBXML_NONET
     	);
@@ -497,7 +497,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	 public function testParameterEntity_doctype_LIBXML_DTDVALID() {
 
-    	$data = simplexml_load_file("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
             $class_name="SimpleXMLElement",
             $options=LIBXML_DTDVALID
                     );
@@ -511,11 +511,11 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
     }
 	/**
 	* @expectedException PHPUnit_Framework_Error 
-	simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/parameterEntity_doctype.dtd../../xml_files_windows/parameterEntity_doctype.xml:3: validity error : Validation failed: no DTD found !
+	simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/parameterEntity_doctype.dtd../../xml_files_windows/xxep/parameterEntity_doctype.xml:3: validity error : Validation failed: no DTD found !
 	*/
 	public function testParameterEntity_doctype_LIBXML_DTDVALID_NONET() {
     
-    	$data = simplexml_load_file("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
     			$class_name="SimpleXMLElement",
     			$options=LIBXML_DTDVALID|LIBXML_NONET
     	);
@@ -530,12 +530,12 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
     
     /**
 	 * @expectedException PHPUnit_Framework_Error    
-     * simplexml_load_file(): ../../xml_files_windows/parameterEntity_doctype.xml:3: parser 
+     * simplexml_load_file(): ../../xml_files_windows/xxep/parameterEntity_doctype.xml:3: parser 
      * error : Entity 'all' not defined
      */
 	public function testParameterEntity_doctype_LIBXML_NOENT() {
 
-    	$data = simplexml_load_file("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$data = simplexml_load_file("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
             $class_name="SimpleXMLElement",
             $options=LIBXML_NOENT                   
         );
@@ -552,7 +552,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 		
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_doctype.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$class_name="SimpleXMLElement"
 				);
 		
@@ -571,7 +571,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 	
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_doctype.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDATTR
 		);
@@ -590,7 +590,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 		
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_doctype.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDATTR|LIBXML_NONET
 		);
@@ -609,7 +609,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 	
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_doctype.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDLOAD
 		);
@@ -628,7 +628,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 		
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_doctype.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDLOAD|LIBXML_NONET
 		);
@@ -647,7 +647,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 	
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_doctype.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDVALID
 		);
@@ -666,7 +666,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 		
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_doctype.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDVALID|LIBXML_NONET
 		);
@@ -684,7 +684,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 	
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_doctype.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_NOENT
 		);
@@ -704,7 +704,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 		
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$class_name="SimpleXMLElement"
 		);
 		
@@ -726,7 +726,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	
 		// enable entities
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options =LIBXML_DTDATTR
 		);
@@ -748,7 +748,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	
 		// enable entities
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options =LIBXML_DTDLOAD
 		);
@@ -770,7 +770,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	
 		// enable entities
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options =LIBXML_DTDVALID
 		);
@@ -783,7 +783,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	/**
 	 * @expectedException PHPUnit_Framework_Error
-	simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/Attempt to load network entity http://127.0.0.1:5000/Attempt to load network entity http://127.0.0.1:5000/file.xml../../xml_files_windows/url_invocation_externalGeneralEntity.xml:6: parser error : Failure to process entity remote
+	simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/Attempt to load network entity http://127.0.0.1:5000/Attempt to load network entity http://127.0.0.1:5000/file.xml../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml:6: parser error : Failure to process entity remote
 	*/
 	public function testURLInvocation_externalGeneralEntity_LIBXML_DTDVALID_NONET() {
 		//setting LIBXML_NONET
@@ -793,7 +793,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 	
 	
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDVALID|LIBXML_NONET
 		);
@@ -816,7 +816,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	
 		// enable entities
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options =LIBXML_NOENT
 		);
@@ -840,7 +840,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	
 		libxml_disable_entity_loader(true);
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options =LIBXML_NOENT
 		);
@@ -852,7 +852,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	*/
 	/**
 	 * @expectedException PHPUnit_Framework_Error
-	 * simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/test.xml../../xml_files_windows/url_invocation_externalGeneralEntity.xml:5: parser error : Failure to process entity remote
+	 * simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/test.xml../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml:5: parser error : Failure to process entity remote
 	 */
 	public function testURLInvocation_externalGeneralEntity_LIBXML_NOENT_NONET() {
 		//setting LIBXML_NONET
@@ -862,7 +862,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 	
 	
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_NOENT|LIBXML_NONET
 		);
@@ -882,7 +882,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 		
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 						$class_name="SimpleXMLElement"
 				);
 		
@@ -902,7 +902,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 
 		
 		// enable entities
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options =LIBXML_DTDATTR
 		);
@@ -920,7 +920,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 
 
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDATTR|LIBXML_NONET
 		);
@@ -945,7 +945,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 
 		
 		// enable entities
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options =LIBXML_DTDLOAD
 		);
@@ -963,7 +963,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 
 
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDLOAD|LIBXML_NONET
 		);
@@ -985,7 +985,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 
 		
 		// enable entities
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options =LIBXML_DTDVALID
 		);
@@ -1003,7 +1003,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 
 
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDVALID|LIBXML_NONET
 		);
@@ -1024,7 +1024,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 
 		
 		// enable entities
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options =LIBXML_NOENT
 		);
@@ -1047,7 +1047,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 		
 		libxml_disable_entity_loader(true);
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options =LIBXML_NOENT
 		);
@@ -1066,7 +1066,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 
 
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_NOENT|LIBXML_NONET
 		);
@@ -1085,7 +1085,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 	
 	
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_schemaLocation.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml",
 				$class_name="SimpleXMLElement"
 		);
 	
@@ -1093,7 +1093,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 			
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml",
 				$class_name="SimpleXMLElement"								
 		);
 	
@@ -1112,7 +1112,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);		
 		
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_xinclude.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_xinclude.xml",
 				$class_name="SimpleXMLElement"
 		);
 		
@@ -1129,7 +1129,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 		
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_xinclude.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_xinclude.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_XINCLUDE
 		);
@@ -1147,7 +1147,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 	
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_xinclude.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_xinclude.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_XINCLUDE|LIBXML_NONET				
 		);
@@ -1168,7 +1168,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 		
 
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml",
 				$class_name="SimpleXMLElement"
 		);
 		
@@ -1176,7 +1176,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 					
-		$data = simplexml_load_file("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml",
+		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml",
 				$class_name="SimpleXMLElement"
 		);
 		
@@ -1228,7 +1228,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	
 	public function testXXE() {
-		$data = simplexml_load_file("../../xml_files_windows/xxe.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxe/xxe.xml",
 				$class_name="SimpleXMLElement");
 	
 		$content = $data->__toString();
@@ -1239,7 +1239,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	}
 	
 	public function testXXE_LIBXML_DTDATTR() {
-		$data = simplexml_load_file("../../xml_files_windows/xxe.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxe/xxe.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDATTR);
 	
@@ -1249,7 +1249,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	}
 	
 	public function testXXE_LIBXML_DTDLOAD() {
-		$data = simplexml_load_file("../../xml_files_windows/xxe.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxe/xxe.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDLOAD);
 	
@@ -1259,7 +1259,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	}
 	
 	public function testXXE_LIBXML_DTDVALID() {
-		$data = simplexml_load_file("../../xml_files_windows/xxe.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxe/xxe.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_DTDVALID);
 	
@@ -1269,7 +1269,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	}
 	
 	public function testXXE_LIBXML_NOENT() {
-		$data = simplexml_load_file("../../xml_files_windows/xxe.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxe/xxe.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_NOENT);
 	
@@ -1281,14 +1281,14 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 	
 	/**
 	 * @expectedException PHPUnit_Framework_Error
-	 simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/url_invocation_parameterEntity.dtdI/O warning : failed to load external entity "../../xml_files_windows/xxe.xml"
+	 simplexml_load_file(): Attempt to load network entity http://127.0.0.1:5000/url_invocation_parameterEntity.dtdI/O warning : failed to load external entity "../../xml_files_windows/xxe/xxe.xml"
 	 */
 	public function testXXE_LIBXML_NOENT_disable_entity_loader() {
 	
 	
 		libxml_disable_entity_loader(true);
 	
-		$data = simplexml_load_file("../../xml_files_windows/xxe.xml",
+		$data = simplexml_load_file("../../xml_files_windows/xxe/xxe.xml",
 				$class_name="SimpleXMLElement",
 				$options=LIBXML_NOENT);
 	
@@ -1307,7 +1307,7 @@ class TestSimplexml extends PHPUnit_Framework_TestCase {
 // // 	If you want to use multiple libxml options, separate them with a pipe, like so:
 // 	public function testUrlInvocation_setFeature_load_external_dtd() {
 		
-// 		$data = simplexml_load_file("../../xml_files_windows/url_invocation_doctype.xml",
+// 		$data = simplexml_load_file("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 // 				$class_name="SimpleXMLElement",
 // 				$options=LIBXML_DTDLOAD| LIBXML_NOENT
 // 		);

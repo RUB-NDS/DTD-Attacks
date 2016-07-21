@@ -16,7 +16,7 @@ public class XercesSaxParseFactory {
 		  	 
 		 
 		 String provider = "org.apache.xerces.jaxp.SAXParserFactoryImpl";
-		 InputStream xmlInput = new FileInputStream("C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml");
+		 InputStream xmlInput = new FileInputStream("C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml");
 	     SAXParserFactory factory = SAXParserFactory.newInstance(provider, null);	     
 	     MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 	     factory.setFeature("http://apache.org/xml/features/xinclude",true);

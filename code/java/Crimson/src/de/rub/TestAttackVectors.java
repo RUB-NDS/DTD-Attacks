@@ -128,7 +128,7 @@ public class TestAttackVectors {
     @Test 
     public void testDOS_core() throws ParserConfigurationException, SAXException, IOException {
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_core.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_core.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         
@@ -145,7 +145,7 @@ public class TestAttackVectors {
     @Test 
     public void testDOS_core_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_core.xml");    	    		        
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_core.xml");    	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
         
         SAXParser saxParser = factory.newSAXParser();
@@ -167,7 +167,7 @@ public class TestAttackVectors {
     @Test 
     public void testDOS_indirections() throws ParserConfigurationException, SAXException, IOException {
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_indirections.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_indirections.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         
@@ -184,7 +184,7 @@ public class TestAttackVectors {
     @Test 
     public void testDOS_indirections_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_indirections.xml");    	    		        
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_indirections.xml");    	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
         
         SAXParser saxParser = factory.newSAXParser();
@@ -207,7 +207,7 @@ public class TestAttackVectors {
     public void testDOS_indirections_parameterEntity() throws ParserConfigurationException, SAXException, IOException {
     	
 		
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/optional/dos_indirections_parameterEntity.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_indirections_parameterEntity.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -235,7 +235,7 @@ public class TestAttackVectors {
     @Test 
     public void testDOS_entitySize() throws ParserConfigurationException, SAXException, IOException {
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_entitySize.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_entitySize.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         
@@ -252,7 +252,7 @@ public class TestAttackVectors {
     @Test 
     public void testDOS_entitySize_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_entitySize.xml");    	    		        
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_entitySize.xml");    	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
         
         SAXParser saxParser = factory.newSAXParser();
@@ -275,7 +275,7 @@ public class TestAttackVectors {
     public void testDOS_recursion() throws ParserConfigurationException, SAXException, IOException {
     	
 		
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/optional/dos_recursion.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_recursion.xml");
     	    		        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -303,7 +303,7 @@ public class TestAttackVectors {
     
     @Test
     public void testInternalSubset_ExternalPEReferenceInDTD() throws ParserConfigurationException, SAXException, IOException {
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -323,7 +323,7 @@ public class TestAttackVectors {
     @Test
     public void testInternalSubset_ExternalPEReferenceInDTD_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
 
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
         
     	MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -360,7 +360,7 @@ public class TestAttackVectors {
 //		}	
 //		finally {
 //    	
-//			InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+//			InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 //        
 //	    	MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
 //	        MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -386,7 +386,7 @@ public class TestAttackVectors {
 //			assertEquals(message, e.getMessage());
 //		}	
 //		finally {
-//	    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+//	    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 //	        
 //	    	MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
 //	        MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -402,7 +402,7 @@ public class TestAttackVectors {
     
     @Test
     public void testInternalSubset_ExternalPEReferenceInDTD_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();  
@@ -428,7 +428,7 @@ public class TestAttackVectors {
     @Test
     public void testInternalSubset_PEReferenceInDTD() throws ParserConfigurationException, SAXException, IOException {
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -447,7 +447,7 @@ public class TestAttackVectors {
 //    @Test
 //    public void testInternalSubset_PEReferenceInDTD_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
 //    	
-//    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+//    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 //        
 //    	MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();
 //        MyDeclHandler myDeclHandler = new MyDeclHandler();
@@ -472,7 +472,7 @@ public class TestAttackVectors {
     @Test
     public void testInternalSubset_PEReferenceInDTD_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
     	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();
@@ -498,7 +498,7 @@ public class TestAttackVectors {
     @Test
     public void testParameterEntity_core() throws IOException, SAXException, ParserConfigurationException {
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         
@@ -515,7 +515,7 @@ public class TestAttackVectors {
     @Test
     public void testParameterEntity_core_setEntityResolver() throws IOException, SAXException, ParserConfigurationException {
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
         
 		MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();
         
@@ -553,7 +553,7 @@ public class TestAttackVectors {
 //		}
 //		finally {
 //			
-//			InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+//			InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
 //			
 //			MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
 //			
@@ -583,7 +583,7 @@ public class TestAttackVectors {
 //		}
 //    	finally {
 //    		
-//    		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+//    		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
 //    		
 //    		MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
 //    		
@@ -603,7 +603,7 @@ public class TestAttackVectors {
     @Test
     public void testParameterEntity_core_setProperty_DeclHandler() throws IOException, SAXException, ParserConfigurationException {
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();
@@ -630,7 +630,7 @@ public class TestAttackVectors {
     @Test
     public void testParameterEntity_doctype() throws IOException, SAXException, ParserConfigurationException {
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         
@@ -657,7 +657,7 @@ public class TestAttackVectors {
 //		}
 //		finally {
 //			
-//			InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+//			InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 //			
 //			MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
 //			
@@ -686,7 +686,7 @@ public class TestAttackVectors {
 //		}
 //    	finally {
 //    		
-//    		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+//    		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 //    		
 //    		MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
 //    		
@@ -702,7 +702,7 @@ public class TestAttackVectors {
     @Test
     public void testParameterEntity_doctype_setEntityResolver() throws IOException, SAXException, ParserConfigurationException {
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");        
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");        
 		MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();        
         SAXParser saxParser = factory.newSAXParser();      
         
@@ -726,7 +726,7 @@ public class TestAttackVectors {
     @Test
     public void testParameterEntity_doctype_setProperty_DeclHandler() throws IOException, SAXException, ParserConfigurationException {
 		
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
         
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();
@@ -764,7 +764,7 @@ public class TestAttackVectors {
         String response = http.sendGet(url + "/getCounter");
         assertEquals("0", response);
                 
-        InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_doctype.xml");        
+        InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_doctype.xml");        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
         SAXParser saxParser = factory.newSAXParser();        
         saxParser.parse(xmlInput, myDefaultHandler);
@@ -785,7 +785,7 @@ public class TestAttackVectors {
         assertEquals("0", response);
         try {    
             
-        	InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_doctype.xml");            
+        	InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_doctype.xml");            
             MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();
             SAXParser saxParser = factory.newSAXParser();            
             saxParser.parse(xmlInput, mySecureDefaultHandler);
@@ -815,7 +815,7 @@ public class TestAttackVectors {
         String response = http.sendGet(url + "/getCounter");
         assertEquals("0", response);
                 
-        InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_doctype.xml");        
+        InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_doctype.xml");        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();
         SAXParser saxParser = factory.newSAXParser();        
@@ -839,7 +839,7 @@ public class TestAttackVectors {
         String response = http.sendGet(url + "/getCounter");
         assertEquals("0", response);
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");        
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
         SAXParser saxParser = factory.newSAXParser();
@@ -860,7 +860,7 @@ public class TestAttackVectors {
         String response = http.sendGet(url + "/getCounter");
         assertEquals("0", response);
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");        
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");        
 		MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();		     
         SAXParser saxParser = factory.newSAXParser();
                 
@@ -903,7 +903,7 @@ public class TestAttackVectors {
 //		}
 //    	finally {
 //    		
-//    		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+//    		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 //    		
 //    		MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
 //    		
@@ -928,7 +928,7 @@ public class TestAttackVectors {
         String response = http.sendGet(url + "/getCounter");
         assertEquals("0", response);
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");        
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();        
         SAXParser saxParser = factory.newSAXParser();
@@ -961,7 +961,7 @@ public class TestAttackVectors {
         String response = http.sendGet(url + "/getCounter");
         assertEquals("0", response);
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");        
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MyDeclHandler myDeclHandler = new MyDeclHandler();
         SAXParser saxParser = factory.newSAXParser();
@@ -983,7 +983,7 @@ public class TestAttackVectors {
         String response = http.sendGet(url + "/getCounter");
         assertEquals("0", response);
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");        
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");        
 		MySecureDefaultHandler mySecureDefaultHandler = new MySecureDefaultHandler();		     
         SAXParser saxParser = factory.newSAXParser();
                 
@@ -1006,42 +1006,6 @@ public class TestAttackVectors {
     }
     
     
-//    @Test
-//    public void testURLInvocation_parameterEntity_setFeature_external_parameter_entities() throws Exception {
-//    
-//       	// reset the counter
-//        SimpleClient http = new SimpleClient();
-//        http.sendGet(url + "/reset");
-//        String response = http.sendGet(url + "/getCounter");
-//        assertEquals("0", response);
-//
-//    	try {
-//    		
-//	    	factory.setFeature("http://xml.org/sax/features/external-parameter-entities",false);    		
-//	    	assertFalse(factory.getFeature("http://xml.org/sax/features/external-parameter-entities"));
-//    	
-//    	} catch (SAXNotSupportedException e) {
-//			String message ="Feature: http://xml.org/sax/features/external-parameter-entities";
-//			assertEquals(message, e.getMessage());
-//		}
-//    	finally {
-//    		
-//    		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");
-//    		
-//    		MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
-//    		
-//    		SAXParser saxParser = factory.newSAXParser();
-//    		
-//    		saxParser.parse(xmlInput, myDefaultHandler);    
-//    		
-//    		   		
-//    		response = http.sendGet(url + "/getCounter");
-//        	assertEquals("1", response);
-//    	}
-//    	
-//    }
-    
-    
     @Test
     public void testURLInvocation_parameterEntity_setProperty_DeclHandler() throws Exception{
 	
@@ -1051,7 +1015,7 @@ public class TestAttackVectors {
         String response = http.sendGet(url + "/getCounter");
         assertEquals("0", response);
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");        
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
         MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();        
         SAXParser saxParser = factory.newSAXParser();
@@ -1084,7 +1048,7 @@ public class TestAttackVectors {
         String response = http.sendGet(url + "/getCounter");
         assertEquals("0", response);
   			
-  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");        
+  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
         SAXParser saxParser = factory.newSAXParser();
         saxParser.parse(xmlInput, myDefaultHandler);
@@ -1105,7 +1069,7 @@ public class TestAttackVectors {
         String response = http.sendGet(url + "/getCounter");
         assertEquals("0", response);
   			
-  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_schemaLocation.xml");        
+  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml");        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
         SAXParser saxParser = factory.newSAXParser();
         saxParser.parse(xmlInput, myDefaultHandler);
@@ -1129,7 +1093,7 @@ public class TestAttackVectors {
         String response = http.sendGet(url + "/getCounter");
         assertEquals("0", response);
   			
-  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_xinclude.xml");        
+  		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");        
         MyDefaultHandler myDefaultHandler = new MyDefaultHandler();        
         SAXParser saxParser = factory.newSAXParser();        
         saxParser.parse(xmlInput, myDefaultHandler);
@@ -1222,30 +1186,6 @@ public class TestAttackVectors {
     }
     
     
-//    @Test
-//    public void testXXE_setFeature_external_general_entities() throws SAXNotRecognizedException, SAXNotSupportedException, IOException,SAXException, ParserConfigurationException {	
-//	
-//    	
-//    	try {
-//    		factory.setFeature("http://xml.org/sax/features/external-general-entities",false);
-//    	    assertFalse(factory.getFeature("http://xml.org/sax/features/external-general-entities"));
-//		} catch (SAXNotSupportedException e) {
-//			String message ="Feature: http://xml.org/sax/features/external-general-entities";
-//			assertEquals(message, e.getMessage());
-//		}	
-//    	  finally {
-//          	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxe/xxe.xml");
-//              
-//              MyDefaultHandler myDefaultHandler = new MyDefaultHandler();
-//              SAXParser saxParser = factory.newSAXParser();              
-//              
-//              saxParser.parse(xmlInput, myDefaultHandler);	    
-//      	
-//      		String content =myDefaultHandler.getElementContent("data");
-//      		assertEquals("it_works", content);
-//          }	    
-//    }
-//    
     
     @Test
     public void testXXE_setProperty_setProperty_DeclHandler() throws IOException,SAXException, ParserConfigurationException {

@@ -31,53 +31,53 @@ class Test(unittest.TestCase):
 	'''
 	def testDOS_core(self):
 		with self.assertRaises(EntitiesForbidden):
-			self.helperParse('../../xml_files_windows/dos_core.xml')
+			self.helperParse('../../xml_files_windows/dos/dos_core.xml')
 			
 	'''
 	EntitiesForbidden: EntitiesForbidden(name='a0', system_id=None, public_id=None)
 	'''			
 	def testDOS_indirections(self):
 		with self.assertRaises(EntitiesForbidden):
-			root = self.helperParse('../../xml_files_windows/dos_indirections.xml')		
+			root = self.helperParse('../../xml_files_windows/dos/dos_indirections.xml')		
 	'''
 	EntitiesForbidden: EntitiesForbidden(name='a0', system_id=None, public_id=None)
 	'''
 	def testDOS_entitySize(self):
 		with self.assertRaises(EntitiesForbidden):
-			root = self.helperParse('../../xml_files_windows/dos_entitySize.xml')		
+			root = self.helperParse('../../xml_files_windows/dos/dos_entitySize.xml')		
 
 	'''
 	EntitiesForbidden: EntitiesForbidden(name='file', system_id=u'file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.txt', public_id=None)
 	'''
 	def testXXE(self):
 		with self.assertRaises(_ET.EntitiesForbidden):
-			tmp = self.helperParse('../../xml_files_windows/xxe.xml')
+			tmp = self.helperParse('../../xml_files_windows/xxe/xxe.xml')
 	'''
 	EntitiesForbidden: EntitiesForbidden(name='external', system_id=u'internalSubset_ExternalPEReferenceInDTD.dtd', public_id=None)
 	'''
 	def testInternalSubset_ExternalPEReferenceInDTD(self):
 		with self.assertRaises(EntitiesForbidden):
-			tmp = self.helperParse('../../xml_files_windows/dtd/externalParameterEntity/internalSubset_ExternalPEReferenceInDTD.xml')
+			tmp = self.helperParse('../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml')
 	'''
 	EntitiesForbidden: EntitiesForbidden(name='internal', system_id=None, public_id=None)
 	'''	
 	def testInternalSubset_PEReferenceInDTD(self):
 		with self.assertRaises(EntitiesForbidden):
-			tmp = self.helperParse('../../xml_files_windows/dtd/internalParameterEntity/internalSubset_PEReferenceInDTD.xml')
+			tmp = self.helperParse('../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml')
 
 	'''
 	EntitiesForbidden: EntitiesForbidden(name='start', system_id=None, public_id=None)
 	'''
 	def testParameterEntity_core(self):
 		with self.assertRaises(EntitiesForbidden):
-			tmp = self.helperParse('../../xml_files_windows/parameterEntity_core.xml')                                      
+			tmp = self.helperParse('../../xml_files_windows/xxep/parameterEntity_core.xml')                                      
 
 	'''
 	ParseError: undefined entity &all;: line 3, column 6
 	'''
 	def testParameterEntity_doctype(self):
 		with self.assertRaises(_ET.ParseError):        
-			self.helperParse('../../xml_files_windows/parameterEntity_doctype.xml')
+			self.helperParse('../../xml_files_windows/xxep/parameterEntity_doctype.xml')
 
 			
 			
@@ -89,7 +89,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)   
 
 		#with self.assertRaises(EntitiesForbidden):
-		self.helperParse('../../xml_files_windows/url_invocation_doctype.xml')
+		self.helperParse('../../xml_files_windows/ssrf/url_invocation_doctype.xml')
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -108,7 +108,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)   
 
 		with self.assertRaises(EntitiesForbidden):
-			self.helperParse('../../xml_files_windows/url_invocation_externalGeneralEntity.xml')
+			self.helperParse('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml')
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -126,7 +126,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)   	
 		
 		with self.assertRaises(EntitiesForbidden):
-			self.helperParse('../../xml_files_windows/url_invocation_parameterEntity.xml')                      
+			self.helperParse('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -142,7 +142,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)  
 
-		self.helperParse('../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml')                      
+		self.helperParse('../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -157,7 +157,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.helperParse('../../xml_files_windows/url_invocation_schemaLocation.xml')  
+		self.helperParse('../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml')  
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -172,7 +172,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.helperParse('../../xml_files_windows/url_invocation_xinclude.xml')                      
+		self.helperParse('../../xml_files_windows/ssrf/url_invocation_xinclude.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -191,7 +191,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)   
 
 		with self.assertRaises(IOError):
-			root = self.helperParse('../../xml_files_windows/url_invocation_xinclude.xml')                      
+			root = self.helperParse('../../xml_files_windows/ssrf/url_invocation_xinclude.xml')                      
 			# Resolve xi:include references
 			_ETINCLUDE.include(root)
 

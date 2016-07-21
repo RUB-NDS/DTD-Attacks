@@ -28,13 +28,13 @@ class Test(unittest.TestCase):
 		self.assertIn("4", root.text)		
 	
 	def testDOS_core(self):
-		root = self.helperParse('../../xml_files_windows/dos_core.xml')
+		root = self.helperParse('../../xml_files_windows/dos/dos_core.xml')
 		expectedCount = 25
 		count = root.text.count("dos")
 		self.assertEqual(expectedCount, count)
 		
 	def testDOS_indirections(self):
-		root = self.helperParse('../../xml_files_windows/dos_indirections.xml')
+		root = self.helperParse('../../xml_files_windows/dos/dos_indirections.xml')
 		expectedCount = 10000 
 		count = root.text.count("dos")
 		self.assertEqual(expectedCount, count)
@@ -44,11 +44,11 @@ class Test(unittest.TestCase):
 	'''
 	def testDOS_indirections_parameterEntity(self):
 		with self.assertRaises(_ET.ParseError):		
-			root = self.helperParse('../../xml_files_windows/optional/dos_indirections_parameterEntity.xml')
+			root = self.helperParse('../../xml_files_windows/dos/dos_indirections_parameterEntity.xml')
 		
 	
 	def testDOS_entitySize(self):
-		root = self.helperParse('../../xml_files_windows/dos_entitySize.xml')
+		root = self.helperParse('../../xml_files_windows/dos/dos_entitySize.xml')
 		expectedCount = 3400000 
 		count = root.text.count("dos")
 		self.assertEqual(expectedCount, count)
@@ -58,42 +58,42 @@ class Test(unittest.TestCase):
 	'''
 	def testDOS_entitySize(self):
 		with self.assertRaises(_ET.ParseError):
-			root = self.helperParse('../../xml_files_windows/optional/dos_recursion.xml')		
+			root = self.helperParse('../../xml_files_windows/dos/dos_recursion.xml')		
 		
 	'''
 	ParseError: undefined entity &file;: line 6, column 6
 	'''
 	def testXXE(self):
 		with self.assertRaises(_ET.ParseError):
-			self.helperParse('../../xml_files_windows/xxe.xml')
+			self.helperParse('../../xml_files_windows/xxe/xxe.xml')
 			
 	'''
 	ParseError: undefined entity &intern;: line 6, column 6
 	'''
 	def testInternalSubset_ExternalPEReferenceInDTD(self):                      
 		with self.assertRaises(_ET.ParseError):        
-			self.helperParse('../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml')
+			self.helperParse('../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml')
 			
 	'''
 	ParseError: undefined entity &intern;: line 6, column 6
 	'''
 	def testInternalSubset_PEReferenceInDTD(self):                              
 		with self.assertRaises(_ET.ParseError):        
-			self.helperParse('../../xml_files_windows/internalSubset_PEReferenceInDTD.xml')
+			self.helperParse('../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml')
 			
 	'''
 	ParseError: undefined entity &all;: line 9, column 6
 	'''
 	def testParameterEntity_core(self):
 		with self.assertRaises(_ET.ParseError):        
-			self.helperParse('../../xml_files_windows/parameterEntity_core.xml')
+			self.helperParse('../../xml_files_windows/xxep/parameterEntity_core.xml')
 		
 	'''
 	ParseError: undefined entity &all;: line 3, column 6
 	'''
 	def testParameterEntity_doctype(self):
 		with self.assertRaises(_ET.ParseError):        
-			self.helperParse('../../xml_files_windows/parameterEntity_doctype.xml')
+			self.helperParse('../../xml_files_windows/xxep/parameterEntity_doctype.xml')
 		
 
 			
@@ -106,7 +106,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.helperParse('../../xml_files_windows/url_invocation_doctype.xml')
+		self.helperParse('../../xml_files_windows/ssrf/url_invocation_doctype.xml')
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -124,7 +124,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)   
 
 		with self.assertRaises(_ET.ParseError):
-			self.helperParse('../../xml_files_windows/url_invocation_externalGeneralEntity.xml')
+			self.helperParse('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml')
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -141,7 +141,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)   
 
 
-		self.helperParse('../../xml_files_windows/url_invocation_parameterEntity.xml')
+		self.helperParse('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml')
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -155,7 +155,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.helperParse('../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml')                      
+		self.helperParse('../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -169,7 +169,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.helperParse('../../xml_files_windows/url_invocation_schemaLocation.xml')  
+		self.helperParse('../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml')  
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -184,7 +184,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.helperParse('../../xml_files_windows/url_invocation_xinclude.xml')                      
+		self.helperParse('../../xml_files_windows/ssrf/url_invocation_xinclude.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -203,7 +203,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)   
 
 		with self.assertRaises(IOError):
-			root = self.helperParse('../../xml_files_windows/url_invocation_xinclude.xml')                      
+			root = self.helperParse('../../xml_files_windows/ssrf/url_invocation_xinclude.xml')                      
 			# Resolve xi:include references
 			_ETINCLUDE.include(root)
 

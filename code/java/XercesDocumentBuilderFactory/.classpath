@@ -7,7 +7,7 @@
 	<classpathentry kind="lib" path="jars/xml-apis.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/SaxHandler"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/SimpleClient"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SaxHandler"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

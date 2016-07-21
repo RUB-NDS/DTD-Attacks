@@ -788,7 +788,7 @@ public class XmlPullParserFactoryTest  {
     }
 
     @Test
-     public void testParameterEntity_doctype () throws FileNotFoundException, XmlPullParserException, IOException {
+    public void testParameterEntity_doctype () throws FileNotFoundException, XmlPullParserException, IOException {
 
         String xmlFile = "data/data/de.rub.nds.parsers/parameterEntity_doctype.xml";
 
@@ -1301,9 +1301,9 @@ public class XmlPullParserFactoryTest  {
         name = parser.getName();
         value = parser.getText();
         event = parser.getEventType();
-        assertEquals(6, event);
+        assertEquals(3, event);
         assertEquals(null, value);
-        assertEquals("file", name);
+        assertEquals("data", name);
 
     }
 

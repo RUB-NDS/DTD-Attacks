@@ -29,7 +29,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 
-		$xml->load("../../xml_files_windows/dos_core.xml");
+		$xml->load("../../xml_files_windows/dos/dos_core.xml");
 		
 		$data = $xml->getElementsByTagName("data");
 		$content = $data->item(0)->nodeValue;
@@ -50,7 +50,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 
-		$xml->load("../../xml_files_windows/dos_indirections.xml");
+		$xml->load("../../xml_files_windows/dos/dos_indirections.xml");
 		
 		$data = $xml->getElementsByTagName("data");
 // 		$content = $data->item(0)->nodeValue;
@@ -67,7 +67,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 	
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
-		$xml->load("../../xml_files_windows/dos_indirections.xml",
+		$xml->load("../../xml_files_windows/dos/dos_indirections.xml",
 				$options=LIBXML_PARSEHUGE);
 	
 		$data = $xml->getElementsByTagName("data");
@@ -89,7 +89,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 
-		$xml->load("../../xml_files_windows/optional/dos_indirections_parameterEntity.xml");
+		$xml->load("../../xml_files_windows/dos/dos_indirections_parameterEntity.xml");
 		
 		$data = $xml->getElementsByTagName("data");
 // 		$content = $data->item(0)->nodeValue;
@@ -107,7 +107,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 
-		$xml->load("../../xml_files_windows/dos_entitySize.xml");
+		$xml->load("../../xml_files_windows/dos/dos_entitySize.xml");
 		
 		$data = $xml->getElementsByTagName("data");
  		$content = $data->item(0)->nodeValue;
@@ -128,7 +128,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 
-		$xml->load("../../xml_files_windows/optional/dos_recursion.xml");
+		$xml->load("../../xml_files_windows/dos/dos_recursion.xml");
 
 	}
 	
@@ -137,7 +137,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 	
 	/**
 	 * @expectedException PHPUnit_Framework_Error
-	 * DOMDocument::load(): Entity 'intern' not defined in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/dtd/externalParameterEntity/internalSubset_ExternalPEReferenceInDTD.xml, line: 6
+	 * DOMDocument::load(): Entity 'intern' not defined in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/dtd/externalParameterEntity/xxep/internalSubset_ExternalPEReferenceInDTD.xml, line: 6
 	 */
 	public function testInternalSubset_ExternalPEReferenceInDTD() {
 	
@@ -146,7 +146,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 	
-		$xml->load("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		$xml->load("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 	
 	}
 	
@@ -156,7 +156,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 	
-		$xml->load("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$xml->load("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 				$options=LIBXML_DTDATTR);
 		
 		$data = $xml->getElementsByTagName("data");
@@ -173,7 +173,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 	
-		$xml->load("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$xml->load("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 				$options=LIBXML_DTDLOAD);
 		
 		$data = $xml->getElementsByTagName("data");
@@ -190,7 +190,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 	
-		$xml->load("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$xml->load("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 				$options=LIBXML_DTDVALID);
 		
 		$data = $xml->getElementsByTagName("data");
@@ -208,7 +208,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 	
-		$xml->load("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$xml->load("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 				$options=LIBXML_NOENT);
 		
 		$data = $xml->getElementsByTagName("data");
@@ -229,7 +229,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml->resolveExternals = true;
 		$this->assertTrue($xml->resolveExternals);
 	
-		$xml->load("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		$xml->load("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 	
 		$data = $xml->getElementsByTagName("data");
 		$content= $data->item(0)->nodeValue;
@@ -250,7 +250,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml->substituteEntities = true;
 		$this->assertTrue($xml->substituteEntities);
 	
-		$xml->load("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		$xml->load("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 	
 		$data = $xml->getElementsByTagName("data");
 		$content= $data->item(0)->nodeValue;
@@ -266,7 +266,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 	
-		$xml->load("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+		$xml->load("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 	
 		$data = $xml->getElementsByTagName("data");
 		$content= $data->item(0)->nodeValue;
@@ -279,7 +279,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 	  
     /**
      * @expectedException PHPUnit_Framework_Error
-     * DOMDocument::load(): Entity 'all' not defined in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml, line: 9
+     * DOMDocument::load(): Entity 'all' not defined in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml, line: 9
      */
     public function testParameterEntity_core() {
     	$xml = new DOMDocument();
@@ -287,7 +287,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_core.xml");
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml");
     
 //     	$data = $xml->getElementsByTagName("data");
 //     	$content= $data->item(0)->nodeValue;
@@ -301,7 +301,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_core.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml",
     			$options=LIBXML_DTDATTR);
     
     	$data = $xml->getElementsByTagName("data");
@@ -321,7 +321,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_core.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml",
     			$options=LIBXML_DTDATTR|LIBXML_NONET);
 
     }
@@ -333,7 +333,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_core.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml",
     			$options=LIBXML_DTDLOAD);
     
     	$data = $xml->getElementsByTagName("data");
@@ -353,7 +353,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_core.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml",
     			$options=LIBXML_DTDLOAD|LIBXML_NONET);
 
     }
@@ -365,7 +365,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_core.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml",
     			$options=LIBXML_DTDVALID);
     
     	$data = $xml->getElementsByTagName("data");
@@ -385,7 +385,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_core.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml",
     			$options=LIBXML_DTDVALID|LIBXML_NONET);
 
     }
@@ -398,7 +398,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_core.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml",
     			$options=LIBXML_NOENT);
     
     	$data = $xml->getElementsByTagName("data");
@@ -412,7 +412,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
      * @expectedException PHPUnit_Framework_Error
      * DOMDocument::load(): Attempt to load network entity 
      * http://127.0.0.1:5000/combine.dtdEntity 'all' not defined in 
-     * /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml, 
+     * /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml, 
      * line: 9
      */
     public function testParameterEntity_core_LIBXML_NOENT_NONET() {
@@ -421,7 +421,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_core.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml",
     			$options=LIBXML_NOENT|LIBXML_NONET);
     
     	$data = $xml->getElementsByTagName("data");
@@ -440,7 +440,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     
     	libxml_disable_entity_loader(true);
     	 
-    	$xml->load("../../xml_files_windows/parameterEntity_core.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml",
     			$options=LIBXML_NOENT);
     
     	//     	$data = $xml->getElementsByTagName("data");
@@ -463,7 +463,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertTrue($xml->resolveExternals);
     
     
-    	$xml->load("../../xml_files_windows/parameterEntity_core.xml");
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml");
     
     	$data = $xml->getElementsByTagName("data");
     	$content= $data->item(0)->nodeValue;
@@ -488,7 +488,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertTrue($xml->resolveExternals);
     
     
-     	$xml->load("../../xml_files_windows/parameterEntity_core.xml",
+     	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml",
     			$options=LIBXML_NONET);
     
     	$data = $xml->getElementsByTagName("data");
@@ -512,7 +512,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertTrue($xml->substituteEntities);
     
     
-    	$xml->load("../../xml_files_windows/parameterEntity_core.xml");
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml");
     
     	$data = $xml->getElementsByTagName("data");
     	$content= $data->item(0)->nodeValue;
@@ -527,7 +527,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
      * @expectedException PHPUnit_Framework_Error
     * DOMDocument::load(): Attempt to load network entity 
     * http://127.0.0.1:5000/combine.dtdEntity 'all' not defined in 
-    * /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml, 
+    * /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml, 
     * line: 9
     */
 	
@@ -542,7 +542,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertTrue($xml->substituteEntities);
     
     
-     	$xml->load("../../xml_files_windows/parameterEntity_core.xml",
+     	$xml->load("../../xml_files_windows/xxep/parameterEntity_core.xml",
     			$options=LIBXML_NONET);   
 
     
@@ -555,7 +555,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 
     /**
      * @expectedException PHPUnit_Framework_Error
-     * DOMDocument::load():	in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml, line: 3
+     * DOMDocument::load():	in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml, line: 3
      */
     public function testParameterEntity_doctype() {
     	$xml = new DOMDocument();
@@ -563,7 +563,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_doctype.xml");
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
     
     	$data = $xml->getElementsByTagName("data");
     	$content= $data->item(0)->nodeValue;
@@ -578,7 +578,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
     				$options=LIBXML_DTDATTR);
     
     	$data = $xml->getElementsByTagName("data");
@@ -598,7 +598,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
     			$options=LIBXML_DTDATTR|LIBXML_NONET);
 
     
@@ -613,7 +613,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
     				$options=LIBXML_DTDLOAD);
     
     	$data = $xml->getElementsByTagName("data");
@@ -626,7 +626,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     
     /**
     *@expectedException PHPUnit_Framework_Error
-    *DOMDocument::load(): Attempt to load network entity http://127.0.0.1:5000/parameterEntity_doctype.dtdEntity 'all' not defined in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml, line: 3
+    *DOMDocument::load(): Attempt to load network entity http://127.0.0.1:5000/parameterEntity_doctype.dtdEntity 'all' not defined in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml, line: 3
 	*/
     public function testParameterEntity_doctype_LIBXML_DTDLOAD_NONET() {
     	$xml = new DOMDocument();
@@ -634,7 +634,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
     			$options=LIBXML_DTDLOAD|LIBXML_NONET);
     
     //	$data = $xml->getElementsByTagName("data");
@@ -651,7 +651,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
     				$options=LIBXML_DTDVALID);
     
     	$data = $xml->getElementsByTagName("data");
@@ -672,7 +672,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
     			$options=LIBXML_DTDVALID|LIBXML_NONET);
     
     
@@ -684,7 +684,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     
     /**
      * @expectedException PHPUnit_Framework_Error
-     * DOMDocument::load(): Entity 'all' not defined in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml, line: 3
+     * DOMDocument::load(): Entity 'all' not defined in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml, line: 3
      */
     public function testParameterEntity_doctype_LIBXML_NOENT() {
     	$xml = new DOMDocument();
@@ -692,7 +692,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertFalse($xml->substituteEntities);
     	$this->assertFalse($xml->resolveExternals);
     
-    	$xml->load("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
     			$options=LIBXML_NOENT);
     
     }
@@ -709,7 +709,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$xml->resolveExternals = true;
     	$this->assertTrue($xml->resolveExternals);
     	
-    	$xml->load("../../xml_files_windows/parameterEntity_doctype.xml");
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
     
     	$data = $xml->getElementsByTagName("data");
     	$content= $data->item(0)->nodeValue;
@@ -728,7 +728,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$xml->resolveExternals = true;
     	$this->assertTrue($xml->resolveExternals);
     	 
-    	$xml->load("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
     				$options=LIBXML_NOENT);
     
     	$data = $xml->getElementsByTagName("data");
@@ -741,7 +741,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 	
     /**
     * @expectedException PHPUnit_Framework_Error
-  	*	  DOMDocument::load(): Attempt to load network entity http://127.0.0.1:5000/parameterEntity_doctype.dtdEntity 'all' not defined in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml, line: 3
+  	*	  DOMDocument::load(): Attempt to load network entity http://127.0.0.1:5000/parameterEntity_doctype.dtdEntity 'all' not defined in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml, line: 3
 	*/
     public function testParameterEntity_doctype_resolveExternals_LIBXML_NONET() {
     	$xml = new DOMDocument();
@@ -752,7 +752,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$xml->resolveExternals = true;
     	$this->assertTrue($xml->resolveExternals);
     	 
-    	$xml->load("../../xml_files_windows/parameterEntity_doctype.xml",
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
     				$options=LIBXML_NONET);
 
     }
@@ -773,7 +773,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
     	$this->assertTrue($xml->substituteEntities);
     
     
-    	$xml->load("../../xml_files_windows/parameterEntity_doctype.xml");
+    	$xml->load("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
  
 
     
@@ -797,7 +797,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 	
-		$xml->load("../../xml_files_windows/url_invocation_doctype.xml");
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 	
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -818,7 +818,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 
 		//enable DTD loading
-		$xml->load("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 					$options=LIBXML_DTDATTR);
 		
 		
@@ -838,7 +838,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml = new DOMDocument();
 		
 		// set LIBXML_NONET
-		$xml->load("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$options=LIBXML_DTDATTR|LIBXML_NONET);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -862,7 +862,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 
 		//enable DTD loading
-		$xml->load("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 					$options=LIBXML_DTDLOAD);
 		
 		
@@ -882,7 +882,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml = new DOMDocument();
 		
 		// set LIBXML_NONET
-		$xml->load("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$options=LIBXML_DTDLOAD|LIBXML_NONET);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -904,7 +904,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 
 		//enable DTD loading
-		$xml->load("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 					$options=LIBXML_DTDVALID);
 		
 		
@@ -925,7 +925,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml = new DOMDocument();
 		
 		// set LIBXML_NONET
-		$xml->load("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$options=LIBXML_DTDVALID|LIBXML_NONET);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -945,7 +945,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml = new DOMDocument();
 		
 		
-		$xml->load("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$options=LIBXML_NOENT);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -970,7 +970,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml->resolveExternals = true;
 		$this->assertTrue($xml->resolveExternals);
 		
-		$xml->load("../../xml_files_windows/url_invocation_doctype.xml");
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -994,7 +994,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertTrue($xml->resolveExternals);
 		
 		// set LIBXML_NONET
-		$xml->load("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$options=LIBXML_NONET);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1018,7 +1018,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml->substituteEntities = true;
 		$this->assertTrue($xml->substituteEntities);
 		
-		$xml->load("../../xml_files_windows/url_invocation_doctype.xml");
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -1045,7 +1045,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);		
 	
-		$xml->load("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 	
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -1067,7 +1067,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 					
 		// works with LIBXML
 		
-			$xml->load("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+			$xml->load("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 					$options=LIBXML_DTDATTR);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1091,7 +1091,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 					
 		// works with LIBXML
 		
-			$xml->load("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+			$xml->load("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 					$options=LIBXML_DTDLOAD);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1114,7 +1114,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 					
 		// works with LIBXML
 		
-			$xml->load("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+			$xml->load("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 					$options=LIBXML_DTDVALID);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1141,7 +1141,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->resolveExternals);
 			
 	
-		$xml->load("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$options=LIBXML_DTDVALID|LIBXML_NONET);
 		
 	
@@ -1167,7 +1167,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 					
 		// works with LIBXML
 		
-			$xml->load("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+			$xml->load("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 					$options=LIBXML_NOENT);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1178,7 +1178,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 	
 	/**
 	*@expectedException PHPUnit_Framework_Error
-	*DOMDocument::load(): Attempt to load network entity http://127.0.0.1:5000/Failure to process entity remote in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml, line: 5
+	*DOMDocument::load(): Attempt to load network entity http://127.0.0.1:5000/Failure to process entity remote in /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml, line: 5
 	*/
 	public function testURLInvocation_externalGeneralEntity_LIBXML_NOENT_NONET() {
 
@@ -1196,7 +1196,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 			
 
 		// set LIBXML_NONET
-		$xml->load("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$options=LIBXML_NOENT|LIBXML_NONET);
 		
 	
@@ -1220,7 +1220,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml->resolveExternals = true;
 		$this->assertTrue($xml->resolveExternals);
 		
-		$xml->load("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -1243,7 +1243,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml->substituteEntities = true;
 		$this->assertTrue($xml->substituteEntities);
 		
-		$xml->load("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -1261,7 +1261,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		
 		$xml = new DOMDocument();
 		
-		$xml->load("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$options=LIBXML_NONET);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1286,7 +1286,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 	
-		$xml->load("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");
 	
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -1307,7 +1307,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 	
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 	
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -1329,7 +1329,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);	
 		
 		
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 					$options=LIBXML_DTDATTR);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1352,7 +1352,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 			
 
 		// set LIBXML_NONET
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$options=LIBXML_DTDATTR|LIBXML_NONET);
 		
 	
@@ -1377,7 +1377,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);	
 		
 		
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 					$options=LIBXML_DTDLOAD);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1400,7 +1400,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 			
 
 		// set LIBXML_NONET
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$options=LIBXML_DTDLOAD|LIBXML_NONET);
 		
 	
@@ -1427,7 +1427,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);	
 		
 		
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 					$options=LIBXML_DTDVALID);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1449,7 +1449,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 			
 
 		// set LIBXML_NONET
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$options=LIBXML_DTDVALID|LIBXML_NONET);
 		
 	
@@ -1477,7 +1477,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 			
 		// works with LIBXML
 		
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 					$options=LIBXML_NOENT);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1502,7 +1502,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		
 		libxml_disable_entity_loader(true);
 		
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$options=LIBXML_NOENT);
 	
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1525,7 +1525,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 			
 
 		// set LIBXML_NONET
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$options=LIBXML_NOENT|LIBXML_NONET);
 		
 	
@@ -1548,7 +1548,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 		
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml" );
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml" );
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -1569,7 +1569,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml->resolveExternals = true;
 		$this->assertTrue($xml->resolveExternals);
 		
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$options=LIBXML_NONET);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1593,7 +1593,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 		
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml" );
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml" );
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -1617,7 +1617,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 	
 		libxml_disable_entity_loader(true);
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml" );
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml" );
 	
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -1639,7 +1639,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml->substituteEntities = true;
 		$this->assertTrue($xml->substituteEntities);
 		
-		$xml->load("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$options=LIBXML_NONET);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1661,7 +1661,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 	
-		$xml->load("../../xml_files_windows/url_invocation_schemaLocation.xml");
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml");
 	
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -1681,7 +1681,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 		
-		$xml->load("../../xml_files_windows/url_invocation_xinclude.xml");
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
 		$r = preg_replace('/\s+/', '', $r);
@@ -1702,7 +1702,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 		
-		$xml->load("../../xml_files_windows/url_invocation_xinclude.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_xinclude.xml",
 					$options=LIBXML_XINCLUDE);
 		
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1724,7 +1724,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 	
-		$xml->load("../../xml_files_windows/url_invocation_xinclude.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_xinclude.xml",
 				$options=LIBXML_XINCLUDE|LIBXML_NONET);
 	
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1746,7 +1746,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$r = preg_replace('/\s+/', '', $r);
 		$this->assertEquals("0", $r);
 	
-		$xml->load("../../xml_files_windows/url_invocation_xinclude.xml");
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");
 		$xml->xinclude();
 	
 		$r = file_get_contents("http://127.0.0.1:5000/getCounter");
@@ -1768,7 +1768,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 		
-		$xml->load("../../xml_files_windows/url_invocation_xinclude.xml",
+		$xml->load("../../xml_files_windows/ssrf/url_invocation_xinclude.xml",
 				$options=LIBXML_NONET);
 		$xml->xinclude();
 		
@@ -1871,7 +1871,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$this->assertFalse($xml->substituteEntities);
 		$this->assertFalse($xml->resolveExternals);
 	
-		$xml->load("../../xml_files_windows/xxe.xml");
+		$xml->load("../../xml_files_windows/xxe/xxe.xml");
 		$data = $xml->getElementsByTagName("data");
 		$content= $data->item(0)->nodeValue;
 		$this->assertEquals("", $content);
@@ -1886,7 +1886,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 	
 			
 		// with libxml:
-		$xml->load("../../xml_files_windows/xxe.xml",
+		$xml->load("../../xml_files_windows/xxe/xxe.xml",
 				$options=LIBXML_DTDATTR);
 	
 		$data = $xml->getElementsByTagName("data");
@@ -1905,7 +1905,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 	
 			
 		// with libxml:
-		$xml->load("../../xml_files_windows/xxe.xml",
+		$xml->load("../../xml_files_windows/xxe/xxe.xml",
 				$options=LIBXML_DTDLOAD);
 	
 		$data = $xml->getElementsByTagName("data");
@@ -1924,7 +1924,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 	
 			
 		// with libxml:
-		$xml->load("../../xml_files_windows/xxe.xml",
+		$xml->load("../../xml_files_windows/xxe/xxe.xml",
 				$options=LIBXML_DTDVALID);
 	
 		$data = $xml->getElementsByTagName("data");
@@ -1943,7 +1943,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 	
 			
 		// with libxml:
-		$xml->load("../../xml_files_windows/xxe.xml",
+		$xml->load("../../xml_files_windows/xxe/xxe.xml",
 				$options=LIBXML_NOENT);
 	
 		$data = $xml->getElementsByTagName("data");
@@ -1961,7 +1961,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml->resolveExternals = true;
 		$this->assertTrue($xml->resolveExternals);
 	
-		$xml->load("../../xml_files_windows/xxe.xml");
+		$xml->load("../../xml_files_windows/xxe/xxe.xml");
 	
 		$data = $xml->getElementsByTagName("data");
 		$content= $data->item(0)->nodeValue;
@@ -1978,7 +1978,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 		$xml->substituteEntities = true;
 		$this->assertTrue($xml->substituteEntities);
 	
-		$xml->load("../../xml_files_windows/xxe.xml");
+		$xml->load("../../xml_files_windows/xxe/xxe.xml");
 	
 		$data = $xml->getElementsByTagName("data");
 		$content= $data->item(0)->nodeValue;
@@ -2000,7 +2000,7 @@ class TestDOMDocument extends PHPUnit_Framework_TestCase {
 	
 		libxml_disable_entity_loader(true);
 			
-		$xml->load("../../xml_files_windows/xxe.xml",
+		$xml->load("../../xml_files_windows/xxe/xxe.xml",
 				$options=LIBXML_NOENT);
 
 	

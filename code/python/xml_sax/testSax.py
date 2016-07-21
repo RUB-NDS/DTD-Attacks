@@ -54,7 +54,7 @@ class MyContentHandlerTest(unittest.TestCase):
 
 	def testDOS_core(self):
 
-		self.parser.parse('../../xml_files_windows/dos_core.xml')                      
+		self.parser.parse('../../xml_files_windows/dos/dos_core.xml')                      
 		tmp = self.myHandler.getElementContent("data")
 		expectedCount = 25
 		count = tmp.count("dos")
@@ -62,7 +62,7 @@ class MyContentHandlerTest(unittest.TestCase):
 
 	def testDOS_indirections(self):
 
-		self.parser.parse('../../xml_files_windows/dos_indirections.xml')                      
+		self.parser.parse('../../xml_files_windows/dos/dos_indirections.xml')                      
 		tmp = self.myHandler.getElementContent("data")
 		expectedCount = 10000 
 		count = tmp.count("dos")
@@ -70,33 +70,33 @@ class MyContentHandlerTest(unittest.TestCase):
 
 	def testDOS_entitySize(self):
 
-		self.parser.parse('../../xml_files_windows/dos_entitySize.xml')                      
+		self.parser.parse('../../xml_files_windows/dos/dos_entitySize.xml')                      
 		tmp = self.myHandler.getElementContent("data")
 		expectedCount = 3400000 
 		count = tmp.count("dos")
 		self.assertEqual(expectedCount,count)
 		
 	'''
-	SAXParseException: ../../xml_files_windows/optional/dos_indirections_parameterEntity.xml:4:14: illegal parameter entity reference
+	SAXParseException: ../../xml_files_windows/dos/dos_indirections_parameterEntity.xml:4:14: illegal parameter entity reference
 	'''
 	def testDOS_indirections_parameterEntity(self):
 		with self.assertRaises(_SAX.SAXParseException):
-			self.parser.parse('../../xml_files_windows/optional/dos_indirections_parameterEntity.xml')                      
+			self.parser.parse('../../xml_files_windows/dos/dos_indirections_parameterEntity.xml')                      
 		
 		
 	'''
-	SAXParseException: ../../xml_files_windows/optional/dos_recursion.xml:6:6: recursive entity reference
+	SAXParseException: ../../xml_files_windows/dos/dos_recursion.xml:6:6: recursive entity reference
 	'''
 	def testDOS_recursion(self):
 	
 		with self.assertRaises(_SAX.SAXParseException):
-			self.parser.parse('../../xml_files_windows/optional/dos_recursion.xml')                      
+			self.parser.parse('../../xml_files_windows/dos/dos_recursion.xml')                      
 			tmp = self.myHandler.getElementContent("data")
 		
 		
 		
 	def testXXE(self):
-		self.parser.parse('../../xml_files_windows/xxe.xml')                       
+		self.parser.parse('../../xml_files_windows/xxe/xxe.xml')                       
 		tmp = self.myHandler.getElementContent("data")
 		self.assertEqual("it_works",tmp)
 		
@@ -108,7 +108,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		mySecureResolver = MySecureResolver()
 		self.parser.setEntityResolver(mySecureResolver)
 		with self.assertRaises(_SAX.SAXNotSupportedException):
-			self.parser.parse('../../xml_files_windows/xxe.xml') 
+			self.parser.parse('../../xml_files_windows/xxe/xxe.xml') 
 			tmp = self.myHandler.getElementContent("data")
 			
 		
@@ -116,24 +116,24 @@ class MyContentHandlerTest(unittest.TestCase):
 		# disables External Entities
 		self.parser.setFeature(_SAX.handler.feature_external_ges, False)        
 		self.assertFalse(self.parser.getFeature(_SAX.handler.feature_external_ges))
-		self.parser.parse('../../xml_files_windows/xxe.xml')                       
+		self.parser.parse('../../xml_files_windows/xxe/xxe.xml')                       
 		tmp = self.myHandler.getElementContent("data")
 		self.assertEqual("",tmp)
 
 	def testInternalSubset_ExternalPEReferenceInDTD(self):                      
-		self.parser.parse('../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml')
+		self.parser.parse('../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml')
 		tmp = self.myHandler.getElementContent("data")
 		self.assertEqual("it_works",tmp) 	
 		
 
 	def testInternalSubset_PEReferenceInDTD(self):                              
-		self.parser.parse('../../xml_files_windows/internalSubset_PEReferenceInDTD.xml')
+		self.parser.parse('../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml')
 		tmp = self.myHandler.getElementContent("data")
 		self.assertEqual("it_works",tmp)                                        	
 		
 		
 	def testParameterEntity_core(self):		
-		self.parser.parse('../../xml_files_windows/parameterEntity_core.xml')
+		self.parser.parse('../../xml_files_windows/xxep/parameterEntity_core.xml')
 		tmp = self.myHandler.getElementContent("data")
 		self.assertEqual("",tmp)
 
@@ -146,7 +146,7 @@ class MyContentHandlerTest(unittest.TestCase):
 
 
 	def testParameterEntity_doctype(self):
-		self.parser.parse('../../xml_files_windows/parameterEntity_doctype.xml')
+		self.parser.parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml')
 		tmp = self.myHandler.getElementContent("data")
 		self.assertEqual("",tmp)
 		
@@ -159,7 +159,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.parser.parse('../../xml_files_windows/url_invocation_doctype.xml')                  
+		self.parser.parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml')                  
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -181,7 +181,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		self.parser.setEntityResolver(mySecureResolver)
 
 		with self.assertRaises(_SAX.SAXNotSupportedException):
-			tmp =  self.parser.parse('../../xml_files_windows/url_invocation_doctype.xml')                      
+			tmp =  self.parser.parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -195,7 +195,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.parser.parse('../../xml_files_windows/url_invocation_externalGeneralEntity.xml')                     
+		self.parser.parse('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml')                     
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -217,7 +217,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		self.parser.setEntityResolver(mySecureResolver)
 
 		with self.assertRaises(_SAX.SAXNotSupportedException):
-			self.parser.parse('../../xml_files_windows/url_invocation_externalGeneralEntity.xml')                     
+			self.parser.parse('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml')                     
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -235,7 +235,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		self.parser.setFeature("http://xml.org/sax/features/external-general-entities", False)
 		self.assertFalse(self.parser.getFeature("http://xml.org/sax/features/external-general-entities"))
 		
-		self.parser.parse('../../xml_files_windows/url_invocation_externalGeneralEntity.xml')                     
+		self.parser.parse('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml')                     
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -250,7 +250,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.parser.parse('../../xml_files_windows/url_invocation_parameterEntity.xml')                      
+		self.parser.parse('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -272,7 +272,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		self.parser.setEntityResolver(mySecureResolver)
 
 		with self.assertRaises(_SAX.SAXNotSupportedException):
-			self.parser.parse('../../xml_files_windows/url_invocation_parameterEntity.xml')                      
+			self.parser.parse('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -288,7 +288,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		self.assertEqual("0", request_content)   
 
 
-		self.parser.parse('../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml')                
+		self.parser.parse('../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml')                
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -322,7 +322,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.parser.parse('../../xml_files_windows/url_invocation_schemaLocation.xml')                      
+		self.parser.parse('../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             
@@ -337,7 +337,7 @@ class MyContentHandlerTest(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		self.parser.parse('../../xml_files_windows/url_invocation_xinclude.xml')                      
+		self.parser.parse('../../xml_files_windows/ssrf/url_invocation_xinclude.xml')                      
 
 		#Check if a request has been made                                       
 		r = requests.get(self._URL_ +"/getCounter")                             

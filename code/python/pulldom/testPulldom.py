@@ -32,7 +32,7 @@ class Test(unittest.TestCase):
 				
 	def testDOS_core(self):
 	
-		file = '../../xml_files_windows/dos_core.xml'
+		file = '../../xml_files_windows/dos/dos_core.xml'
 		tagName = "data"
 		
 		doc = _PULLDOM.parse(file)        
@@ -46,7 +46,7 @@ class Test(unittest.TestCase):
 
 	def testDOS_indirections(self):
 	
-		file = '../../xml_files_windows/dos_indirections.xml'
+		file = '../../xml_files_windows/dos/dos_indirections.xml'
 		tagName = "data"
 		
 		doc = _PULLDOM.parse(file)        
@@ -60,7 +60,7 @@ class Test(unittest.TestCase):
 
 	def testDOS_entitySize(self):
 
-		file = '../../xml_files_windows/dos_entitySize.xml'
+		file = '../../xml_files_windows/dos/dos_entitySize.xml'
 		tagName = "data"
 		
 		doc = _PULLDOM.parse(file)        
@@ -77,7 +77,7 @@ class Test(unittest.TestCase):
 	'''	
 	def testDOS_indirections_parameterEntity(self):
 	
-		file = '../../xml_files_windows/optional/dos_indirections_parameterEntity.xml'
+		file = '../../xml_files_windows/dos/dos_indirections_parameterEntity.xml'
 		tagName = "data"
 		
 		with self.assertRaises(_SAX.SAXParseException):
@@ -92,7 +92,7 @@ class Test(unittest.TestCase):
 	SAXParseException: <unknown>:6:6: recursive entity reference
 	'''
 	def testDOS_recursion(self):
-		file = '../../xml_files_windows/optional/dos_recursion.xml'
+		file = '../../xml_files_windows/dos/dos_recursion.xml'
 		tagName = "data"
 		
 		with self.assertRaises(_SAX.SAXParseException):
@@ -104,7 +104,7 @@ class Test(unittest.TestCase):
 					
 
 	def testXXE(self):
-		file = '../../xml_files_windows/xxe.xml'
+		file = '../../xml_files_windows/xxe/xxe.xml'
 		tagName = "data"
 		
 		doc = _PULLDOM.parse(file)        
@@ -117,7 +117,7 @@ class Test(unittest.TestCase):
 		
 	def testInternalSubset_ExternalPEReferenceInDTD(self): 
 
-		file = '../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml'
+		file = '../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml'
 		tagName = "data"
 		
 		doc = _PULLDOM.parse(file)        
@@ -129,7 +129,7 @@ class Test(unittest.TestCase):
 				
 	def testInternalSubset_PEReferenceInDTD(self): 
 
-		file = '../../xml_files_windows/internalSubset_PEReferenceInDTD.xml'
+		file = '../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml'
 		tagName = "data"
 		
 		doc = _PULLDOM.parse(file)        
@@ -143,7 +143,7 @@ class Test(unittest.TestCase):
 				
 				
 	def testParameterEntity_core(self):                                                
-		file = '../../xml_files_windows/parameterEntity_core.xml'
+		file = '../../xml_files_windows/xxep/parameterEntity_core.xml'
 		tagName = "data"
 		
 		doc = _PULLDOM.parse(file)        
@@ -155,7 +155,7 @@ class Test(unittest.TestCase):
 
 	def testParameterEntity_doctype(self):  
 
-		file = '../../xml_files_windows/parameterEntity_doctype.xml'
+		file = '../../xml_files_windows/xxep/parameterEntity_doctype.xml'
 		tagName = "data"
 		
 		doc = _PULLDOM.parse(file)        
@@ -176,7 +176,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		file = '../../xml_files_windows/url_invocation_doctype.xml'
+		file = '../../xml_files_windows/ssrf/url_invocation_doctype.xml'
 		tagName = "data"		
 		doc = _PULLDOM.parse(file)
 		for event, node in doc:                                                         
@@ -196,7 +196,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		file = '../../xml_files_windows/url_invocation_externalGeneralEntity.xml'
+		file = '../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml'
 		tagName = "data"		
 		doc = _PULLDOM.parse(file)
 		for event, node in doc:                                                         
@@ -216,7 +216,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 		
-		file = '../../xml_files_windows/url_invocation_parameterEntity.xml'
+		file = '../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml'
 		tagName = "data"		
 		doc = _PULLDOM.parse(file)
 		for event, node in doc:                                                         
@@ -236,7 +236,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		file = '../../xml_files_windows/url_invocation_schemaLocation.xml'
+		file = '../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml'
 		tagName = "ttt:data"		
 		doc = _PULLDOM.parse(file)
 		for event, node in doc:                                                         
@@ -258,7 +258,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		file = '../../xml_files_windows/url_invocation_xinclude.xml'
+		file = '../../xml_files_windows/ssrf/url_invocation_xinclude.xml'
 		tagName = "data"		
 		doc = _PULLDOM.parse(file)
 		for event, node in doc:                                                         
@@ -278,7 +278,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 
-		file = '../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml'
+		file = '../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml'
 		tagName = "data"		
 		doc = _PULLDOM.parse(file)
 		for event, node in doc:                                                         

@@ -124,3 +124,23 @@ sympy-plots-for-*.tex/
 # WinEdt
 *.bak
 *.sav
+
+
+# ignore custom files
+**/bin/
+**/obj/
+*.suo
+*.classpath
+*.project
+code/xml_files_windows/test/dos_entitySize_backup.xml
+code/xml_files_windows/test/dos_entitySize_test.xml
+code/xml_files_windows/test/test.xml
+
+code/php/alert.xhtml
+code/php/cat.jpeg
+code/php/file.pdf
+code/php/login.php
+code/php/message.txt
+code/php/test.html
+code/php/xhr.html
+code/php/xxe.xml

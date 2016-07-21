@@ -30,7 +30,7 @@ class Test(unittest.TestCase):
 	'''
 	def testDOS_core(self):	
 		with self.assertRaises(EntitiesForbidden):	
-			tree = _LXML.parse('../../xml_files_windows/dos_core.xml')
+			tree = _LXML.parse('../../xml_files_windows/dos/dos_core.xml')
 			
 		
 	'''
@@ -38,7 +38,7 @@ class Test(unittest.TestCase):
 	'''
 	def testDOS_indirections(self):
 		with self.assertRaises(XMLSyntaxError):			
-			tree = _LXML.parse('../../xml_files_windows/dos_indirections.xml')
+			tree = _LXML.parse('../../xml_files_windows/dos/dos_indirections.xml')
 
 	'''
 	EntitiesForbidden: EntitiesForbidden(name='a0', system_id=None, public_id=None)
@@ -46,14 +46,14 @@ class Test(unittest.TestCase):
 	def testDOS_entitySize(self):
 		#with self.assertRaises(XMLSyntaxError):
 		with self.assertRaises(EntitiesForbidden):
-			tree = _LXML.parse('../../xml_files_windows/dos_entitySize.xml')
+			tree = _LXML.parse('../../xml_files_windows/dos/dos_entitySize.xml')
 		
 	'''
 	EntitiesForbidden: EntitiesForbidden(name='file', system_id=None, public_id=None)
 	'''
 	def testXXE(self):
 		with self.assertRaises(EntitiesForbidden):		
-			tree = _LXML.parse('../../xml_files_windows/xxe.xml')
+			tree = _LXML.parse('../../xml_files_windows/xxe/xxe.xml')
 		
 
 	'''
@@ -61,7 +61,7 @@ class Test(unittest.TestCase):
 	'''
 	def testInternalSubset_ExternalPEReferenceInDTD(self):
 		with self.assertRaises(EntitiesForbidden):
-			tree = _LXML.parse('../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml')
+			tree = _LXML.parse('../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml')
 
 
 
@@ -70,7 +70,7 @@ class Test(unittest.TestCase):
 	'''
 	def testInternalSubset_PEReferenceInDTD(self):                              
 		with self.assertRaises(EntitiesForbidden):
-			tree = _LXML.parse('../../xml_files_windows/internalSubset_PEReferenceInDTD.xml')
+			tree = _LXML.parse('../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml')
 		
 
 
@@ -79,10 +79,10 @@ class Test(unittest.TestCase):
 	'''
 	def testParameterEntity_core(self):
 		with self.assertRaises(EntitiesForbidden):						
-			tree = _LXML.parse('../../xml_files_windows/parameterEntity_core.xml')
+			tree = _LXML.parse('../../xml_files_windows/xxep/parameterEntity_core.xml')
 	
 	def testParameterEntity_doctype(self):				
-		tree = _LXML.parse('../../xml_files_windows/parameterEntity_doctype.xml')
+		tree = _LXML.parse('../../xml_files_windows/xxep/parameterEntity_doctype.xml')
 		root = tree.getroot()
 		self.assertEquals(None, root.text)
 	
@@ -97,7 +97,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)      
 
-		tree = _LXML.parse('../../xml_files_windows/url_invocation_doctype.xml')
+		tree = _LXML.parse('../../xml_files_windows/ssrf/url_invocation_doctype.xml')
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -116,7 +116,7 @@ class Test(unittest.TestCase):
 
 		
 		with self.assertRaises(EntitiesForbidden):
-			tree = _LXML.parse('../../xml_files_windows/url_invocation_externalGeneralEntity.xml')
+			tree = _LXML.parse('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml')
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -135,7 +135,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)     
 
 		with self.assertRaises(EntitiesForbidden):
-			tree = _LXML.parse('../../xml_files_windows/url_invocation_parameterEntity.xml')
+			tree = _LXML.parse('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml')
 
 		#Check if a request has been made                                       
 		r = requests.get(url_counter)                                           
@@ -151,7 +151,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)
 
 		
-		tree = _LXML.parse('../../xml_files_windows/url_invocation_schemaLocation.xml')		
+		tree = _LXML.parse('../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml')		
 
 		#Check if a request has been made
 		r = requests.get(url_counter)
@@ -172,7 +172,7 @@ class Test(unittest.TestCase):
 		parser = XMLParser() 
 
 
-		tree = _LXML.parse('../../xml_files_windows/url_invocation_xinclude.xml')                      
+		tree = _LXML.parse('../../xml_files_windows/ssrf/url_invocation_xinclude.xml')                      
 
 
 		#Check if a request has been made
@@ -188,7 +188,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")
 		self.assertEqual("0", request_content)
 		
-		tree = _LXML.parse('../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml')                      
+		tree = _LXML.parse('../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml')                      
 
 		#Check if a request has been made
 		r = requests.get(url_counter)

@@ -23,36 +23,36 @@ class Test(unittest.TestCase):
 
 	def testDOS(self):
 		with self.assertRaises(EntitiesForbidden):
-			document = '../../xml_files_windows/dos_core.xml'
+			document = '../../xml_files_windows/dos/dos_core.xml'
 			doc = minidom.parse(document)    
 
 	def testDOS_indirections(self):
 		with self.assertRaises(EntitiesForbidden):
-			document = '../../xml_files_windows/dos_indirections.xml'
+			document = '../../xml_files_windows/dos/dos_indirections.xml'
 			doc = minidom.parse(document)    			
 			
 	def testDOS_entitySize(self):
 		with self.assertRaises(EntitiesForbidden):
-			document = '../../xml_files_windows/dos_entitySize.xml'
+			document = '../../xml_files_windows/dos/dos_entitySize.xml'
 			doc = minidom.parse(document)    			
 			
 	def testInternalSubset_ExternalPEReferenceInDTD(self):
 		with self.assertRaises(EntitiesForbidden):
-			document = '../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml'
+			document = '../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml'
 			doc = minidom.parse(document)   
 			
 	def testInternalSubset_PEReferenceInDTD(self):
 		with self.assertRaises(EntitiesForbidden):
-			document = '../../xml_files_windows/internalSubset_PEReferenceInDTD.xml'
+			document = '../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml'
 			doc = minidom.parse(document)   
 
 	def testParameterEntity_core(self):
 		with self.assertRaises(EntitiesForbidden):
-			document = '../../xml_files_windows/parameterEntity_core.xml'
+			document = '../../xml_files_windows/xxep/parameterEntity_core.xml'
 			doc = minidom.parse(document)   		
 		
 	def testParameterEntity_doctype(self):        		
-		document = '../../xml_files_windows/parameterEntity_doctype.xml'
+		document = '../../xml_files_windows/xxep/parameterEntity_doctype.xml'
 		doc = minidom.parse(document)   
 		content = doc.documentElement.toxml()		
 		self.assertEqual("<data/>", content) 
@@ -65,7 +65,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)     
 		
-		document = '../../xml_files_windows/url_invocation_doctype.xml'
+		document = '../../xml_files_windows/ssrf/url_invocation_doctype.xml'
 		doc = minidom.parse(document)   
 		content = doc.documentElement.toxml()          
 		
@@ -84,7 +84,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)       
 		
 		with self.assertRaises(EntitiesForbidden):	
-			document = '../../xml_files_windows/url_invocation_externalGeneralEntity.xml'
+			document = '../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml'
 			doc = minidom.parse(document)   
 			content = doc.documentElement.toxml()      
 		
@@ -101,7 +101,7 @@ class Test(unittest.TestCase):
 		self.assertEqual("0", request_content)     
 		
 		with self.assertRaises(EntitiesForbidden):
-			document = '../../xml_files_windows/url_invocation_parameterEntity.xml'
+			document = '../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml'
 			doc = minidom.parse(document)   
 			content = doc.documentElement.toxml()      
 		
@@ -117,7 +117,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)   
 		
-		document = '../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml'
+		document = '../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml'
 		doc = minidom.parse(document)   
 		content = doc.documentElement.toxml()                        
 		
@@ -133,7 +133,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)     
 		
-		document = '../../xml_files_windows/url_invocation_schemaLocation.xml'
+		document = '../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml'
 		doc = minidom.parse(document)   
 		content = doc.documentElement.toxml()     
 		
@@ -149,7 +149,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)  
 		
-		document = '../../xml_files_windows/url_invocation_xinclude.xml'
+		document = '../../xml_files_windows/ssrf/url_invocation_xinclude.xml'
 		doc = minidom.parse(document)   
 		content = doc.documentElement.toxml()     
 		
@@ -167,7 +167,7 @@ class Test(unittest.TestCase):
 		
 	def testXXE(self):
 		with self.assertRaises(EntitiesForbidden):
-			document = '../../xml_files_windows/xxe.xml'
+			document = '../../xml_files_windows/xxe/xxe.xml'
 			doc = minidom.parse(document)    
 
 		

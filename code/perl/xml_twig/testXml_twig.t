@@ -46,7 +46,7 @@ is($content, "4", "testDefault_noAttack");
 #testDOS_core                                                    
 #####
 $t= XML::Twig->new(); 
-$t->parsefile('../../xml_files_windows/dos_core.xml');                                  
+$t->parsefile('../../xml_files_windows/dos/dos_core.xml');                                  
 $root = $t->root;                                                               
 $content = $root->first_child->text;                                            
 $expected_count = 25;                                                        
@@ -60,7 +60,7 @@ is($real_count, $expected_count, "testDOS_core");
 #testDOS_core_NoExpand                                                
 #####
 $t= XML::Twig->new();    
-$t->parsefile('../../xml_files_windows/dos_core.xml', NoExpand => 1);                                  
+$t->parsefile('../../xml_files_windows/dos/dos_core.xml', NoExpand => 1);                                  
 $root = $t->root;                                                               
 $content = $root->first_child->text;                                            
 $expected_count = 0;                                                        
@@ -74,7 +74,7 @@ is($real_count, $expected_count, "testDOS_core_NoExpand");
 ## testDOS_entitySize
 ####
 $t= XML::Twig->new();    
-$t->parsefile('../../xml_files_windows/dos_entitySize.xml');                                  
+$t->parsefile('../../xml_files_windows/dos/dos_entitySize.xml');                                  
 $root = $t->root;                                                               
 $content = $root->first_child->text;                                            
 $expected_count = 3400000;                                                        
@@ -88,7 +88,7 @@ is($real_count, $expected_count, "testDOS_entitySize");
 ## testDOS_entitySize_NoExpand
 ####
 $t= XML::Twig->new(); 
-$t->parsefile('../../xml_files_windows/dos_entitySize.xml', NoExpand => 1);                                  
+$t->parsefile('../../xml_files_windows/dos/dos_entitySize.xml', NoExpand => 1);                                  
 $root = $t->root;                                                               
 $content = $root->first_child->text;                                            
 $expected_count = 0;                                                        
@@ -102,7 +102,7 @@ is($real_count, $expected_count, "testDOS_entitySize_NoExpand");
 ## testDOS_indirections
 ####
 $t= XML::Twig->new(); 
-$t->parsefile('../../xml_files_windows/dos_indirections.xml');                                  
+$t->parsefile('../../xml_files_windows/dos/dos_indirections.xml');                                  
 $root = $t->root;                                                               
 $content = $root->first_child->text;                                            
 $expected_count = 10000;                                                        
@@ -116,7 +116,7 @@ is($real_count, $expected_count, "testDOS_indirections");
 ## testDOS_indirections_NoExpand
 ####
 $t= XML::Twig->new(); 
-$t->parsefile('../../xml_files_windows/dos_indirections.xml', NoExpand => 1);                                  
+$t->parsefile('../../xml_files_windows/dos/dos_indirections.xml', NoExpand => 1);                                  
 $root = $t->root;                                                               
 $content = $root->first_child->text;                                            
 $expected_count = 0;                                                        
@@ -132,7 +132,7 @@ is($real_count, $expected_count, "testDOS_indirections_NoExpand");
 ####
 $t= XML::Twig->new();
 
-throws_ok{$t->parsefile('../../xml_files_windows/optional/dos_indirections_parameterEntity.xml');}
+throws_ok{$t->parsefile('../../xml_files_windows/dos/dos_indirections_parameterEntity.xml');}
 				qr/illegal parameter entity reference/, "testDOS_indirections_parameterEntity";
 				
 
@@ -144,7 +144,7 @@ $t= XML::Twig->new();
 
 
 $t= XML::Twig->new();                                                        
-throws_ok{$t->parsefile('../../xml_files_windows/optional/dos_recursion.xml');}
+throws_ok{$t->parsefile('../../xml_files_windows/dos/dos_recursion.xml');}
 				qr/recursive entity reference/, "testDOS_recursion";
 
 
@@ -198,7 +198,7 @@ is($content, "&intern;", "testInternalSubset_ExternalPEReferenceInDTD_ParseParam
 ## testInternalSubset_PEReferenceInDTD
 ####	
 $t= XML::Twig->new();                                                        
-$t->parsefile('../../xml_files_windows/internalSubset_PEReferenceInDTD.xml');                                  
+$t->parsefile('../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml');                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text;                                         
                                                                                 
@@ -209,7 +209,7 @@ is($content, "&intern;", "testInternalSubset_PEReferenceInDTD");
 ## testInternalSubset_PEReferenceInDTD_load_DTD
 ####	
 $t= XML::Twig->new(load_DTD => 1);                                                        
-$t->parsefile('../../xml_files_windows/internalSubset_PEReferenceInDTD.xml');                                  
+$t->parsefile('../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml');                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text;                                         
                                                                                 
@@ -220,7 +220,7 @@ is($content, "&intern;", "testInternalSubset_PEReferenceInDTD_load_DTD");
 ## testInternalSubset_PEReferenceInDTD_ParseParamEnt
 ####	
 $t= XML::Twig->new(ParseParamEnt => 1);                                                        
-$t->parsefile('../../xml_files_windows/internalSubset_PEReferenceInDTD.xml');                                  
+$t->parsefile('../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml');                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text;                                         
                                                                                 
@@ -231,7 +231,7 @@ is($content, "it_works", "testInternalSubset_PEReferenceInDTD_ParseParamEnt");
 ## testInternalSubset_PEReferenceInDTD_ParseParamEnt_NoExpand
 ####	
 $t= XML::Twig->new();                                                        
-$t->parsefile('../../xml_files_windows/internalSubset_PEReferenceInDTD.xml', ParseParamEnt => 1, NoExpand => 1);                                  
+$t->parsefile('../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml', ParseParamEnt => 1, NoExpand => 1);                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text;                                         
                                                                                 
@@ -242,7 +242,7 @@ is($content, "&intern;", "testInternalSubset_PEReferenceInDTD_ParseParamEnt_NoEx
 ## testParameterEntity_core
 ####	
 $t= XML::Twig->new();                                                        
-$t->parsefile('../../xml_files_windows/parameterEntity_core.xml');                                  
+$t->parsefile('../../xml_files_windows/xxep/parameterEntity_core.xml');                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text;                                         
                                                                                 
@@ -255,12 +255,12 @@ is($content, "&all;", "testParameterEntity_core");
 ## testParameterEntity_core_ParseParamEnt
 ####	
 $t= XML::Twig->new();                                                        
-throws_ok{$t->parsefile('../../xml_files_windows/parameterEntity_core.xml', 
+throws_ok{$t->parsefile('../../xml_files_windows/xxep/parameterEntity_core.xml', 
 				ParseParamEnt => 1 );} qr/cannot expand %dtd/, "testParameterEntity_core_ParseParamEnt";
 
 # tried every option; still not working;
 #$t= XML::Twig->new(load_DTD=>1);                                                        
-#$t->parsefile('../../xml_files_windows/parameterEntity_core.xml', ParseParamEnt => 1, load_DTD =>1, NoExpand => 0); 
+#$t->parsefile('../../xml_files_windows/xxep/parameterEntity_core.xml', ParseParamEnt => 1, load_DTD =>1, NoExpand => 0); 
 #$root = $t->root;                                                            
 #$content = $root->first_child->text;                                                                                                                         
 #is($content, "&all;", "testParameterEntity_core"); 
@@ -270,7 +270,7 @@ throws_ok{$t->parsefile('../../xml_files_windows/parameterEntity_core.xml',
 ## testParameterEntity_doctype
 ####	
 $t= XML::Twig->new();                                                        
-$t->parsefile('../../xml_files_windows/parameterEntity_doctype.xml');                                  
+$t->parsefile('../../xml_files_windows/xxep/parameterEntity_doctype.xml');                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text;                                         
                                                                                 
@@ -288,7 +288,7 @@ is($content, "&all;", "testParameterEntity_doctype");
  #        at testXml_twig.t line 262.
  #       XML::Twig::_croak("\x{a}illegal parameter entity reference at line 1, column 194, by"..., 0) called at #C:/Strawberry/perl/vendor/lib/XML/Twig.pm line 795
 #        XML::Twig::_checked_parse_result(undef, "\x{a}illegal parameter entity reference at line 1, column 194, by"...) called at C:/Strawberry/perl/vendor/lib/XML/Twig.pm line 783
-#        XML::Twig::parsefile(XML::Twig=HASH(0x3a1b4f0), "../../xml_files_windows/parameterEntity_doctype.xml") called at testXml_twig.t line 262
+#        XML::Twig::parsefile(XML::Twig=HASH(0x3a1b4f0), "../../xml_files_windows/xxep/parameterEntity_doctype.xml") called at testXml_twig.t line 262
 # Looks like you planned 28 tests but ran 18.
 # Looks like your test exited with 255 just after 18.
 
@@ -297,7 +297,7 @@ is($content, "&all;", "testParameterEntity_doctype");
 ####	
 $t= XML::Twig->new(load_DTD => 1);   
 
-throws_ok{$t->parsefile('../../xml_files_windows/parameterEntity_doctype.xml');}
+throws_ok{$t->parsefile('../../xml_files_windows/xxep/parameterEntity_doctype.xml');}
 			qr/illegal parameter entity reference/, "testParameterEntity_doctype_load_DTD";
 
 			
@@ -308,19 +308,19 @@ throws_ok{$t->parsefile('../../xml_files_windows/parameterEntity_doctype.xml');}
 ####	
 $t= XML::Twig->new(load_DTD => 1, ParseParamEnt => 1);   
 
-throws_ok{$t->parsefile('../../xml_files_windows/parameterEntity_doctype.xml');}
+throws_ok{$t->parsefile('../../xml_files_windows/xxep/parameterEntity_doctype.xml');}
 			qr/illegal parameter entity reference/, "testParameterEntity_doctype_load_DTD_ParseParamEnt";
 
 ######################
 ## testParameterEntity_doctype_ParseParamEnt
 ####	
 $t= XML::Twig->new(ParseParamEnt => 1);          
-throws_ok{$t->parsefile('../../xml_files_windows/parameterEntity_doctype.xml');}
+throws_ok{$t->parsefile('../../xml_files_windows/xxep/parameterEntity_doctype.xml');}
 			qr/cannot expand >/, "testParameterEntity_doctype_ParseParamEnt";
                                              
 # tried every option; still not working; load_DTD =>1, NoExpand => 0
 #$t= XML::Twig->new(load_DTD=>1);                                                        
-#$t->parsefile('../../xml_files_windows/parameterEntity_core.xml', ParseParamEnt => 1); 
+#$t->parsefile('../../xml_files_windows/xxep/parameterEntity_core.xml', ParseParamEnt => 1); 
 #$root = $t->root;                                                            
 #$content = $root->first_child->text;                                                                                                                         
 #is($content, "&all;", "testParameterEntity_core");                                                                           
@@ -340,7 +340,7 @@ $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
 $t= XML::Twig->new();                                                        
-$t->parsefile('../../xml_files_windows/url_invocation_doctype.xml');                                  
+$t->parsefile('../../xml_files_windows/ssrf/url_invocation_doctype.xml');                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text;                                         
 
@@ -367,7 +367,7 @@ $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
 $t= XML::Twig->new(load_DTD => 1);                                                        
-$t->parsefile('../../xml_files_windows/url_invocation_doctype.xml');                                  
+$t->parsefile('../../xml_files_windows/ssrf/url_invocation_doctype.xml');                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text;                                         
 
@@ -392,7 +392,7 @@ $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
 $t= XML::Twig->new(ParseParamEnt => 1);                                    
-throws_ok { $t->parsefile('../../xml_files_windows/url_invocation_externalGeneralEntity.xml') } qr/cannot expand &remote;/, 'testURLInvocation_doctype_ParseParamEnt Exception';
+throws_ok { $t->parsefile('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml') } qr/cannot expand &remote;/, 'testURLInvocation_doctype_ParseParamEnt Exception';
                                 
 
 $request = $ua->get($URL.'/getCounter');
@@ -419,7 +419,7 @@ $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
 $t= XML::Twig->new();                                                        
-throws_ok { $t->parsefile('../../xml_files_windows/url_invocation_externalGeneralEntity.xml') } qr/cannot expand &remote;/, 'testURLInvocaton_externalGeneralEntity Exception';
+throws_ok { $t->parsefile('../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml') } qr/cannot expand &remote;/, 'testURLInvocaton_externalGeneralEntity Exception';
 
 $request = $ua->get($URL.'/getCounter');
 $response = $request->decoded_content;
@@ -445,7 +445,7 @@ $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
 $t= XML::Twig->new();                                                        
-$t->parsefile('../../xml_files_windows/url_invocation_parameterEntity.xml');                                  
+$t->parsefile('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml');                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text;                                         
 
@@ -470,7 +470,7 @@ $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
 $t= XML::Twig->new(load_DTD => 1);                                                        
-$t->parsefile('../../xml_files_windows/url_invocation_parameterEntity.xml');                                  
+$t->parsefile('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml');                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text; 
 
@@ -503,7 +503,7 @@ $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
 $t= XML::Twig->new(ParseParamEnt => 1);                                                        
-throws_ok{$t->parsefile('../../xml_files_windows/url_invocation_parameterEntity.xml');} qr/cannot expand %remote/, "testURLInvocation_parameterEntity_ParseParamEnt Exception";
+throws_ok{$t->parsefile('../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml');} qr/cannot expand %remote/, "testURLInvocation_parameterEntity_ParseParamEnt Exception";
 
 $request = $ua->get($URL.'/getCounter');
 $response = $request->decoded_content;
@@ -531,7 +531,7 @@ $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
 $t= XML::Twig->new();                                                        
-$t->parsefile('../../xml_files_windows/url_invocation_xinclude.xml');                                  
+$t->parsefile('../../xml_files_windows/ssrf/url_invocation_xinclude.xml');                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text;                                         
 
@@ -556,7 +556,7 @@ $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
 $t= XML::Twig->new();                                                        
-$t->parsefile('../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml');                                  
+$t->parsefile('../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml');                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text;                                         
 
@@ -581,7 +581,7 @@ $response =~ s/^\s*(.*?)\s*$/$1/;
 is($response, "0", "counter reset");
 
 $t= XML::Twig->new();                                                        
-$t->parsefile('../../xml_files_windows/url_invocation_schemaLocation.xml');                                  
+$t->parsefile('../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml');                                  
 $root = $t->root;                                                            
 $content = $root->first_child->text;                                         
 
@@ -627,7 +627,7 @@ is($content, "xi:include", "testXInclude");
 #not load 'file:///C:/Christopher_Sp"...) called at C:/Strawberry/perl/vendor/lib
 #/XML/Twig.pm line 783
 #        XML::Twig::parsefile(XML::Twig=HASH(0x4062990), "../../xml_files_windows
-#/xxe.xml") called at testXml_twig.t line 496
+#/xxe/xxe.xml") called at testXml_twig.t line 496
 
 ######################
 ## testXXE

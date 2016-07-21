@@ -29,7 +29,7 @@ namespace TestDOMDocument
         public void testDOS_core()
         {
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml");
             String content = xmlDoc.DocumentElement.InnerText;
 
             int expectedCount = 25;
@@ -45,7 +45,7 @@ namespace TestDOMDocument
         {
             try
             {
-                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml";
+                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml";
                 XmlReaderSettings settings = new XmlReaderSettings();
                 XmlReader reader = XmlReader.Create(filename, settings);
                 XmlDocument xmlDoc = new XmlDocument();
@@ -67,7 +67,7 @@ namespace TestDOMDocument
         public void testDOS_indirections()
         {
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/dos_indirections.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections.xml");
             String content = xmlDoc.DocumentElement.InnerText;
 
             int expectedCount = 10000;
@@ -80,7 +80,7 @@ namespace TestDOMDocument
         {
             try
             {
-                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos_indirections.xml";
+                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections.xml";
                 XmlReaderSettings settings = new XmlReaderSettings();
                 XmlReader reader = XmlReader.Create(filename, settings);
                 XmlDocument xmlDoc = new XmlDocument();
@@ -106,7 +106,7 @@ namespace TestDOMDocument
             try
             {
                 XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/optional/dos_indirections_parameterEntity.xml");
+                xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections_parameterEntity.xml");
                 String content = xmlDoc.DocumentElement.InnerText;
             }
             catch (System.Xml.XmlException e)
@@ -127,7 +127,7 @@ namespace TestDOMDocument
             try
             {
                 XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/dos_entitySize.xml");
+                xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_entitySize.xml");
                 String content = xmlDoc.DocumentElement.InnerText;
             }
             catch (System.Xml.XmlException e)
@@ -149,7 +149,7 @@ namespace TestDOMDocument
             try
             {
                 XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/optional/dos_recursion.xml");
+                xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_recursion.xml");
                 String content = xmlDoc.DocumentElement.InnerText;
             }
             catch (System.Xml.XmlException e)
@@ -170,7 +170,7 @@ namespace TestDOMDocument
         public void testInternalSubset_ExternalPEReferenceInDTD()
         {
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
             String content = xmlDoc.DocumentElement.InnerText;
             Assert.AreEqual("it_works", content);
         }
@@ -183,7 +183,7 @@ namespace TestDOMDocument
             
             try
             {
-                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
                 XmlReaderSettings settings = new XmlReaderSettings();
                 XmlReader reader = XmlReader.Create(filename, settings);
                 XmlDocument xmlDoc = new XmlDocument();
@@ -205,7 +205,7 @@ namespace TestDOMDocument
         public void testInternalSubset_PEReferenceInDTD()
         {
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
             String content = xmlDoc.DocumentElement.InnerText;
             Assert.AreEqual("it_works", content);
         }
@@ -216,7 +216,7 @@ namespace TestDOMDocument
 
             try
             {
-                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_PEReferenceInDTD.xml";
+                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml";
                 XmlReaderSettings settings = new XmlReaderSettings();
                 XmlReader reader = XmlReader.Create(filename, settings);
                 XmlDocument xmlDoc = new XmlDocument();
@@ -239,7 +239,7 @@ namespace TestDOMDocument
         public void testParameterEntity_core()
         {
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml");
             String content = xmlDoc.DocumentElement.InnerText;
             Assert.AreEqual("it_works", content);
         }
@@ -250,7 +250,7 @@ namespace TestDOMDocument
 
             try
             {
-                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml";
+                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml";
                 XmlReaderSettings settings = new XmlReaderSettings();
                 XmlReader reader = XmlReader.Create(filename, settings);
                 XmlDocument xmlDoc = new XmlDocument();
@@ -272,7 +272,7 @@ namespace TestDOMDocument
         public void testParameterEntity_doctype()
         {
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml");
             String content = xmlDoc.DocumentElement.InnerText;
             Assert.AreEqual("it_works", content);
         }
@@ -283,7 +283,7 @@ namespace TestDOMDocument
         {
             try
             {
-                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml";
+                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml";
                 XmlReaderSettings settings = new XmlReaderSettings();
                 XmlReader reader = XmlReader.Create(filename, settings);
                 XmlDocument xmlDoc = new XmlDocument();
@@ -313,7 +313,7 @@ namespace TestDOMDocument
             WebResponse response = request.GetResponse();
             
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml");
             
             //check the counter
             request = WebRequest.Create("http://127.0.0.1:5000/getCounter");
@@ -336,7 +336,7 @@ namespace TestDOMDocument
 
             try
             {
-                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml";
+                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml";
                 XmlReaderSettings settings = new XmlReaderSettings();
                 XmlReader reader = XmlReader.Create(filename, settings);
                 XmlDocument xmlDoc = new XmlDocument();
@@ -376,7 +376,7 @@ namespace TestDOMDocument
             WebResponse response = request.GetResponse();
 
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 
             //check the counter
             request = WebRequest.Create("http://127.0.0.1:5000/getCounter");
@@ -399,7 +399,7 @@ namespace TestDOMDocument
 
             try
             {
-                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml";
+                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
                 XmlReaderSettings settings = new XmlReaderSettings();
                 XmlReader reader = XmlReader.Create(filename, settings);
                 XmlDocument xmlDoc = new XmlDocument();
@@ -439,7 +439,7 @@ namespace TestDOMDocument
             WebResponse response = request.GetResponse();
 
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");
 
             //check the counter
             request = WebRequest.Create("http://127.0.0.1:5000/getCounter");
@@ -492,7 +492,7 @@ namespace TestDOMDocument
             WebResponse response = request.GetResponse();
 
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 
             //check the counter
             request = WebRequest.Create("http://127.0.0.1:5000/getCounter");
@@ -516,7 +516,7 @@ namespace TestDOMDocument
 
             try
             {
-                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml";
+                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
                 XmlReaderSettings settings = new XmlReaderSettings();                
                 XmlReader reader = XmlReader.Create(filename, settings);
                 XmlDocument xmlDoc = new XmlDocument();
@@ -550,7 +550,7 @@ namespace TestDOMDocument
             WebResponse response = request.GetResponse();
 
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_schemaLocation.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_schemaLocation.xml");
 
             //check the counter
             request = WebRequest.Create("http://127.0.0.1:5000/getCounter");
@@ -603,7 +603,7 @@ namespace TestDOMDocument
             WebResponse response = request.GetResponse();
 
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_xinclude.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_xinclude.xml");
 
             //check the counter
             request = WebRequest.Create("http://127.0.0.1:5000/getCounter");
@@ -627,7 +627,7 @@ namespace TestDOMDocument
 
                        
 
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_xinclude.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_xinclude.xml";
             XmlReaderSettings settings = new XmlReaderSettings();            
             XmlReader reader = XmlReader.Create(filename, settings);
             //XmlDocument xmlDoc = new XmlDocument();
@@ -695,7 +695,7 @@ namespace TestDOMDocument
         {
 
             XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml");
+            xmlDoc.Load("C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml");
             String content = xmlDoc.DocumentElement.InnerText;
             Assert.AreEqual("it_works", content);
         }
@@ -707,7 +707,7 @@ namespace TestDOMDocument
 
             try
             {
-                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml";
+                String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml";
                 XmlReaderSettings settings = new XmlReaderSettings();
                 XmlReader reader = XmlReader.Create(filename, settings);
                 XmlDocument xmlDoc = new XmlDocument();

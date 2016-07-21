@@ -36,7 +36,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	public function testDOS_core() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/dos_core.xml");
+		$xml->open("../../xml_files_windows/dos/dos_core.xml");
 		
 		
 		while($xml->read()) {
@@ -54,7 +54,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 	public function testDOS_core_LIBXML_NOENT() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/dos_core.xml",
+		$xml->open("../../xml_files_windows/dos/dos_core.xml",
 					$encoding="UTF-8",
 					$options = LIBXML_NOENT);
 		
@@ -77,7 +77,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/dos_core.xml");				
+		$xml->open("../../xml_files_windows/dos/dos_core.xml");				
 		
 		$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
 		
@@ -103,7 +103,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	 */
 	public function testDOS_indirections() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/dos_indirections.xml");
+		$xml->open("../../xml_files_windows/dos/dos_indirections.xml");
 	
 	
 		while($xml->read()) {
@@ -126,7 +126,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 	public function testDOS_indirections_LIBXML_NOENT() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/dos_indirections.xml",
+		$xml->open("../../xml_files_windows/dos/dos_indirections.xml",
 				$encoding="UTF-8",
 				$options = LIBXML_NOENT);
 	
@@ -146,7 +146,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	public function testDOS_indirections_LIBXML_NOENT_PARSEHUGE() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/dos_indirections.xml",
+		$xml->open("../../xml_files_windows/dos/dos_indirections.xml",
 				$encoding="UTF-8",
 				$options = LIBXML_NOENT|LIBXML_PARSEHUGE);
 	
@@ -167,7 +167,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 	public function testDOS_indirections_LIBXML_PARSEHUGE() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/dos_indirections.xml",
+		$xml->open("../../xml_files_windows/dos/dos_indirections.xml",
 				$encoding="UTF-8",
 				$options = LIBXML_PARSEHUGE);
 	
@@ -193,7 +193,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 		$xml = new XMLReader();
 	
-		$xml->open("../../xml_files_windows/dos_indirections.xml");
+		$xml->open("../../xml_files_windows/dos/dos_indirections.xml");
 	
 		$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
 	
@@ -212,7 +212,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 		$xml = new XMLReader();
 	
-		$xml->open("../../xml_files_windows/dos_indirections.xml",
+		$xml->open("../../xml_files_windows/dos/dos_indirections.xml",
 				$encoding="UTF-8",
 				$options = LIBXML_PARSEHUGE);
 	
@@ -238,7 +238,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	*/	
 	public function testDOS_indirections_parameterEntity() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/optional/dos_indirections_parameterEntity.xml");
+		$xml->open("../../xml_files_windows/dos/dos_indirections_parameterEntity.xml");
 	
 	
 		while($xml->read()) {
@@ -261,7 +261,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	public function testDOS_entitySize() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/dos_entitySize.xml");
+		$xml->open("../../xml_files_windows/dos/dos_entitySize.xml");
 	
 	
 		while($xml->read()) {
@@ -281,7 +281,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	public function testDOS_entitySize_LIBXML_NOENT() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/dos_entitySize.xml",
+		$xml->open("../../xml_files_windows/dos/dos_entitySize.xml",
 				$encoding="UTF-8",
 				$options = LIBXML_NOENT);
 	
@@ -304,7 +304,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 		$xml = new XMLReader();
 	
-		$xml->open("../../xml_files_windows/dos_entitySize.xml");
+		$xml->open("../../xml_files_windows/dos/dos_entitySize.xml");
 	
 		$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
 	
@@ -328,7 +328,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 		$xml = new XMLReader();
 	
-		$xml->open("../../xml_files_windows/dos_entitySize.xml",
+		$xml->open("../../xml_files_windows/dos/dos_entitySize.xml",
 				$encoding="UTF-8",
 				$options = LIBXML_PARSEHUGE);
 	
@@ -356,7 +356,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 	public function testDOS_recursion() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/optional/dos_recursion.xml");
+		$xml->open("../../xml_files_windows/dos/dos_recursion.xml");
 	
 	
 		while($xml->read()) {
@@ -380,12 +380,12 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	/**
 	 * @expectedException PHPUnit_Framework_Error 
-	 * XMLReader::read(): /xml_files_windows/dtd/externalParameterEntity/internalSubset_ExternalPEReferenceInDTD.xml:6: parser error : Entity 'intern' not defined
+	 * XMLReader::read(): /xml_files_windows/dtd/externalParameterEntity/xxep/internalSubset_ExternalPEReferenceInDTD.xml:6: parser error : Entity 'intern' not defined
 	 */
 	public function testInternalSubset_ExternalPEReferenceInDTD() {
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		$xml->open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 		
 		while($xml->read()) {
 			if ($xml->nodeType == XMLReader::ELEMENT && $xml->name == 'data') {
@@ -402,7 +402,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$xml->open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDATTR);
 		
@@ -423,7 +423,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$xml->open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDLOAD);
 		
@@ -445,7 +445,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$xml->open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDVALID);
 		
@@ -467,7 +467,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$xml->open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 		
@@ -498,7 +498,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml",
+		$xml->open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 		
@@ -522,7 +522,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_ExternalPEReferenceInDTD_setParserProperty_LOADDTD() {
 		
 		$xml = new XMLReader();		
-		$xml->open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		$xml->open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 		$xml->setParserProperty(XMLReader::LOADDTD, true);
 		
 		
@@ -546,7 +546,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_ExternalPEReferenceInDTD_setParserProperty_DEFAULTATTRS() {
 		
 		$xml = new XMLReader();		
-		$xml->open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		$xml->open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 		$xml->setParserProperty(XMLReader::DEFAULTATTRS, true);
 		
 		
@@ -566,7 +566,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_ExternalPEReferenceInDTD_setParserProperty_VALIDATE() {
 		
 		$xml = new XMLReader();		
-		$xml->open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		$xml->open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 		$xml->setParserProperty(XMLReader::VALIDATE, true);
 		
 		
@@ -587,7 +587,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_ExternalPEReferenceInDTD_setParserProperty_SUBST_ENTITIES() {
 		
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+		$xml->open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 		
 		$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
 		
@@ -605,13 +605,13 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 	/**
 	*@expectedException PHPUnit_Framework_Error 
-	*XMLReader::read(): internalSubset_ExternalPEReferenceInDTD.xml:4: 
+	*XMLReader::read(): xxep/internalSubset_ExternalPEReferenceInDTD.xml:4: 
 	*I/O warning : failed to load external entity "/xml_files_windows/dtd/externalParameterEntity/internalSubset_ExternalPEReferenceInDTD.dtd"
 	**/
 	public function testInternalSubset_ExternalPEReferenceInDTD_setParserProperty_SUBST_ENTITIES_disable_entity_loader() {
 	
 	$xml = new XMLReader();
-	$xml->open("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+	$xml->open("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 	
 	libxml_disable_entity_loader(true);
 	$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
@@ -632,7 +632,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_PEReferenceInDTD() {
 		$xml = new XMLReader();			
 		
-		$xml->open("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");		
+		$xml->open("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");		
 		
 		while($xml->read()) {
 			if ($xml->nodeType == XMLReader::ELEMENT && $xml->name == 'data') {
@@ -649,7 +649,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_PEReferenceInDTD_LIBXML_DTDATTR() {
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml",
+		$xml->open("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDATTR);
 		
@@ -669,7 +669,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_PEReferenceInDTD_LIBXML_DTDLOAD() {
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml",
+		$xml->open("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDLOAD);
 		
@@ -688,7 +688,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_PEReferenceInDTD_LIBXML_DTDVALID() {
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml",
+		$xml->open("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDVALID);
 		
@@ -707,7 +707,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_PEReferenceInDTD_LIBXML_NOENT() {
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml",
+		$xml->open("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 		
@@ -731,7 +731,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_PEReferenceInDTD_setParserProperty_LOADDTD() {
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+		$xml->open("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 		
 		$xml->setParserProperty(XMLReader::LOADDTD, true);
 		
@@ -750,7 +750,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_PEReferenceInDTD_setParserProperty_DEFAULTATTRS() {
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+		$xml->open("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 		
 		$xml->setParserProperty(XMLReader::DEFAULTATTRS, true);
 		
@@ -769,7 +769,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_PEReferenceInDTD_setParserProperty_VALIDATE() {
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+		$xml->open("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 		
 		$xml->setParserProperty(XMLReader::VALIDATE, true);
 		
@@ -787,7 +787,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testInternalSubset_PEReferenceInDTD_setParserProperty_SUBST_ENTITIES() {
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+		$xml->open("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 		
 		$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
 		
@@ -813,7 +813,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 		$xml = new XMLReader();		
 
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml");	
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml");	
 		
 		while($xml->read()) {
 			if ($xml->nodeType == XMLReader::ELEMENT && $xml->name == 'data') {
@@ -829,7 +829,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDATTR);
 		
@@ -850,7 +850,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDLOAD);
 		
@@ -869,7 +869,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDVALID);
 		
@@ -889,7 +889,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 		
@@ -914,7 +914,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_NOENT|LIBXML_NONET);
 		
@@ -935,7 +935,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 		
@@ -956,7 +956,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_core_setParserProperty_LOADDTD(){
 		
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml");
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml");
 		//use setParserProperty
 		$xml->setParserProperty(XMLReader::LOADDTD, true);
 		
@@ -977,7 +977,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_core_setParserProperty_DEFAULTATTRS(){
 		
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml");
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml");
 		//use setParserProperty
 		$xml->setParserProperty(XMLReader::DEFAULTATTRS, true);
 		
@@ -993,7 +993,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_core_setParserProperty_VALIDATE(){
 		
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml");
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml");
 		//use setParserProperty
 		$xml->setParserProperty(XMLReader::VALIDATE, true);
 		
@@ -1013,7 +1013,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_core_setParserProperty_SUBST_ENTITIES(){
 		
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml");
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml");
 		//use setParserProperty
 		$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
 		
@@ -1036,7 +1036,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_core_setParserProperty_SUBST_ENTITIES_disable_entity_loader(){
 	
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml");
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml");
 
 		libxml_disable_entity_loader(true);
 		//use setParserProperty
@@ -1062,7 +1062,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 		$xml = new XMLReader();
 
-		$xml->open("../../xml_files_windows/parameterEntity_core.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_core.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_NONET);
 	
@@ -1089,7 +1089,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype() {
 		$xml = new XMLReader();			
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml");	
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml");	
 		
 		while($xml->read()) {
 			if ($xml->nodeType == XMLReader::ELEMENT && $xml->name == 'data') {
@@ -1106,7 +1106,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_LIBXML_DTDATTR() {
 		$xml = new XMLReader();			
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_DTDATTR);
 		
@@ -1126,7 +1126,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_LIBXML_DTDATTR_NOENT() {
 		$xml = new XMLReader();			
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_DTDATTR|LIBXML_NOENT);
 		
@@ -1149,7 +1149,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_LIBXML_DTDATTR_NOENT_NONET() {
 		$xml = new XMLReader();			
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_DTDATTR|LIBXML_NOENT|LIBXML_NONET);
 		
@@ -1173,7 +1173,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 	$xml = new XMLReader();			
 
-	$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+	$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 					$encoding="UTF-8",
 				$options=LIBXML_DTDATTR|LIBXML_NOENT);
 	
@@ -1220,7 +1220,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_LIBXML_DTDLOAD() {
 		$xml = new XMLReader();			
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_DTDLOAD);
 		
@@ -1239,7 +1239,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_LIBXML_DTDLOAD_NOENT() {
 		$xml = new XMLReader();			
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_DTDLOAD|LIBXML_NOENT);
 		
@@ -1262,7 +1262,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_LIBXML_DTDLOAD_NOENT_NONET() {
 		$xml = new XMLReader();			
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_DTDLOAD|LIBXML_NOENT|LIBXML_NONET);
 		
@@ -1286,7 +1286,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 	$xml = new XMLReader();			
 
-	$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+	$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 					$encoding="UTF-8",
 				$options=LIBXML_DTDLOAD|LIBXML_NOENT);
 	
@@ -1308,7 +1308,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_LIBXML_DTDVALID() {
 		$xml = new XMLReader();			
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_DTDVALID);
 		
@@ -1327,7 +1327,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_LIBXML_DTDVALID_NOENT() {
 		$xml = new XMLReader();			
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_DTDVALID|LIBXML_NOENT);
 		
@@ -1350,7 +1350,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_LIBXML_DTDVALID_NOENT_NONET() {
 		$xml = new XMLReader();			
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_DTDVALID|LIBXML_NOENT|LIBXML_NONET);
 		
@@ -1374,7 +1374,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_LIBXML_DTDVALID_NOENT_disable_entity_loader() {
 		$xml = new XMLReader();			
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_DTDVALID|LIBXML_NOENT);
 		libxml_disable_entity_loader(true);
@@ -1403,7 +1403,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
     public function testParameterEntity_doctype_LIBXML_NOENT() {
 		$xml = new XMLReader();			
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 		
@@ -1428,7 +1428,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_setParserProperty_SUBST_ENTITIES(){
 		
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml");
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 		//use setParserProperty
 		$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
 		
@@ -1452,7 +1452,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
     public function testParameterEntity_doctype_setParserProperty_LOADDTD() {
        
         $xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml");
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 		//use setParserProperty
         $xml->setParserProperty(XMLReader::LOADDTD, true);
 		
@@ -1473,7 +1473,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
         $xml = new XMLReader();
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 	
@@ -1501,7 +1501,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
         $xml = new XMLReader();
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_NOENT|LIBXML_NONET);
 	
@@ -1532,7 +1532,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
         $xml = new XMLReader();
 
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 	
@@ -1552,7 +1552,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_setParserProperty_DEFAULTATTRS() {
        
         $xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml");
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 		//use setParserProperty
         $xml->setParserProperty(XMLReader::DEFAULTATTRS, true);
 		
@@ -1571,7 +1571,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_setParserProperty_DEFAULTATTRS_LIBXML_NOENT() {
        
         $xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 		//use setParserProperty
@@ -1596,7 +1596,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_setParserProperty_DEFAULTATTRS_LIBXML_NOENT_NONET() {
        
         $xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_NOENT|LIBXML_NONET);
 		//use setParserProperty
@@ -1621,7 +1621,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_setParserProperty_DEFAULTATTRS_LIBXML_NOENT_disable_entity_loader() {
        
         $xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 		//use setParserProperty
@@ -1649,7 +1649,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	 public function testParameterEntity_doctype_setParserProperty_VALIDATE() {
        
         $xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml");
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 		//use setParserProperty
         $xml->setParserProperty(XMLReader::VALIDATE, true);
 		
@@ -1668,7 +1668,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_setParserProperty_VALIDATE_LIBXML_NOENT() {
        
         $xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 		//use setParserProperty
@@ -1693,7 +1693,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_setParserProperty_VALIDATE_LIBXML_NOENT_NONET() {
        
         $xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_NOENT|LIBXML_NONET);
 		//use setParserProperty
@@ -1719,7 +1719,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testParameterEntity_doctype_setParserProperty_VALIDATE_LIBXML_NOENT_disable_entity_loader() {
        
         $xml = new XMLReader();
-		$xml->open("../../xml_files_windows/parameterEntity_doctype.xml",
+		$xml->open("../../xml_files_windows/xxep/parameterEntity_doctype.xml",
 						$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 		//use setParserProperty
@@ -1764,7 +1764,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
  		
  		$xml = new XMLReader();
  		
- 		$xml->open("../../xml_files_windows/url_invocation_doctype.xml"); 				
+ 		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml"); 				
  		
  		while($xml->read()) {
  			if ($xml->nodeType == XMLReader::ELEMENT && $xml->name == 'data') {
@@ -1789,7 +1789,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDATTR);
 			
@@ -1815,7 +1815,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDATTR|LIBXML_NONET);
 			
@@ -1847,7 +1847,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDATTR);
 
@@ -1878,7 +1878,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDLOAD);
 			
@@ -1903,7 +1903,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDLOAD|LIBXML_NONET);
 			
@@ -1924,7 +1924,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 	/**
 	*@expectedException PHPUnit_Framework_Error
-	*	XMLReader::read(): /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml:2: I/O warning : failed to load external entity "http://127.0.0.1:5000/"
+	*	XMLReader::read(): /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml:2: I/O warning : failed to load external entity "http://127.0.0.1:5000/"
 	*/
 	public function testURLInvocation_doctype_LIBXML_DTDLOAD_disable_entity_loader() {
 
@@ -1936,7 +1936,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDLOAD);
 
@@ -1967,7 +1967,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDVALID);
 			
@@ -1994,7 +1994,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDVALID|LIBXML_NONET);
 			
@@ -2025,7 +2025,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_DTDVALID);
 
@@ -2060,7 +2060,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 					$encoding="UTF-8",
 					$options=LIBXML_NOENT);
 			
@@ -2097,7 +2097,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 
 		//set LOADDTD
 		$xml->setParserProperty(XMLReader::LOADDTD, true);
@@ -2117,7 +2117,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 	/**
 	*@expectedException PHPUnit_Framework_Error
-	*XMLReader::read(): /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml:2: I/O warning : failed to load external entity "http://127.0.0.1:5000/"
+	*XMLReader::read(): /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml:2: I/O warning : failed to load external entity "http://127.0.0.1:5000/"
 	*/
 	public function testURLInvocation_doctype_setParserProperty_LOADDTD_disable_entity_loader() {
 		
@@ -2130,7 +2130,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 
 		libxml_disable_entity_loader(true);
 
@@ -2168,7 +2168,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 
 		
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NONET);
 		
@@ -2200,7 +2200,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 
 		
 		$xml->setParserProperty(XMLReader::DEFAULTATTRS, true);
@@ -2229,7 +2229,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NONET);
 
@@ -2252,7 +2252,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 	/**
 	*@expectedException PHPUnit_Framework_Error
-	*XMLReader::read(): /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml:2: I/O warning : failed to load external entity "http://127.0.0.1:5000/"
+	*XMLReader::read(): /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml:2: I/O warning : failed to load external entity "http://127.0.0.1:5000/"
 	*/
 	public function testURLInvocation_doctype_setParserProperty_DEFAULTATTRS_disable_entity_loader() {
 		
@@ -2265,7 +2265,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 
 		libxml_disable_entity_loader(true);
 
@@ -2305,7 +2305,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 
 		
 		$xml->setParserProperty(XMLReader::VALIDATE, true);
@@ -2335,7 +2335,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NONET);
 
@@ -2358,7 +2358,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 	/**
 	*@expectedException PHPUnit_Framework_Error
-	*XMLReader::read(): /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml:2: I/O warning : failed to load external entity "http://127.0.0.1:5000/"
+	*XMLReader::read(): /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml:2: I/O warning : failed to load external entity "http://127.0.0.1:5000/"
 	*/
 	public function testURLInvocation_doctype_setParserProperty_VALIDATE_disable_entity_loader() {
 		
@@ -2371,7 +2371,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 
 		libxml_disable_entity_loader(true);
 
@@ -2405,7 +2405,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_doctype.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 
 		
 		$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
@@ -2439,7 +2439,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 			
 		while($xml->read()) {
 			if ($xml->nodeType == XMLReader::ELEMENT && $xml->name == 'data') {
@@ -2462,7 +2462,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDATTR);
 			
@@ -2489,7 +2489,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDLOAD);
 			
@@ -2514,7 +2514,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDVALID);
 			
@@ -2543,7 +2543,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDVALID|LIBXML_NONET);
 			
@@ -2574,7 +2574,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDVALID);
 			
@@ -2605,7 +2605,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NOENT);
 			
@@ -2623,7 +2623,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	/**
 	 * @expectedException PHPUnit_Framework_Error
-	 * XMLReader::read(): Attempt to load network entity http://127.0.0.1:5000/test.xml/home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml:5: parser error : Failure to process entity remote
+	 * XMLReader::read(): Attempt to load network entity http://127.0.0.1:5000/test.xml/home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml:5: parser error : Failure to process entity remote
 	 */
 	public function testURLInvocation_externalGeneralEntity_LIBXML_NOENT_NONET() {
 		// reset the counter
@@ -2634,7 +2634,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NOENT|LIBXML_NONET);
 			
@@ -2653,7 +2653,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	/**
 	 *@expectedException PHPUnit_Framework_Error
-	 * XMLReader::read(): Attempt to load network entity http://127.0.0.1:5000/Attempt to load network entity http://127.0.0.1:5000//home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml:4: I/O warning : failed to load external entity "http://127.0.0.1:5000/test.dtd"
+	 * XMLReader::read(): Attempt to load network entity http://127.0.0.1:5000/Attempt to load network entity http://127.0.0.1:5000//home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml:4: I/O warning : failed to load external entity "http://127.0.0.1:5000/test.dtd"
 	 */
 	public function testURLInvocation_externalGeneralEntity_LIBXML_NOENT_disable_entity_loader() {
 		// reset the counter
@@ -2664,7 +2664,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NOENT);
 			
@@ -2693,7 +2693,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 	
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 	
 		$xml->setParserProperty(XMLReader::LOADDTD, true);
 	
@@ -2721,7 +2721,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 	
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 	
 		$xml->setParserProperty(XMLReader::DEFAULTATTRS, true);
 	
@@ -2748,7 +2748,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 	
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 	
 		$xml->setParserProperty(XMLReader::VALIDATE, true);
 	
@@ -2777,7 +2777,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 	
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NONET);
 	
@@ -2811,7 +2811,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 	
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 	
 		libxml_disable_entity_loader(true);
 	
@@ -2847,7 +2847,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 	
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 	
 		$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
 	
@@ -2864,7 +2864,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	/**
 	 *@expectedException PHPUnit_Framework_Error
-	 *	XMLReader::read(): /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml:4: I/O warning : failed to load external entity "http://127.0.0.1:5000/test.dtd"
+	 *	XMLReader::read(): /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml:4: I/O warning : failed to load external entity "http://127.0.0.1:5000/test.dtd"
 	 */
 	public function testURLInvocation_externalGeneralEntity_setParserProperty_SUBST_ENTITIES_disable_entity_loader() {
 	
@@ -2877,7 +2877,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 	
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 	
 		libxml_disable_entity_loader(true);
 	
@@ -2902,7 +2902,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	/**
 	 *  @expectedException PHPUnit_Framework_Error
-	 * XMLReader::read(): Attempt to load network entity http://127.0.0.1:5000/test.xml/home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml:5: parser error : Failure to process entity remote
+	 * XMLReader::read(): Attempt to load network entity http://127.0.0.1:5000/test.xml/home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml:5: parser error : Failure to process entity remote
 	 */
 	public function testURLInvocaton_externalGeneralEntity_setParserProperty_SUBST_ENTITIES_LIBXML_NONET() {
 	
@@ -2915,7 +2915,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 	
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_externalGeneralEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NONET);
 	
@@ -2943,7 +2943,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 			
 		while($xml->read()) {
 			if ($xml->nodeType == XMLReader::ELEMENT && $xml->name == 'data') {
@@ -2966,7 +2966,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDATTR);
 			
@@ -2993,7 +2993,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDATTR|LIBXML_NONET);
 			
@@ -3022,7 +3022,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDATTR);
 			
@@ -3066,7 +3066,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDLOAD);
 			
@@ -3091,7 +3091,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDLOAD|LIBXML_NONET);
 			
@@ -3120,7 +3120,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDLOAD);
 			
@@ -3150,7 +3150,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDVALID);
 			
@@ -3176,7 +3176,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDVALID|LIBXML_NONET);
 			
@@ -3205,7 +3205,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDVALID);
 			
@@ -3234,7 +3234,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NOENT);
 			
@@ -3259,7 +3259,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NOENT|LIBXML_NONET);
 			
@@ -3279,7 +3279,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 
 	/**
 	*@expectedException PHPUnit_Framework_Error
-	* XMLReader::read(): Attempt to load network entity http://127.0.0.1:5000/Attempt to load network entity http://127.0.0.1:5000//home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml:4: I/O warning : failed to load external entity "http://127.0.0.1:5000/test.dtd"
+	* XMLReader::read(): Attempt to load network entity http://127.0.0.1:5000/Attempt to load network entity http://127.0.0.1:5000//home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml:4: I/O warning : failed to load external entity "http://127.0.0.1:5000/test.dtd"
 	*/
 	public function testURLInvocation_parameterEntity_LIBXML_NOENT_disable_entity_loader() {
 		// reset the counter
@@ -3290,7 +3290,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 			
 		$xml = new XMLReader();
 			
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NOENT);
 			
@@ -3319,7 +3319,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 		
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 		
 		$xml->setParserProperty(XMLReader::LOADDTD, true);
 		
@@ -3345,7 +3345,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 		
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 		
 		$xml->setParserProperty(XMLReader::DEFAULTATTRS, true);
 		
@@ -3371,7 +3371,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 		
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 		
 		$xml->setParserProperty(XMLReader::VALIDATE, true);
 		
@@ -3397,7 +3397,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 		
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NONET);
 		
@@ -3430,7 +3430,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 		
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 
 		libxml_disable_entity_loader(true);
 		
@@ -3462,7 +3462,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 		
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 		
 		$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
 		
@@ -3488,7 +3488,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 		
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NONET);
 		
@@ -3508,7 +3508,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	/**
 	*@expectedException PHPUnit_Framework_Error
-	*	XMLReader::read(): /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml:4: I/O warning : failed to load external entity "http://127.0.0.1:5000/test.dtd"
+	*	XMLReader::read(): /home/phoenix/masterthesis/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml:4: I/O warning : failed to load external entity "http://127.0.0.1:5000/test.dtd"
 	*/
 	public function testURLInvocation_parameterEntity_setParserProperty_SUBST_ENTITIES_disable_entity_loader() {
 		
@@ -3521,7 +3521,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 		
 		//use substituteEntitities
-		$xml->open("../../xml_files_windows/url_invocation_parameterEntity.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 
 		libxml_disable_entity_loader(true);
 		
@@ -3559,7 +3559,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 		$xml = new XMLReader();
 	
-		$xml->open("../../xml_files_windows/url_invocation_schemaLocation.xml");
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml");
 	
 	
 		while($xml->read()) {
@@ -3574,7 +3574,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 			
 	
-		//$xml->open("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
+		//$xml->open("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");
 	
 		// 		$xml->setParserProperty(XMLReader::VALIDATE, true);
 	
@@ -3600,7 +3600,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_xinclude.xml");				
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");				
 		
 		
 		while($xml->read()) {			
@@ -3630,7 +3630,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_xinclude.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_xinclude.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_XINCLUDE);
 		
@@ -3673,7 +3673,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 		$xml = new XMLReader();
 	
-		$xml->open("../../xml_files_windows/url_invocation_xinclude.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_xinclude.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_XINCLUDE|LIBXML_NONET);
 	
@@ -3709,7 +3709,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_xinclude.xml",
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_xinclude.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_XINCLUDE);
 		
@@ -3745,7 +3745,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		
 		$xml = new XMLReader();
 		
-		$xml->open("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");				
+		$xml->open("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");				
 		
 
 		while($xml->read()) {
@@ -3760,7 +3760,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$this->assertEquals("0", $r);
 			
 		
-		//$xml->open("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
+		//$xml->open("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");
 		
 // 		$xml->setParserProperty(XMLReader::VALIDATE, true);
 		
@@ -3881,7 +3881,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	public function testXXE() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/xxe.xml");
+		$xml->open("../../xml_files_windows/xxe/xxe.xml");
 		
 		
 		while($xml->read()) {
@@ -3897,7 +3897,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	public function testXXE_LIBXML_DTDATTR() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/xxe.xml",
+		$xml->open("../../xml_files_windows/xxe/xxe.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDATTR);
 		
@@ -3917,7 +3917,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	public function testXXE_LIBXML_DTDLOAD() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/xxe.xml",
+		$xml->open("../../xml_files_windows/xxe/xxe.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDLOAD);
 		
@@ -3936,7 +3936,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	public function testXXE_LIBXML_DTDVALID() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/xxe.xml",
+		$xml->open("../../xml_files_windows/xxe/xxe.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_DTDVALID);
 		
@@ -3954,7 +3954,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	
 	public function testXXE_LIBXML_NOENT() {
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/xxe.xml",
+		$xml->open("../../xml_files_windows/xxe/xxe.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NOENT);
 		
@@ -3981,7 +3981,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 	public function testXXE_LIBXML_NOENT_disable_entity_loader() {		
 		
 		$xml = new XMLReader();
-		$xml->open("../../xml_files_windows/xxe.xml",
+		$xml->open("../../xml_files_windows/xxe/xxe.xml",
 				$encoding="UTF-8",
 				$options=LIBXML_NOENT);
 		
@@ -4004,7 +4004,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 		// use setParserProperty
 				
-		$xml->open("../../xml_files_windows/xxe.xml");
+		$xml->open("../../xml_files_windows/xxe/xxe.xml");
 		$xml->setParserProperty(XMLReader::LOADDTD, true);
 		
 		
@@ -4025,7 +4025,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 		// use setParserProperty
 				
-		$xml->open("../../xml_files_windows/xxe.xml");
+		$xml->open("../../xml_files_windows/xxe/xxe.xml");
 		$xml->setParserProperty(XMLReader::DEFAULTATTRS, true);
 		
 		
@@ -4046,7 +4046,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 		// use setParserProperty
 				
-		$xml->open("../../xml_files_windows/xxe.xml");
+		$xml->open("../../xml_files_windows/xxe/xxe.xml");
 		$xml->setParserProperty(XMLReader::VALIDATE, true);
 		
 		
@@ -4071,7 +4071,7 @@ class TestXMLReader extends PHPUnit_Framework_TestCase {
 		$xml = new XMLReader();
 		// use setParserProperty
 				
-		$xml->open("../../xml_files_windows/xxe.xml");
+		$xml->open("../../xml_files_windows/xxe/xxe.xml");
 		$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
 		
 		
@@ -4100,7 +4100,7 @@ external entity "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.txt"
 		$xml = new XMLReader();
 			
 		// use setParserProperty
-		$xml->open("../../xml_files_windows/xxe.xml");
+		$xml->open("../../xml_files_windows/xxe/xxe.xml");
 		$xml->setParserProperty(XMLReader::SUBST_ENTITIES, true);
 		
 		libxml_disable_entity_loader(true);

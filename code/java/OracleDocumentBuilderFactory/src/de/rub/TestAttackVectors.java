@@ -74,7 +74,7 @@ public class TestAttackVectors {
 //	obsolet
 //	@Test
 //	public void testDOS_core_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
-//		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml"; 
+//		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos/dos_core.xml"; 
 //	    DocumentBuilder builder = factory.newDocumentBuilder();
 //	    MyEntityResolver myEntityResolver = new MyEntityResolver();
 //	    builder.setEntityResolver(myEntityResolver);
@@ -185,7 +185,7 @@ public class TestAttackVectors {
 	
 	@Test
 	public void testDOS_indirections_parameterEntity() throws ParserConfigurationException, SAXException, IOException {
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/optional/dos_indirections_parameterEntity.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections_parameterEntity.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -205,7 +205,7 @@ public class TestAttackVectors {
 	
 	@Test
 	public void testDOS_recursion() throws ParserConfigurationException, SAXException, IOException {
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/optional/dos_recursion.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_recursion.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -225,7 +225,7 @@ public class TestAttackVectors {
 	@Test
 	public void testInternalSubset_ExternalPEReferenceInDTD() throws ParserConfigurationException, SAXException, IOException {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -239,7 +239,7 @@ public class TestAttackVectors {
 	@Test
 	public void testInternalSubset_ExternalPEReferenceInDTD_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";	    
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";	    
 		builder = factory.newDocumentBuilder();	
 	    MyEntityResolver myEntityResolver = new MyEntityResolver();
 	    builder.setEntityResolver(myEntityResolver);  	    
@@ -262,7 +262,7 @@ public class TestAttackVectors {
 		factory.setExpandEntityReferences(false);
 		assertFalse(factory.isExpandEntityReferences());
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -285,7 +285,7 @@ public class TestAttackVectors {
 	@Test
 	public void testInternalSubset_PEReferenceInDTD() throws ParserConfigurationException, SAXException, IOException {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_PEReferenceInDTD.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -301,7 +301,7 @@ public class TestAttackVectors {
 		factory.setExpandEntityReferences(false);
 		assertFalse(factory.isExpandEntityReferences());
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_PEReferenceInDTD.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml"; 
 	    	      
 	    		
 	    builder = factory.newDocumentBuilder();		
@@ -323,7 +323,7 @@ public class TestAttackVectors {
 	@Test
 	public void testParameterEntity_core() throws ParserConfigurationException, SAXException, IOException {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -336,7 +336,7 @@ public class TestAttackVectors {
 	@Test
 	public void testParameterEntity_core_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml"; 
 		builder = factory.newDocumentBuilder();		
 	    MyEntityResolver myEntityResolver = new MyEntityResolver();
 	    builder.setEntityResolver(myEntityResolver); 
@@ -363,7 +363,7 @@ public class TestAttackVectors {
 		assertFalse(factory.isExpandEntityReferences());
 		
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -383,7 +383,7 @@ public class TestAttackVectors {
 	@Test
 	public void testParameterEntity_doctype() throws ParserConfigurationException, SAXException, IOException {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -399,7 +399,7 @@ public class TestAttackVectors {
 	@Test
 	public void testParameterEntity_doctype_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml";	    
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml";	    
 		builder = factory.newDocumentBuilder();		
 	    MyEntityResolver myEntityResolver = new MyEntityResolver();
 	    builder.setEntityResolver(myEntityResolver); 
@@ -424,7 +424,7 @@ public class TestAttackVectors {
 		factory.setExpandEntityReferences(false);
 		assertFalse(factory.isExpandEntityReferences());
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml"; 
 	    
 	      
 	    builder = factory.newDocumentBuilder();		
@@ -445,7 +445,7 @@ public class TestAttackVectors {
 	@Test
 	public void testURLInvocation_doctype() throws Exception {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml"; 
 	    
 	    
 	 // reset the counter
@@ -466,7 +466,7 @@ public class TestAttackVectors {
 	@Test
 	public void testURLInvocation_doctype_setEntityResolver() throws Exception {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml"; 
 		 
 	    
 	 // reset the counter
@@ -506,7 +506,7 @@ public class TestAttackVectors {
 		factory.setExpandEntityReferences(false);
 		assertFalse(factory.isExpandEntityReferences());
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml"; 
 
 	    
 	 // reset the counter
@@ -527,7 +527,7 @@ public class TestAttackVectors {
 	@Test
 	public void testURLInvocation_externalGeneralEntity() throws Exception {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml"; 
 
 	    
 	 // reset the counter
@@ -548,7 +548,7 @@ public class TestAttackVectors {
 	@Test
 	public void testURLInvocation_externalGeneralEntity_setEntityResolver() throws Exception {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml"; 
 
 	    
 	    
@@ -586,7 +586,7 @@ public class TestAttackVectors {
 		factory.setExpandEntityReferences(false);
 		assertFalse(factory.isExpandEntityReferences());
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml"; 
 	    
 	    
 	 // reset the counter
@@ -607,7 +607,7 @@ public class TestAttackVectors {
 	@Test
 	public void testURLInvocation_noNamespaceSchemaLocation() throws Exception {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml";
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml";
 	  
 	    
 	 // reset the counter
@@ -630,7 +630,7 @@ public class TestAttackVectors {
 //	 We create a DOMParser directly in this test!
 	public void testURLInvocation_noNamespaceSchemaLocation_setValidationMode() throws Exception {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml";
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml";
 	  
 
 	    
@@ -661,7 +661,7 @@ public class TestAttackVectors {
 	@Test
 	public void testURLInvocation_parameterEntity() throws Exception {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml"; 
 	    
 	    
 	 // reset the counter
@@ -682,7 +682,7 @@ public class TestAttackVectors {
 	@Test
 	public void testURLInvocation_parameterEntity_setEntityResolver() throws Exception {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml"; 
 
 	    
 	 // reset the counter
@@ -719,7 +719,7 @@ public class TestAttackVectors {
 		factory.setExpandEntityReferences(false);
 		assertFalse(factory.isExpandEntityReferences());
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml"; 
 	    
 	    
 	 // reset the counter
@@ -740,7 +740,7 @@ public class TestAttackVectors {
 	@Test
 	public void testURLInvocation_schemaLocation() throws Exception {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_schemaLocation.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_schemaLocation.xml"; 
 	    
 	    
 	 // reset the counter
@@ -763,7 +763,7 @@ public class TestAttackVectors {
 //	 We create a DOMParser directly in this test!
 	public void testURLInvocation_schemaLocation_setValidationMode() throws Exception {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_schemaLocation.xml";
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_schemaLocation.xml";
 	  
 
 	    
@@ -809,7 +809,7 @@ public class TestAttackVectors {
 	@Test
 	public void testURLInvocation_XInclude() throws Exception {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_xinclude.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_xinclude.xml"; 
 	    
 	    
 	 // reset the counter
@@ -831,7 +831,7 @@ public class TestAttackVectors {
   	@Test
 	public void testXInclude() throws SAXException, IOException, ParserConfigurationException {
   		
-  		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_xinclude.xml"; 
+  		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_xinclude.xml"; 
 	    DocumentBuilder builder = factory.newDocumentBuilder();		
 		org.w3c.dom.Document w3cDocument = builder.parse(xmlFile);
 		String content = w3cDocument.getElementsByTagName("data").
@@ -842,7 +842,7 @@ public class TestAttackVectors {
 	@Test
 	public void testXXE() throws ParserConfigurationException, SAXException, IOException {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml"; 
 		builder = factory.newDocumentBuilder();	      
 	    	
 		org.w3c.dom.Document w3cDocument = builder.parse(xmlFile);		
@@ -854,7 +854,7 @@ public class TestAttackVectors {
 	@Test
 	public void testXXE_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml"; 
 	    builder = factory.newDocumentBuilder();
 	    MyEntityResolver myEntityResolver = new MyEntityResolver();
 	    builder.setEntityResolver(myEntityResolver);
@@ -878,7 +878,7 @@ public class TestAttackVectors {
 		factory.setExpandEntityReferences(false);
 		assertFalse(factory.isExpandEntityReferences());
 		
-		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml"; 
+		String xmlFile = "file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml"; 
 	    builder = factory.newDocumentBuilder();
 	      
 	    

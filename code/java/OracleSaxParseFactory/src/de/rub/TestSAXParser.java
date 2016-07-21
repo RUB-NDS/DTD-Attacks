@@ -102,7 +102,7 @@ public class TestSAXParser {
 	public void testDOS_core() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml";
 		
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		parser.setContentHandler(myDefaultHandler);
@@ -118,7 +118,7 @@ public class TestSAXParser {
 	public void testDOS_core_setAttribute_EXPAND_ENTITYREF() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml";
 		
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		parser.setContentHandler(myDefaultHandler);
@@ -140,7 +140,7 @@ public class TestSAXParser {
 	public void testDOS_core_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml";
 		
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		
@@ -169,7 +169,7 @@ public class TestSAXParser {
 	public void testDOS_entitySize() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_entitySize.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_entitySize.xml";
 		
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		parser.setContentHandler(myDefaultHandler);
@@ -186,7 +186,7 @@ public class TestSAXParser {
 	public void testDOS_entitySize_setAttribute_EXPAND_ENTITYREF() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_entitySize.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_entitySize.xml";
 		
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		parser.setContentHandler(myDefaultHandler);
@@ -205,7 +205,7 @@ public class TestSAXParser {
 	public void testDOS_entitySize_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_entitySize.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_entitySize.xml";
 		
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -231,7 +231,7 @@ public class TestSAXParser {
 	public void testDOS_indirections() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_indirections.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections.xml";
 		
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -250,7 +250,7 @@ public class TestSAXParser {
 	public void testDOS_indirections_setAttribute_EXPAND_ENTITYREF() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_indirections.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections.xml";
 		
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		parser.setContentHandler(myDefaultHandler);
@@ -268,7 +268,7 @@ public class TestSAXParser {
 	public void testDOS_indirections_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos_indirections.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections.xml";
 		
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -293,7 +293,7 @@ public class TestSAXParser {
 	 @Test 
 	 public void testDOS_indirections_parameterEntity() throws ParserConfigurationException, SAXException, IOException {
 	    	    	    		        
-	    	String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/optional/dos_indirections_parameterEntity.xml";
+	    	String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections_parameterEntity.xml";
 			
 			
 			MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -320,7 +320,7 @@ public class TestSAXParser {
     @Test 
     public void testDOS_recursion() throws ParserConfigurationException, SAXException, IOException {
     	    	    		        
-    	String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/optional/dos_recursion.xml";
+    	String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_recursion.xml";
 		
 		
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -349,7 +349,7 @@ public class TestSAXParser {
 	public void testInternalSubset_ExternalPEReferenceInDTD() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		parser.setContentHandler(myDefaultHandler);
@@ -364,7 +364,7 @@ public class TestSAXParser {
 	public void testInternalSubset_ExternalPEReferenceInDTD_setAttribute_EXPAND_ENTITYREF() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		parser.setContentHandler(myDefaultHandler);
@@ -395,7 +395,7 @@ public class TestSAXParser {
 	public void testInternalSubset_ExternalPEReferenceInDTD_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
 			
 		MySecureDefaultHandler mySecureDefaultHandler   = new MySecureDefaultHandler();
 		MyEntityResolver myEntityResolver = new MyEntityResolver();
@@ -425,7 +425,7 @@ public class TestSAXParser {
 //			
 //		
 //		
-//		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+//		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
 //		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 //		try {
 //			parser.setFeature("http://xml.org/sax/features/external-general-entities",false);
@@ -454,7 +454,7 @@ public class TestSAXParser {
 	public void testInternalSubset_ExternalPEReferenceInDTD_setFeature_external_parameter_entities() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		
 		try {
@@ -478,7 +478,7 @@ public class TestSAXParser {
 	public void testInternalSubset_ExternalPEReferenceInDTD_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		
@@ -509,7 +509,7 @@ public class TestSAXParser {
 	public void testInternalSubset_PEReferenceInDTD() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_PEReferenceInDTD.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml";
 		
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -524,7 +524,7 @@ public class TestSAXParser {
 	public void testInternalSubset_PEReferenceInDTD_setAttribute_EXPAND_ENTITYREF() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_PEReferenceInDTD.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml";
 		
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -560,7 +560,7 @@ public class TestSAXParser {
 	public void testInternalSubset_PEReferenceInDTD_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_PEReferenceInDTD.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml";
 		
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		
@@ -587,7 +587,7 @@ public class TestSAXParser {
 	public void testParameterEntity_core() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml";
 		
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -602,7 +602,7 @@ public class TestSAXParser {
 	public void testParameterEntity_core_setAttribute_EXPAND_ENTITYREF() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml";
 		
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -633,7 +633,7 @@ public class TestSAXParser {
 	public void testParameterEntity_core_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml";
 		
 			
 		MySecureDefaultHandler mySecureDefaultHandler   = new MySecureDefaultHandler();
@@ -662,7 +662,7 @@ public class TestSAXParser {
 	public void testParameterEntity_core_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml";
 		
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -692,7 +692,7 @@ public class TestSAXParser {
 	public void testParameterEntity_doctype() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml";
 		
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -708,7 +708,7 @@ public class TestSAXParser {
 	public void testParameterEntity_doctype_setAttribute_EXPAND_ENTITYREF() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml";
 		
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -725,7 +725,7 @@ public class TestSAXParser {
 	public void testParameterEntity_doctype_setEntityResolver() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml";
 			
 		MySecureDefaultHandler mySecureDefaultHandler   = new MySecureDefaultHandler();
 		
@@ -755,7 +755,7 @@ public class TestSAXParser {
 	public void testParameterEntity_doctype_setProperty_DeclHandler() throws ParserConfigurationException, SAXException, IOException {
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml";
 		
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
@@ -787,7 +787,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml";
 			
 		
 		parser.parse(xmlInput);
@@ -808,7 +808,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml";
 			
 		parser.setAttribute(parser.EXPAND_ENTITYREF, false);
 		parser.parse(xmlInput);
@@ -830,7 +830,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml";
 			
 		MySecureDefaultHandler mySecureDefaultHandler   = new MySecureDefaultHandler();
 		
@@ -862,7 +862,7 @@ public class TestSAXParser {
 	        assertEquals("0", response);
 		      
 	        
-	        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml";
+	        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml";
 				
 			
 			MySecureDeclHandler mySecureDeclHandler = new MySecureDeclHandler();
@@ -891,7 +891,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
 		
 		
 		parser.parse(xmlInput);
@@ -913,7 +913,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
 		
         parser.setAttribute(parser.EXPAND_ENTITYREF, false);
 		
@@ -936,7 +936,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
     		
     	MySecureDefaultHandler mySecureDefaultHandler   = new MySecureDefaultHandler();
     	
@@ -968,7 +968,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
 		
     		
     	
@@ -1004,7 +1004,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml";
 			    
 		
 		parser.parse(xmlInput);
@@ -1027,7 +1027,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml";
 			    
 		
         parser.setValidationMode(parser.SCHEMA_VALIDATION);			
@@ -1049,7 +1049,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
 			    
 		
 		parser.parse(xmlInput);
@@ -1069,7 +1069,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
 			    
 		parser.setAttribute(parser.EXPAND_ENTITYREF, false);
 		parser.parse(xmlInput);
@@ -1091,7 +1091,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
     		
     	MySecureDefaultHandler mySecureDefaultHandler   = new MySecureDefaultHandler();    	
     	
@@ -1124,7 +1124,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
 		
     		
     	
@@ -1157,7 +1157,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_schemaLocation.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_schemaLocation.xml";
 			    
 		
 		parser.parse(xmlInput);
@@ -1180,7 +1180,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
         
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_schemaLocation.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_schemaLocation.xml";
 		try {
 			
 			parser.setValidationMode(parser.SCHEMA_VALIDATION);		
@@ -1213,7 +1213,7 @@ public class TestSAXParser {
         assertEquals("0", response);
 	      
 
-        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_xinclude.xml";
+        String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_xinclude.xml";
 			    
 		
 		parser.parse(xmlInput);
@@ -1240,7 +1240,7 @@ public class TestSAXParser {
 	@Test
 	public void testXXE() throws SAXException, IOException, ParserConfigurationException {		
 		
-	    String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml";
+	    String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml";
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		parser.setContentHandler(myDefaultHandler);
@@ -1258,7 +1258,7 @@ public class TestSAXParser {
 		
 		
 		
-	    String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml";
+	    String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml";
 			
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		parser.setContentHandler(myDefaultHandler);
@@ -1275,7 +1275,7 @@ public class TestSAXParser {
 	@Test
 	public void testXXE_setEntityResolver() throws SAXException, IOException, ParserConfigurationException {		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml";
 			
 		MySecureDefaultHandler mySecureDefaultHandler   = new MySecureDefaultHandler();
 		MyEntityResolver myEntityResolver = new MyEntityResolver();
@@ -1303,7 +1303,7 @@ public class TestSAXParser {
 			
 		
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml";
 		MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();
 		try {
 			parser.setFeature("http://xml.org/sax/features/external-general-entities",false);
@@ -1331,7 +1331,7 @@ public class TestSAXParser {
 	public void testXXE_setProperty_DeclHandler() throws Exception {
 	      
 		
-		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml";
+		String xmlInput ="file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml";
 		
     		
     	MyDefaultHandler myDefaultHandler   = new MyDefaultHandler();

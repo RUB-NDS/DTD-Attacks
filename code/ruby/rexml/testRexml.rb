@@ -24,7 +24,7 @@ class TestRexml < Test::Unit::TestCase
 
     def testDOS_core
 
-        file = File.new( "../../xml_files_windows/dos_core.xml" )
+        file = File.new( "../../xml_files_windows/dos/dos_core.xml" )
         doc = REXML::Document.new file
 
         content = doc.root.text
@@ -42,7 +42,7 @@ class TestRexml < Test::Unit::TestCase
 =end
     def testDOS_core_entity_expansion_limit
 
-        file = File.new( "../../xml_files_windows/dos_core.xml" )
+        file = File.new( "../../xml_files_windows/dos/dos_core.xml" )
         
 		assert_raise( RuntimeError ) {
 		    doc = REXML::Document.new file
@@ -56,7 +56,7 @@ RuntimeError: entity expansion has grown too large
 =end
     def testDOS_core_entity_expansion_text_limit
 
-        file = File.new( "../../xml_files_windows/dos_core.xml" )
+        file = File.new( "../../xml_files_windows/dos/dos_core.xml" )
         
 		assert_raise( RuntimeError ) {
 		    doc = REXML::Document.new file
@@ -76,7 +76,7 @@ RuntimeError: entity expansion has grown too large
 =end
     def testDOS_entitySize
 
-        file = File.new( "../../xml_files_windows/dos_entitySize.xml" )
+        file = File.new( "../../xml_files_windows/dos/dos_entitySize.xml" )
 
          assert_raise( RuntimeError ) {
             doc = REXML::Document.new file			
@@ -90,7 +90,7 @@ RuntimeError: number of entity expansions exceeded, processing aborted.
 =end
     def testDOS_entitySize_entity_expansion_limit
 
-        file = File.new( "../../xml_files_windows/dos_entitySize.xml" )
+        file = File.new( "../../xml_files_windows/dos/dos_entitySize.xml" )
         
         assert_raise( RuntimeError ) {
             doc = REXML::Document.new file
@@ -107,7 +107,7 @@ RuntimeError: entity expansion has grown too large
 =end
 	def testDOS_entitySize_entity_expansion_text_limit
 
-        file = File.new( "../../xml_files_windows/dos_entitySize.xml" )
+        file = File.new( "../../xml_files_windows/dos/dos_entitySize.xml" )
         
         assert_raise( RuntimeError ) {
             doc = REXML::Document.new file
@@ -124,7 +124,7 @@ RuntimeError: entity expansion has grown too large
 =end
     def testDOS_indirections
 
-        file = File.new( "../../xml_files_windows/dos_indirections.xml" )
+        file = File.new( "../../xml_files_windows/dos/dos_indirections.xml" )
 
          assert_raise( RuntimeError ) {
             doc = REXML::Document.new file
@@ -143,7 +143,7 @@ RuntimeError: number of entity expansions exceeded, processing aborted.
 =end
     def testDOS_indirections_entity_expansion_limit
 
-        file = File.new( "../../xml_files_windows/dos_indirections.xml" )
+        file = File.new( "../../xml_files_windows/dos/dos_indirections.xml" )
         
         assert_raise( RuntimeError ) {
             doc = REXML::Document.new file
@@ -160,7 +160,7 @@ RuntimeError: entity expansion has grown too large
 =end
 	def testDOS_indirections_entity_expansion_text_limit
 
-        file = File.new( "../../xml_files_windows/dos_indirections.xml" )
+        file = File.new( "../../xml_files_windows/dos/dos_indirections.xml" )
         
         assert_raise( RuntimeError ) {
             doc = REXML::Document.new file
@@ -172,15 +172,14 @@ RuntimeError: entity expansion has grown too large
 =begin
 REXML::ParseException: #<RuntimeError: entity expansion has grown too large>
 =end
-
 	def testDOS_indirections_parameterEntity
 
-        file = File.new( "../../xml_files_windows/optional/dos_indirections_parameterEntity.xml" )
+        file = File.new( "../../xml_files_windows/dos/dos_indirections_parameterEntity.xml" )
 
-         #assert_raise( ParseException ) {
+         assert_raise( ParseException ) {
             doc = REXML::Document.new file		
             content = doc.root.text
-        #}
+        }
 
        
     end
@@ -192,7 +191,7 @@ SystemStackError: stack level too deep
 =end
 	def testDOS_recursion
 
-        file = File.new( "../../xml_files_windows/optional/dos_recursion.xml" )        	
+        file = File.new( "../../xml_files_windows/dos/dos_recursion.xml" )        	
 		
 		assert_raise( SystemStackError ) {
             doc = REXML::Document.new file            
@@ -204,7 +203,7 @@ SystemStackError: stack level too deep
 	
 	
     def testInternalSubset_ExternalPEReferenceInDTD
-        file = File.new( "../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml" )
+        file = File.new( "../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml" )
         doc = REXML::Document.new file        
         content = doc.root.text        
         assert_equal("&intern;", content)
@@ -214,7 +213,7 @@ SystemStackError: stack level too deep
 setting has no effect
 =end
 	def testInternalSubset_ExternalPEReferenceInDTD_entity_expansion_limit
-        file = File.new( "../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml" )
+        file = File.new( "../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml" )
         
 		
 		doc = REXML::Document.new file
@@ -228,7 +227,7 @@ setting has no effect
 RuntimeError: entity expansion has grown too large
 =end	
 	def testInternalSubset_ExternalPEReferenceInDTD_entity_expansion_text_limit
-        file = File.new( "../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml" )
+        file = File.new( "../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml" )
         
 		assert_raise( RuntimeError ) {		
 			doc = REXML::Document.new file
@@ -239,7 +238,7 @@ RuntimeError: entity expansion has grown too large
     end
 
     def testInternalSubset_PEReferenceInDTD 
-        file = File.new( "../../xml_files_windows/internalSubset_PEReferenceInDTD.xml" )
+        file = File.new( "../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml" )
         doc = REXML::Document.new file
         
         content = doc.root.text
@@ -253,7 +252,7 @@ TestRexml#testInternalSubset_PEReferenceInDTD_entity_expansion_limit:
 RuntimeError: number of entity expansions exceeded, processing aborted.
 =end
 	def testInternalSubset_PEReferenceInDTD_entity_expansion_limit
-        file = File.new( "../../xml_files_windows/internalSubset_PEReferenceInDTD.xml" )
+        file = File.new( "../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml" )
 		
 		assert_raise( RuntimeError ) {
 		
@@ -269,7 +268,7 @@ TestRexml#testInternalSubset_PEReferenceInDTD_entity
 RuntimeError: entity expansion has grown too large
 =end	
 	def testInternalSubset_PEReferenceInDTD_entity_expansion_text_limit
-        file = File.new( "../../xml_files_windows/internalSubset_PEReferenceInDTD.xml" )
+        file = File.new( "../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml" )
 		
 		assert_raise( RuntimeError ) {
 		
@@ -284,7 +283,7 @@ RuntimeError: entity expansion has grown too large
 	
 
     def testParameterEntity_core
-        file = File.new( "../../xml_files_windows/parameterEntity_core.xml" )
+        file = File.new( "../../xml_files_windows/xxep/parameterEntity_core.xml" )
         doc = REXML::Document.new file
         
         content = doc.root.text
@@ -295,7 +294,7 @@ RuntimeError: entity expansion has grown too large
 
 
     def testParameterEntity_doctype
-        file = File.new( "../../xml_files_windows/parameterEntity_doctype.xml" )
+        file = File.new( "../../xml_files_windows/xxep/parameterEntity_doctype.xml" )
         doc = REXML::Document.new file
         
         content = doc.root.text
@@ -316,7 +315,7 @@ RuntimeError: entity expansion has grown too large
         result = result.strip()
         assert_equal("0", result)
 
-        file = File.new( "../../xml_files_windows/url_invocation_doctype.xml" )
+        file = File.new( "../../xml_files_windows/ssrf/url_invocation_doctype.xml" )
         doc = REXML::Document.new file
         
         #check if a request has been made 
@@ -335,7 +334,7 @@ RuntimeError: entity expansion has grown too large
         result = result.strip()
         assert_equal("0", result)
 
-        file = File.new( "../../xml_files_windows/url_invocation_externalGeneralEntity.xml" )
+        file = File.new( "../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml" )
         doc = REXML::Document.new file
         
         #check if a request has been made 
@@ -354,7 +353,7 @@ RuntimeError: entity expansion has grown too large
         result = result.strip()
         assert_equal("0", result)
 
-        file = File.new( "../../xml_files_windows/url_invocation_parameterEntity.xml" )
+        file = File.new( "../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml" )
         doc = REXML::Document.new file
         
         #check if a request has been made 
@@ -373,7 +372,7 @@ RuntimeError: entity expansion has grown too large
         result = result.strip()
         assert_equal("0", result)
 
-        file = File.new( "../../xml_files_windows/url_invocation_xinclude.xml" )
+        file = File.new( "../../xml_files_windows/ssrf/url_invocation_xinclude.xml" )
         doc = REXML::Document.new file
         
         #check if a request has been made 
@@ -393,7 +392,7 @@ RuntimeError: entity expansion has grown too large
         result = result.strip()
         assert_equal("0", result)
 
-        file = File.new( "../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml")
+        file = File.new( "../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml")
         doc = REXML::Document.new file
         
         #check if a request has been made 
@@ -411,7 +410,7 @@ RuntimeError: entity expansion has grown too large
         result = result.strip()
         assert_equal("0", result)
 
-        file = File.new( "../../xml_files_windows/url_invocation_schemaLocation.xml")
+        file = File.new( "../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml")
         doc = REXML::Document.new file
         
         #check if a request has been made 
@@ -433,7 +432,7 @@ RuntimeError: entity expansion has grown too large
 	
 	
 	def testXXE
-        file = File.new( "../../xml_files_windows/xxe.xml" )
+        file = File.new( "../../xml_files_windows/xxe/xxe.xml" )
         doc = REXML::Document.new file
         
         content = doc.root.text
@@ -445,7 +444,7 @@ RuntimeError: entity expansion has grown too large
 RuntimeError: entity expansion has grown too large
 =end		
 	def testXXE_entity_expansion_limit
-        file = File.new( "../../xml_files_windows/xxe.xml" )
+        file = File.new( "../../xml_files_windows/xxe/xxe.xml" )
 		
 		assert_raise( RuntimeError ) {		
 			doc = REXML::Document.new file
@@ -459,7 +458,7 @@ RuntimeError: entity expansion has grown too large
 RuntimeError: entity expansion has grown too large
 =end		
 	def testXXE_entity_expansion_text_limit
-        file = File.new( "../../xml_files_windows/xxe.xml" )
+        file = File.new( "../../xml_files_windows/xxe/xxe.xml" )
 		
 		assert_raise( RuntimeError ) {		
 			doc = REXML::Document.new file

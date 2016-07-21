@@ -134,7 +134,7 @@ public class TestAttackVectors {
 	    	
 	    	MyDeclHandler myDeclHandler = new MyDeclHandler();    	
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", myDeclHandler);
-	        myPiccolo.parse("../../xml_files_windows/dos_core.xml");   
+	        myPiccolo.parse("../../xml_files_windows/dos/dos_core.xml");   
 	        
 	        String expected = "&a1;&a1;&a1;&a1;&a1;";
 		    assertEquals( expected, myDeclHandler.getEntityValue("a2"));
@@ -155,7 +155,7 @@ public class TestAttackVectors {
 	        myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", mySecureDeclHandler);
 	        
 	        try {
-	        	myPiccolo.parse("../../xml_files_windows/dos_core.xml");
+	        	myPiccolo.parse("../../xml_files_windows/dos/dos_core.xml");
 	        }
 	        catch (SAXException e) {
 	        	assertEquals(_DECL_HANDLER_INTERNAL_, e.getMessage());
@@ -171,7 +171,7 @@ public class TestAttackVectors {
 	    	
 	    	MyDeclHandler myDeclHandler = new MyDeclHandler();    	
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", myDeclHandler);
-	        myPiccolo.parse("../../xml_files_windows/dos_indirections.xml");   
+	        myPiccolo.parse("../../xml_files_windows/dos/dos_indirections.xml");   
  
 	        
 		    String content =myDefaultHandler.getElementContent("data");
@@ -189,7 +189,7 @@ public class TestAttackVectors {
 	        myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", mySecureDeclHandler);
 	        
 	        try {
-	        	myPiccolo.parse("../../xml_files_windows/dos_indirections.xml");
+	        	myPiccolo.parse("../../xml_files_windows/dos/dos_indirections.xml");
 	        }
 	        catch (SAXException e) {
 	        	assertEquals(_DECL_HANDLER_INTERNAL_, e.getMessage());
@@ -209,7 +209,7 @@ public class TestAttackVectors {
 	        
 	        
 	        try {
-	    		myPiccolo.parse("../../xml_files_windows/optional/dos_indirections_parameterEntity.xml");	
+	    		myPiccolo.parse("../../xml_files_windows/dos/dos_indirections_parameterEntity.xml");	
 	        	
 			} catch (SAXParseException e) {
 				String message = e.getMessage();
@@ -229,7 +229,7 @@ public class TestAttackVectors {
 	    	
 	    	MyDeclHandler myDeclHandler = new MyDeclHandler();    	
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", myDeclHandler);
-	        myPiccolo.parse("../../xml_files_windows/dos_entitySize.xml");   
+	        myPiccolo.parse("../../xml_files_windows/dos/dos_entitySize.xml");   
  
 	        
 		    String content =myDefaultHandler.getElementContent("data");
@@ -247,7 +247,7 @@ public class TestAttackVectors {
 	        myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", mySecureDeclHandler);
 	        
 	        try {
-	        	myPiccolo.parse("../../xml_files_windows/dos_entitySize.xml");
+	        	myPiccolo.parse("../../xml_files_windows/dos/dos_entitySize.xml");
 	        }
 	        catch (SAXException e) {
 	        	assertEquals(_DECL_HANDLER_INTERNAL_, e.getMessage());
@@ -268,7 +268,7 @@ public class TestAttackVectors {
 	        
 	        
 	        try {
-	    		myPiccolo.parse("../../xml_files_windows/optional/dos_recursion.xml");	
+	    		myPiccolo.parse("../../xml_files_windows/dos/dos_recursion.xml");	
 	        	
 			} catch (SAXParseException e) {
 				String message = e.getMessage();
@@ -292,7 +292,7 @@ public class TestAttackVectors {
 			MyDeclHandler myDeclHandler = new MyDeclHandler();
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", myDeclHandler);
 	    	
-	    	myPiccolo.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+	    	myPiccolo.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 			
 //	        assertEquals("<!ENTITY intern 'it_works'>",myDeclHandler.getEntityValue("%internal"));
 	        assertEquals("it_works",myDeclHandler.getEntityValue("intern"));
@@ -310,7 +310,7 @@ public class TestAttackVectors {
 	    	
 	    	try {
 	    		
-	    		myPiccolo.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+	    		myPiccolo.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 	    	}
 	    	catch (SAXNotSupportedException e) {
 	    		String message = "External Entities not allowed";
@@ -336,7 +336,7 @@ public class TestAttackVectors {
 	    	MyDeclHandler myDeclHandler = new MyDeclHandler();
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", myDeclHandler);
 	    	
-	    	myPiccolo.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+	    	myPiccolo.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 			
 //	        assertEquals("<!ENTITY intern 'it_works'>",myDeclHandler.getEntityValue("%internal"));
 	        assertEquals("it_works",myDeclHandler.getEntityValue("intern"));
@@ -360,7 +360,7 @@ public class TestAttackVectors {
 	    	MyDeclHandler myDeclHandler = new MyDeclHandler();
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", myDeclHandler);
 	    	
-	    	myPiccolo.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+	    	myPiccolo.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 			
 //	        assertEquals("<!ENTITY intern 'it_works'>",myDeclHandler.getEntityValue("%internal"));
 	        assertEquals("",myDeclHandler.getEntityValue("intern"));
@@ -375,7 +375,7 @@ public class TestAttackVectors {
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", mySecureDeclHandler);
 	    	
 	    	try {
-	    		myPiccolo.parse("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+	    		myPiccolo.parse("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
 	    	}
 	    	catch (SAXException e ){
 //	    		String message ="External Entities not allowed";
@@ -398,7 +398,7 @@ public class TestAttackVectors {
 	    	MyDeclHandler myDeclHandler = new MyDeclHandler();
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", myDeclHandler);
 	    	
-	    	myPiccolo.parse("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+	    	myPiccolo.parse("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 			
 	        assertEquals("<!ENTITY intern 'it_works'>",myDeclHandler.getEntityValue("%internal"));
 	        assertEquals("it_works",myDeclHandler.getEntityValue("intern"));
@@ -416,7 +416,7 @@ public class TestAttackVectors {
 //	    	MyEntityResolver myEntityResolver = new MyEntityResolver();
 //	    	myPiccolo.setEntityResolver(myEntityResolver);
 //	    		    		
-//	    	myPiccolo.parse("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+//	    	myPiccolo.parse("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 //	    		    	
 //	        assertEquals("<!ENTITY intern 'it_works'>",myDeclHandler.getEntityValue("%internal"));
 //	        assertEquals("it_works",myDeclHandler.getEntityValue("intern"));
@@ -431,7 +431,7 @@ public class TestAttackVectors {
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", mySecureDeclHandler);
 	    	
 	    	try {
-	    		myPiccolo.parse("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+	    		myPiccolo.parse("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
 	    	}
 	    	catch (SAXException e ){
 //	    		String message ="Entities not allowed";
@@ -454,7 +454,7 @@ public class TestAttackVectors {
 	    @Test
 	    public void testParameterEntity_core() throws IOException, SAXException, ParserConfigurationException {
 
-	        myPiccolo.parse("../../xml_files_windows/parameterEntity_core.xml");
+	        myPiccolo.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");
 		
 			String content =myDefaultHandler.getElementContent("data");
 			assertEquals("it_works", content);			
@@ -467,7 +467,7 @@ public class TestAttackVectors {
 	    	myPiccolo.setEntityResolver(myEntityResolver);
 	    	
 	    	try {	    		
-	    		myPiccolo.parse("../../xml_files_windows/parameterEntity_core.xml");
+	    		myPiccolo.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");
 	    	}
 	    	catch (SAXNotSupportedException e) {
 	    		String message = "External Entities not allowed";
@@ -486,7 +486,7 @@ public class TestAttackVectors {
 //	    	myPiccolo.setFeature("http://xml.org/sax/features/external-general-entities",false);    		
 //	    	assertFalse(myPiccolo.getFeature("http://xml.org/sax/features/external-general-entities"));	   		
 //
-//	        myPiccolo.parse("../../xml_files_windows/parameterEntity_core.xml");    	    
+//	        myPiccolo.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");    	    
 //	    	
 //	    	String content =myDefaultHandler.getElementContent("data");
 //	    	assertEquals("it_works", content);  	
@@ -501,7 +501,7 @@ public class TestAttackVectors {
 	    	myPiccolo.setFeature("http://xml.org/sax/features/external-parameter-entities",false);    		
 	    	assertTrue(myPiccolo.getFeature("http://xml.org/sax/features/external-parameter-entities"));
 	    		
-	        myPiccolo.parse("../../xml_files_windows/parameterEntity_core.xml");    
+	        myPiccolo.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");    
 	    	
 	    	String content =myDefaultHandler.getElementContent("data");
 	    	assertEquals("", content);	    	
@@ -514,7 +514,7 @@ public class TestAttackVectors {
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", mySecureDeclHandler);
 	    	
 	    	try {
-	    		myPiccolo.parse("../../xml_files_windows/parameterEntity_core.xml");	    		
+	    		myPiccolo.parse("../../xml_files_windows/xxep/parameterEntity_core.xml");	    		
 	    	}
 	    	catch (SAXException e ){
 //	    		String message ="Entities not allowed";
@@ -532,7 +532,7 @@ public class TestAttackVectors {
 	    @Test
 	    public void testParameterEntity_doctype() throws IOException, SAXException, ParserConfigurationException {
 	    	
-	        myPiccolo.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+	        myPiccolo.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 		
 			String content =myDefaultHandler.getElementContent("data");
 			assertEquals("it_works", content);
@@ -547,7 +547,7 @@ public class TestAttackVectors {
 	    	
 	    	try {
 	    		
-	    		myPiccolo.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+	    		myPiccolo.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 	    	}
 	    	catch (SAXNotSupportedException e) {
 	    		String message = "External Entities not allowed";
@@ -567,7 +567,7 @@ public class TestAttackVectors {
 	    	
 	    	try {
 	    		
-	    		myPiccolo.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+	    		myPiccolo.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 	    	}
 	    	catch (SAXParseException e){
 	    		String message ="Reference to undefined entity: all";
@@ -590,7 +590,7 @@ public class TestAttackVectors {
 	    	myPiccolo.setFeature("http://xml.org/sax/features/external-parameter-entities",false);    		
 	    	assertTrue(myPiccolo.getFeature("http://xml.org/sax/features/external-parameter-entities"));
 	    	
-	        myPiccolo.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+	        myPiccolo.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 		
 			String content =myDefaultHandler.getElementContent("data");
 			assertEquals("%goodies;", content);
@@ -606,7 +606,7 @@ public class TestAttackVectors {
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", mySecureDeclHandler);
 	    	
 	    	try {	    		
-	    		myPiccolo.parse("../../xml_files_windows/parameterEntity_doctype.xml");
+	    		myPiccolo.parse("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
 	    	}
 	    	catch (SAXException e ){
 //	    		String message ="Entities not allowed";
@@ -633,7 +633,7 @@ public class TestAttackVectors {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        myPiccolo.parse("../../xml_files_windows/url_invocation_doctype.xml");
+	        myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 	        
 	        response = http.sendGet(url + "/getCounter");
 	        assertEquals("1", response);
@@ -652,7 +652,7 @@ public class TestAttackVectors {
 	        myPiccolo.setEntityResolver(myEntityResolver);
 	        
 	    	 try {
-	    		 myPiccolo.parse("../../xml_files_windows/url_invocation_doctype.xml");
+	    		 myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 	    	 }
 	    	 catch(SAXNotSupportedException e) {
 	    		 String message ="External Entities not allowed";
@@ -678,7 +678,7 @@ public class TestAttackVectors {
 	        
 	    	myPiccolo.setFeature("http://xml.org/sax/features/external-general-entities",false);    		
 	    	assertFalse(myPiccolo.getFeature("http://xml.org/sax/features/external-general-entities"));	        
-	        myPiccolo.parse("../../xml_files_windows/url_invocation_doctype.xml");
+	        myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 	        
 	        response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
@@ -698,7 +698,7 @@ public class TestAttackVectors {
 	    	// This is a problem in the implementation of the getFeature() method.
 	    	assertTrue(myPiccolo.getFeature("http://xml.org/sax/features/external-parameter-entities"));	    	
 	    	
-	        myPiccolo.parse("../../xml_files_windows/url_invocation_doctype.xml");
+	        myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 	        
 	        response = http.sendGet(url + "/getCounter");
 	        assertEquals("1", response);
@@ -719,7 +719,7 @@ public class TestAttackVectors {
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", mySecureDeclHandler);
 
 	        	
-	        myPiccolo.parse("../../xml_files_windows/url_invocation_doctype.xml");
+	        myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
 
 	        
 	        response = http.sendGet(url + "/getCounter");
@@ -735,7 +735,7 @@ public class TestAttackVectors {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        myPiccolo.parse("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+	        myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 	        
 	        response = http.sendGet(url + "/getCounter");
 	        assertEquals("1", response);	    		
@@ -755,7 +755,7 @@ public class TestAttackVectors {
 	        
    		 	try {
    		 		
-   		 		myPiccolo.parse("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+   		 		myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
    		 	}
    		 	catch(SAXNotSupportedException e) {
     		 String message ="External Entities not allowed";
@@ -782,7 +782,7 @@ public class TestAttackVectors {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        myPiccolo.parse("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+	        myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 	        
 	        response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);	    		
@@ -802,7 +802,7 @@ public class TestAttackVectors {
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", mySecureDeclHandler);
         
 	    	try {	    		
-	    		myPiccolo.parse("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+	    		myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
 	    	}
 	    	catch (SAXException e ){
 //	    		String message ="External Entities not allowed";
@@ -827,7 +827,7 @@ public class TestAttackVectors {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        myPiccolo.parse("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
+	        myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");
 	        
 	        response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
@@ -843,7 +843,7 @@ public class TestAttackVectors {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        myPiccolo.parse("../../xml_files_windows/url_invocation_parameterEntity.xml");
+	        myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 	        
 	        response = http.sendGet(url + "/getCounter");
 	        assertEquals("1", response);	    		
@@ -863,7 +863,7 @@ public class TestAttackVectors {
 	        
    		 	try {
    		 		
-   		 		myPiccolo.parse("../../xml_files_windows/url_invocation_parameterEntity.xml");
+   		 		myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
    		 	}
    		 	catch(SAXNotSupportedException e) {
     		 String message ="External Entities not allowed";
@@ -889,7 +889,7 @@ public class TestAttackVectors {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        myPiccolo.parse("../../xml_files_windows/url_invocation_parameterEntity.xml");
+	        myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 	        
 	        response = http.sendGet(url + "/getCounter");
 	        assertEquals("1", response);	    		
@@ -909,7 +909,7 @@ public class TestAttackVectors {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        myPiccolo.parse("../../xml_files_windows/url_invocation_parameterEntity.xml");
+	        myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 	        
 	        response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);	    		
@@ -929,7 +929,7 @@ public class TestAttackVectors {
 	    	myPiccolo.setProperty("http://xml.org/sax/properties/declaration-handler", mySecureDeclHandler);
         
 	    	try {	    		
-	    		myPiccolo.parse("../../xml_files_windows/url_invocation_parameterEntity.xml");
+	    		myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
 	    	}
 	    	catch (SAXException e ){
 //	    		String message ="External Entities not allowed";
@@ -954,7 +954,7 @@ public class TestAttackVectors {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        myPiccolo.parse("../../xml_files_windows/url_invocation_schemaLocation.xml");
+	        myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml");
 	        
 	        response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
@@ -974,7 +974,7 @@ public class TestAttackVectors {
 	        String response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
 	        
-	        myPiccolo.parse("../../xml_files_windows/url_invocation_xinclude.xml");
+	        myPiccolo.parse("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");
 	        
 	        response = http.sendGet(url + "/getCounter");
 	        assertEquals("0", response);
@@ -1014,7 +1014,7 @@ public class TestAttackVectors {
 	    @Test
 	    public void testXXE() throws IOException,SAXException, ParserConfigurationException {	    	
 
-	        myPiccolo.parse("../../xml_files_windows/xxe.xml");
+	        myPiccolo.parse("../../xml_files_windows/xxe/xxe.xml");
 		
 			String content =myDefaultHandler.getElementContent("data");
 			assertEquals("it_works", content);
@@ -1028,7 +1028,7 @@ public class TestAttackVectors {
 	    	myPiccolo.setEntityResolver(myEntityResolver);
 	    	
 	    	try {    		
-	    		myPiccolo.parse("../../xml_files_windows/xxe.xml");
+	    		myPiccolo.parse("../../xml_files_windows/xxe/xxe.xml");
 	    	}
 	    	catch (SAXNotSupportedException e) {
 	    		String message ="External Entities not allowed";
@@ -1048,7 +1048,7 @@ public class TestAttackVectors {
 		    assertFalse(myPiccolo.getFeature("http://xml.org/sax/features/external-general-entities"));		    
 	    	
 
-	        myPiccolo.parse("../../xml_files_windows/xxe.xml");
+	        myPiccolo.parse("../../xml_files_windows/xxe/xxe.xml");
 		
 			String content =myDefaultHandler.getElementContent("data");			
 			assertEquals("", content);
@@ -1065,7 +1065,7 @@ public class TestAttackVectors {
 	        
 			try {
 				
-				myPiccolo.parse("../../xml_files_windows/xxe.xml");
+				myPiccolo.parse("../../xml_files_windows/xxe/xxe.xml");
 			}		
 			catch (SAXException e ){
 //	    		String message ="External Entities not allowed";

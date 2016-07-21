@@ -18,57 +18,57 @@ class Test(unittest.TestCase):
 		self.assertEqual("4",soup.data.string)
 		
 	def testDOS_core(self):
-		file = "../../xml_files_windows/dos_core.xml"
+		file = "../../xml_files_windows/dos/dos_core.xml"
 		soup = BeautifulSoup(open(file), "xml")
 		self.assertEqual(None, soup.data.string)
 
 	def testDOS_indirections(self):
-		file = "../../xml_files_windows/dos_indirections.xml"
+		file = "../../xml_files_windows/dos/dos_indirections.xml"
 		soup = BeautifulSoup(open(file), "xml")
 		self.assertEqual(None, soup.data.string)
 
 	def testDOS_indirections_parameterEntity(self):
-		file = "../../xml_files_windows/optional/dos_indirections_parameterEntity.xml"
+		file = "../../xml_files_windows/dos/dos_indirections_parameterEntity.xml"
 		soup = BeautifulSoup(open(file), "xml")
 		self.assertEqual(None, soup.data.string)
 		
 			
 	def testDOS_entitySize(self):
-		file = "../../xml_files_windows/dos_entitySize.xml"
+		file = "../../xml_files_windows/dos/dos_entitySize.xml"
 		soup = BeautifulSoup(open(file), "xml")
 		self.assertEqual(None, soup.data.string)
 			
 	def testDOS_recursion (self):	
-		file = "../../xml_files_windows/optional/dos_recursion.xml"
+		file = "../../xml_files_windows/dos/dos_recursion.xml"
 		soup = BeautifulSoup(open(file), "xml")
 		self.assertEqual(None, soup.data.string)
 
 	def testXXE(self):
-		file = "../../xml_files_windows/xxe.xml"
+		file = "../../xml_files_windows/xxe/xxe.xml"
 		soup = BeautifulSoup(open(file), "xml")
 		self.assertEqual(None, soup.data.string)
 		
 		
 	def testInternalSubset_ExternalPEReferenceInDTD(self):     
-		file = "../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml"
+		file = "../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml"
 		soup = BeautifulSoup(open(file), "xml")
 		self.assertEqual(None, soup.data.string)	
 
 		
 	def testInternalSubset_PEReferenceInDTD(self): 
-		file = "../../xml_files_windows/internalSubset_PEReferenceInDTD.xml"
+		file = "../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml"
 		soup = BeautifulSoup(open(file), "xml")
 		self.assertEqual(None, soup.data.string)
 		
 		
 	def testParameterEntity_core(self):
-		file = "../../xml_files_windows/parameterEntity_core.xml"
+		file = "../../xml_files_windows/xxep/parameterEntity_core.xml"
 		soup = BeautifulSoup(open(file), "xml")
 		self.assertEqual(None, soup.data.string)
 
 			
 	def testParameterEntity_doctype(self):
-		file = "../../xml_files_windows/parameterEntity_doctype.xml"
+		file = "../../xml_files_windows/xxep/parameterEntity_doctype.xml"
 		soup = BeautifulSoup(open(file), "xml")
 		self.assertEqual(None, soup.data.string)
 			
@@ -82,7 +82,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)      
 
-		file = "../../xml_files_windows/url_invocation_doctype.xml"
+		file = "../../xml_files_windows/ssrf/url_invocation_doctype.xml"
 		soup = BeautifulSoup(open(file), "xml")
 
 		#Check if a request has been made                                       
@@ -99,7 +99,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)      
 
-		file = "../../xml_files_windows/url_invocation_externalGeneralEntity.xml"
+		file = "../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml"
 		soup = BeautifulSoup(open(file), "xml")
 
 		#Check if a request has been made                                       
@@ -115,7 +115,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")                             
 		self.assertEqual("0", request_content)     
 
-		file = "../../xml_files_windows/url_invocation_parameterEntity.xml"
+		file = "../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml"
 		soup = BeautifulSoup(open(file), "xml")
 
 		#Check if a request has been made                                       
@@ -131,7 +131,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")
 		self.assertEqual("0", request_content)
 
-		file = "../../xml_files_windows/url_invocation_schemaLocation.xml"
+		file = "../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml"
 		soup = BeautifulSoup(open(file), "xml")
 
 		#Check if a request has been made
@@ -150,7 +150,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")
 		self.assertEqual("0", request_content)
 
-		file = "../../xml_files_windows/url_invocation_xinclude.xml"
+		file = "../../xml_files_windows/ssrf/url_invocation_xinclude.xml"
 		soup = BeautifulSoup(open(file), "xml")
 
 		#Check if a request has been made
@@ -166,7 +166,7 @@ class Test(unittest.TestCase):
 		request_content = r.text.replace("\r\n","")
 		self.assertEqual("0", request_content)
 
-		file = "../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml"
+		file = "../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml"
 		soup = BeautifulSoup(open(file), "xml")
 
 		#Check if a request has been made

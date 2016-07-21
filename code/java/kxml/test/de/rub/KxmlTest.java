@@ -80,7 +80,7 @@ public class KxmlTest {
     public void testDOS_core() throws FileNotFoundException, IOException, XmlPullParserException  {
             
         try {
-            InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_core.xml");
+            InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_core.xml");
             parser.setInput(xmlInput, "UTF-8");   
             parser.nextTag();        
             String name = parser.getName();    
@@ -96,7 +96,7 @@ public class KxmlTest {
     public void testDOS_indirections() throws FileNotFoundException, IOException, XmlPullParserException  {
          
         try {
-            InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_indirections.xml");
+            InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_indirections.xml");
             parser.setInput(xmlInput, "UTF-8");   
             parser.nextTag();        
             String name = parser.getName();    
@@ -112,7 +112,7 @@ public class KxmlTest {
     public void testDOS_indirections_parameterEntity() throws FileNotFoundException, IOException, XmlPullParserException  {
         
         try {
-            InputStream xmlInput = new FileInputStream("../../xml_files_windows/optional/dos_indirections_parameterEntity.xml");
+            InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_indirections_parameterEntity.xml");
             parser.setInput(xmlInput, "UTF-8");   
             parser.nextTag();        
             String name = parser.getName();    
@@ -129,7 +129,7 @@ public class KxmlTest {
     public void testDOS_entitySize() throws FileNotFoundException, IOException, XmlPullParserException  {
         
         try {
-            InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos_entitySize.xml");
+            InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_entitySize.xml");
             parser.setInput(xmlInput, "UTF-8");   
             parser.nextTag();        
             String name = parser.getName();    
@@ -146,7 +146,7 @@ public class KxmlTest {
     public void testDOS_recursion() throws FileNotFoundException, IOException, XmlPullParserException  {
         
         try {
-            InputStream xmlInput = new FileInputStream("../../xml_files_windows/optional/dos_recursion.xml");
+            InputStream xmlInput = new FileInputStream("../../xml_files_windows/dos/dos_recursion.xml");
             parser.setInput(xmlInput, "UTF-8");   
             parser.nextTag();        
             String name = parser.getName();    
@@ -163,7 +163,7 @@ public class KxmlTest {
     public void testInternalSubset_ExternalPEReferenceInDTD() throws FileNotFoundException, IOException, XmlPullParserException  {
         
         try {
-            InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml");
+            InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml");
         
             parser.setInput(xmlInput, "UTF-8");   
             parser.nextTag();        
@@ -180,7 +180,7 @@ public class KxmlTest {
     public void testInternalSubset_PEReferenceInDTD() throws FileNotFoundException, IOException, XmlPullParserException  {
         
         try {
-        	InputStream xmlInput = new FileInputStream("../../xml_files_windows/internalSubset_PEReferenceInDTD.xml");
+        	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml");
             
         
             parser.setInput(xmlInput, "UTF-8");   
@@ -200,7 +200,7 @@ public class KxmlTest {
     public void testParameterEntity_core() throws FileNotFoundException, IOException, XmlPullParserException  {
         
         try {
-        	InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_core.xml");
+        	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_core.xml");
             
         
             parser.setInput(xmlInput, "UTF-8");   
@@ -220,7 +220,7 @@ public class KxmlTest {
     public void testParameterEntity_doctype() throws FileNotFoundException, IOException, XmlPullParserException  {
         
         try {
-        	InputStream xmlInput = new FileInputStream("../../xml_files_windows/parameterEntity_doctype.xml");
+        	InputStream xmlInput = new FileInputStream("../../xml_files_windows/xxep/parameterEntity_doctype.xml");
                        
         
             parser.setInput(xmlInput, "UTF-8");   
@@ -240,7 +240,7 @@ public class KxmlTest {
     public void testURLInvocation_doctype() throws Exception{
 	
 			
-		InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_doctype.xml");
+		InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_doctype.xml");
         
         SimpleClient http = new SimpleClient();
 
@@ -264,7 +264,7 @@ public class KxmlTest {
     public void testURLInvocation_externalGeneralEntity() throws Exception{
 	
 			
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_externalGeneralEntity.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml");
         
         SimpleClient http = new SimpleClient();
 
@@ -299,7 +299,7 @@ public class KxmlTest {
     public void testURLInvocation_parameterEntity() throws Exception{
 	
 			
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_parameterEntity.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_parameterEntity.xml");
         
         SimpleClient http = new SimpleClient();
 
@@ -326,7 +326,7 @@ public class KxmlTest {
     public void testURLInvocation_schemaLocation() throws Exception{
 	
 			
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_schemaLocation.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_schemaLocation.xml");
         
         SimpleClient http = new SimpleClient();
 
@@ -352,7 +352,7 @@ public class KxmlTest {
     @Test
     public void testURLInvocation_XInclude() throws Exception{
 	
-    	 InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_xinclude.xml");
+    	 InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_xinclude.xml");
          
         SimpleClient http = new SimpleClient();
 
@@ -379,7 +379,7 @@ public class KxmlTest {
     @Test
     public void testURLInvocation_noNamespaceSchemaLocation() throws Exception{
 	
-    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml");
+    	InputStream xmlInput = new FileInputStream("../../xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml");
         
         SimpleClient http = new SimpleClient();
 

@@ -44,7 +44,7 @@ namespace TestXMLReader
 
         public void testDOS_core()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml";            
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml";            
             XmlReaderSettings settings = new XmlReaderSettings();            
             XmlReader reader = XmlReader.Create(filename, settings);
             
@@ -70,7 +70,7 @@ namespace TestXMLReader
 
         public void testDOS_core_DtdProcessing_Parse()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml";           
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml";           
             XmlReaderSettings settings = new XmlReaderSettings();
             // activate DTD Processing
             settings.DtdProcessing = DtdProcessing.Parse;
@@ -90,7 +90,7 @@ namespace TestXMLReader
 
         public void testDOS_core_DtdProcessing_Parse_MaxCharactersFromEntities()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos_core.xml";            
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_core.xml";            
             XmlReaderSettings settings = new XmlReaderSettings();
             // activate DTD Processing
             settings.DtdProcessing = DtdProcessing.Parse;
@@ -118,7 +118,7 @@ namespace TestXMLReader
 
         public void testDOS_indirections()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos_indirections.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections.xml";
             XmlReaderSettings settings = new XmlReaderSettings();
             XmlReader reader = XmlReader.Create(filename, settings);
 
@@ -141,7 +141,7 @@ namespace TestXMLReader
 
         public void testDOS_indirections_DtdProcessing_Parse()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos_indirections.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections.xml";
             XmlReaderSettings settings = new XmlReaderSettings();
             // activate DTD Processing
             settings.DtdProcessing = DtdProcessing.Parse;
@@ -161,7 +161,7 @@ namespace TestXMLReader
 
         public void testDOS_indirections_DtdProcessing_Parse_MaxCharactersFromEntities()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos_indirections.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections.xml";
             XmlReaderSettings settings = new XmlReaderSettings();
             // activate DTD Processing
             settings.DtdProcessing = DtdProcessing.Parse;
@@ -189,7 +189,7 @@ namespace TestXMLReader
         [TestMethod]
         public void testDOS_indirections_parameterEntity()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/optional/dos_indirections_parameterEntity.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_indirections_parameterEntity.xml";
             XmlReaderSettings settings = new XmlReaderSettings();
             XmlReader reader = XmlReader.Create(filename, settings);
 
@@ -213,7 +213,7 @@ namespace TestXMLReader
 
         public void testDOS_entitySize()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos_entitySize.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_entitySize.xml";
             XmlReaderSettings settings = new XmlReaderSettings();
             XmlReader reader = XmlReader.Create(filename, settings);
 
@@ -237,7 +237,7 @@ namespace TestXMLReader
 
         public void testDOS_entitySize_DtdProcessing_Parse()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos_entitySize.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_entitySize.xml";
             XmlReaderSettings settings = new XmlReaderSettings();
             // activate DTD Processing
             settings.DtdProcessing = DtdProcessing.Parse;
@@ -256,7 +256,7 @@ namespace TestXMLReader
         [TestMethod]
         public void testDOS_recursion()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/optional/dos_recursion.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_recursion.xml";
             XmlReaderSettings settings = new XmlReaderSettings();
             XmlReader reader = XmlReader.Create(filename, settings);
 
@@ -280,7 +280,7 @@ namespace TestXMLReader
 
         public void testDOS_entitySize_DtdProcessing_Parse_MaxCharactersFromEntities()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos_entitySize.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/dos/dos_entitySize.xml";
             XmlReaderSettings settings = new XmlReaderSettings();
             // activate DTD Processing
             settings.DtdProcessing = DtdProcessing.Parse;
@@ -309,7 +309,7 @@ namespace TestXMLReader
         [TestMethod]
         public void testInternalSubset_ExternalPEReferenceInDTD()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
            // XmlTextReader textReader = new XmlTextReader(filename);
             XmlReaderSettings settings = new XmlReaderSettings();
             //XmlReader reader = XmlReader.Create(textReader, settings);
@@ -334,7 +334,7 @@ namespace TestXMLReader
         [TestMethod]
         public void testInternalSubset_ExternalPEReferenceInDTD_DtdProcessing_Parse()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
             // XmlTextReader textReader = new XmlTextReader(filename);
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.DtdProcessing = DtdProcessing.Parse;            
@@ -353,7 +353,7 @@ namespace TestXMLReader
         [TestMethod]
         public void testInternalSubset_ExternalPEReferenceInDTD_DtdProcessing_Parse_MaxCharactersFromEntities()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
             // XmlTextReader textReader = new XmlTextReader(filename);
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.DtdProcessing = DtdProcessing.Parse;
@@ -370,7 +370,7 @@ namespace TestXMLReader
             {
                 // assert
                 //Assert.AreEqual("Das Eingabedokument hat das Limit von MaxCharactersFromEntities überschritten.", e.Message);
-                Assert.AreEqual("An error has occurred while opening external entity 'file:///C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.dtd': The input document has exceeded a limit set by MaxCharactersFromEntities.", e.Message);
+                Assert.AreEqual("An error has occurred while opening external entity 'file:///C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.dtd': The input document has exceeded a limit set by MaxCharactersFromEntities.", e.Message);
                 return;
             }
 
@@ -389,7 +389,7 @@ namespace TestXMLReader
         [TestMethod]
         public void testInternalSubset_ExternalPEReferenceInDTD_DtdProcessing_Parse_XmlResolver()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_ExternalPEReferenceInDTD.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_ExternalPEReferenceInDTD.xml";
             // XmlTextReader textReader = new XmlTextReader(filename);
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.DtdProcessing = DtdProcessing.Parse;
@@ -426,7 +426,7 @@ namespace TestXMLReader
         [TestMethod]
         public void testInternalSubset_PEReferenceInDTD()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_PEReferenceInDTD.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml";
             //XmlTextReader textReader = new XmlTextReader(filename);
             XmlReaderSettings settings = new XmlReaderSettings();
             //XmlReader reader = XmlReader.Create(textReader, settings);
@@ -450,7 +450,7 @@ namespace TestXMLReader
         [TestMethod]
         public void testInternalSubset_PEReferenceInDTD_DtdProcessing_Parse()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_PEReferenceInDTD.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml";
             //XmlTextReader textReader = new XmlTextReader(filename);
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.DtdProcessing = DtdProcessing.Parse;
@@ -468,7 +468,7 @@ namespace TestXMLReader
         [TestMethod]
         public void testInternalSubset_PEReferenceInDTD_DtdProcessing_Parse_MaxCharactersFromEntities()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_PEReferenceInDTD.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml";
             //XmlTextReader textReader = new XmlTextReader(filename);
             XmlReaderSettings settings = new XmlReaderSettings();
             settings.DtdProcessing = DtdProcessing.Parse;
@@ -506,7 +506,7 @@ namespace TestXMLReader
         //[TestMethod]
         //public void testInternalSubset_PEReferenceInDTD_DtdProcessing_Parse_XmlResolver()
         //{
-        //    String filename = "C:/Christopher_Spaeth/code/xml_files_windows/internalSubset_PEReferenceInDTD.xml";            
+        //    String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/internalSubset_PEReferenceInDTD.xml";            
         //    XmlReaderSettings settings = new XmlReaderSettings();
         //    settings.DtdProcessing = DtdProcessing.Parse;
         //    settings.XmlResolver = null;
@@ -524,7 +524,7 @@ namespace TestXMLReader
          [TestMethod]
         public void testParameterEntity_core()
         {
-            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml";
+            String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml";
             //XmlTextReader textReader = new XmlTextReader(filename);
             XmlReaderSettings settings = new XmlReaderSettings();
             //XmlReader reader = XmlReader.Create(textReader, settings);
@@ -549,7 +549,7 @@ namespace TestXMLReader
          [TestMethod]
          public void testParameterEntity_core_DtdProcessing_Parse()
          {
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml";             
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml";             
              XmlReaderSettings settings = new XmlReaderSettings();                          
              settings.DtdProcessing = DtdProcessing.Parse;
              XmlReader reader = XmlReader.Create(filename, settings);
@@ -566,7 +566,7 @@ namespace TestXMLReader
          [TestMethod]
          public void testParameterEntity_core_DtdProcessing_Parse_XmlResolver()
          {
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_core.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_core.xml";
              XmlReaderSettings settings = new XmlReaderSettings();
              settings.DtdProcessing = DtdProcessing.Parse;
              settings.XmlResolver = null;
@@ -591,7 +591,7 @@ namespace TestXMLReader
          [TestMethod]
          public void testParameterEntity_doctype()
          {
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml";
             // XmlTextReader textReader = new XmlTextReader(filename);
              XmlReaderSettings settings = new XmlReaderSettings();
              //XmlReader reader = XmlReader.Create(textReader, settings);
@@ -617,7 +617,7 @@ namespace TestXMLReader
          [TestMethod]
          public void testParameterEntity_doctype_DtdProcessing_Parse()
          {
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml";             
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml";             
              XmlReaderSettings settings = new XmlReaderSettings();
              settings.DtdProcessing = DtdProcessing.Parse;
              XmlReader reader = XmlReader.Create(filename, settings);
@@ -635,7 +635,7 @@ namespace TestXMLReader
          [TestMethod]
          public void testParameterEntity_doctype_DtdProcessing_Parse_XmlResolver()
          {
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/parameterEntity_doctype.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxep/parameterEntity_doctype.xml";
              XmlReaderSettings settings = new XmlReaderSettings();
              settings.DtdProcessing = DtdProcessing.Parse;
              settings.XmlResolver = null;
@@ -650,7 +650,7 @@ namespace TestXMLReader
              catch (System.Xml.XmlException e)
              {
                  // assert
-                 //Assert.AreEqual("Verweis auf die nicht deklarierte Entität 'all'. Zeile 3, Position 8.", e.Message);
+                 //Assert.AreEqual("Verweis auf die nicht deklarierte Entität 'all'. Zeile 3, Position 8.", e.Message);ssrf/url_invocation_doctype.xml
                  Assert.AreEqual("Reference to undeclared entity 'all'. Line 3, position 8.", e.Message);
                  
                  return;
@@ -678,7 +678,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml";
              XmlReaderSettings settings = new XmlReaderSettings();             
              XmlReader reader = XmlReader.Create(filename, settings);
 
@@ -725,7 +725,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml";
              XmlReaderSettings settings = new XmlReaderSettings();
              settings.DtdProcessing = DtdProcessing.Parse;
              XmlReader reader = XmlReader.Create(filename, settings);
@@ -761,7 +761,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_doctype.xml";             
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_doctype.xml";             
              XmlReaderSettings settings = new XmlReaderSettings();
              settings.DtdProcessing = DtdProcessing.Parse;
              settings.XmlResolver = null;
@@ -799,7 +799,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
              XmlReaderSettings settings = new XmlReaderSettings();
              XmlReader reader = XmlReader.Create(filename, settings);
 
@@ -847,7 +847,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
              XmlReaderSettings settings = new XmlReaderSettings();
              settings.DtdProcessing = DtdProcessing.Parse;
              XmlReader reader = XmlReader.Create(filename, settings);
@@ -883,7 +883,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_externalGeneralEntity.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_externalGeneralEntity.xml";
              XmlReaderSettings settings = new XmlReaderSettings();
              settings.DtdProcessing = DtdProcessing.Parse;
              settings.XmlResolver = null;
@@ -921,7 +921,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml";
              //XmlTextReader textReader = new XmlTextReader(filename);
              XmlReaderSettings settings = new XmlReaderSettings();
              //XmlReader xmlReader = XmlReader.Create(textReader, settings);
@@ -960,7 +960,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml";             
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml";             
              XmlReaderSettings settings = new XmlReaderSettings();
              // as documented in https://msdn.microsoft.com/en-us/library/system.xml.xmlreadersettings.validationtype%28v=vs.110%29.aspx
              // ValidationFlag ProcessSchemaLocation has to set
@@ -1000,7 +1000,7 @@ namespace TestXMLReader
              Assert.AreEqual("0", responseServer);
 
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_noNamespaceSchemaLocation.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_noNamespaceSchemaLocation.xml";
              XmlReaderSettings settings = new XmlReaderSettings();
              // as documented in https://msdn.microsoft.com/en-us/library/system.xml.xmlreadersettings.validationtype%28v=vs.110%29.aspx
              // ValidationFlag ProcessSchemaLocation has to set
@@ -1042,7 +1042,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
              //XmlTextReader textReader = new XmlTextReader(filename);
              XmlReaderSettings settings = new XmlReaderSettings();
              //XmlReader xmlReader = XmlReader.Create(textReader, settings);
@@ -1090,7 +1090,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml";             
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml";             
              XmlReaderSettings settings = new XmlReaderSettings();
              settings.DtdProcessing = DtdProcessing.Parse;
              
@@ -1126,7 +1126,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_parameterEntity.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_parameterEntity.xml";
              XmlReaderSettings settings = new XmlReaderSettings();
              settings.DtdProcessing = DtdProcessing.Parse;
              settings.XmlResolver = null;
@@ -1163,7 +1163,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_schemaLocation.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_schemaLocation.xml";
              //XmlTextReader textReader = new XmlTextReader(filename);
              XmlReaderSettings settings = new XmlReaderSettings();
              //XmlReader xmlReader = XmlReader.Create(textReader, settings);
@@ -1202,7 +1202,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_schemaLocation.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_schemaLocation.xml";
              XmlReaderSettings settings = new XmlReaderSettings();
              // as documented in https://msdn.microsoft.com/en-us/library/system.xml.xmlreadersettings.validationtype%28v=vs.110%29.aspx
              // ValidationFlag ProcessSchemaLocation has to set
@@ -1241,7 +1241,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_schemaLocation.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_schemaLocation.xml";
              XmlReaderSettings settings = new XmlReaderSettings();
              // as documented in https://msdn.microsoft.com/en-us/library/system.xml.xmlreadersettings.validationtype%28v=vs.110%29.aspx
              // ValidationFlag ProcessSchemaLocation has to set
@@ -1282,7 +1282,7 @@ namespace TestXMLReader
              responseServer = responseServer.Trim();
              Assert.AreEqual("0", responseServer);
 
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/url_invocation_xinclude.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/ssrf/url_invocation_xinclude.xml";
              //XmlTextReader textReader = new XmlTextReader(filename);
              XmlReaderSettings settings = new XmlReaderSettings();
              //XmlReader xmlReader = XmlReader.Create(textReader, settings);
@@ -1369,7 +1369,7 @@ namespace TestXMLReader
          [TestMethod]
          public void testXXE()
          {
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml";
             // XmlTextReader textReader = new XmlTextReader(filename);
              XmlReaderSettings settings = new XmlReaderSettings();
 
@@ -1396,7 +1396,7 @@ namespace TestXMLReader
          [TestMethod]
          public void testXXE_DtdProcessing_Parse()
          {
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml";             
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml";             
              XmlReaderSettings settings = new XmlReaderSettings();
              settings.DtdProcessing = DtdProcessing.Parse;
              XmlReader reader = XmlReader.Create(filename, settings);
@@ -1413,7 +1413,7 @@ namespace TestXMLReader
          [TestMethod]
          public void testXXE_DtdProcessing_Parse_MaxCharactersFromEntities()
          {
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml";
              XmlReaderSettings settings = new XmlReaderSettings();
              settings.DtdProcessing = DtdProcessing.Parse;             
              settings.MaxCharactersFromEntities = 1;
@@ -1429,7 +1429,7 @@ namespace TestXMLReader
              {
                  // assert
                  //Assert.AreEqual("Das Eingabedokument hat das Limit von MaxCharactersFromEntities überschritten.", e.Message);
-                 Assert.AreEqual("An error has occurred while opening external entity 'file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe.txt': The input document has exceeded a limit set by MaxCharactersFromEntities.", e.Message);
+                 Assert.AreEqual("An error has occurred while opening external entity 'file:///C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.txt': The input document has exceeded a limit set by MaxCharactersFromEntities.", e.Message);
                  return;
              }
 
@@ -1449,7 +1449,7 @@ namespace TestXMLReader
          [TestMethod]
          public void testXXE_DtdProcessing_Parse_XmlResolver()
          {
-             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxe.xml";
+             String filename = "C:/Christopher_Spaeth/code/xml_files_windows/xxe/xxe.xml";
              XmlReaderSettings settings = new XmlReaderSettings();
              settings.DtdProcessing = DtdProcessing.Parse;
              settings.XmlResolver = null;

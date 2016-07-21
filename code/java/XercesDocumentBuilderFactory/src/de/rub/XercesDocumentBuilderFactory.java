@@ -18,7 +18,7 @@ public class XercesDocumentBuilderFactory {
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 	
 //		String provider ="org.apache.xerces.impl.Version";
-		String xmlFile = "../../xml_files_windows/dos_core.xml";
+		String xmlFile = "../../xml_files_windows/dos/dos_core.xml";
 //		String xmlFile= "../../xml_files_windows/test/schemaEntity_noSchema.xml";
 
 		    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance(); 
